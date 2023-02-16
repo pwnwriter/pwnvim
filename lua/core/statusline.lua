@@ -1,4 +1,3 @@
--- Define a function to set the statusline
 function set_statusline()
   local filename = vim.fn.expand('%:t')
   local filetype = vim.bo.filetype
@@ -37,9 +36,3 @@ end
 
 -- Set the statusline for all windows
 set_statusline()
-
--- Define the colors for the statusline
-vim.cmd('highlight StatusLine guibg=#5C5F5E guifg=#EBDBB2')
-vim.cmd('highlight StatusLineNC guibg=#5C5F5E guifg=#928374')
-vim.cmd('autocmd BufEnter * lua set_statusline()')
-

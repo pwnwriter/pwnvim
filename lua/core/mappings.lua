@@ -12,14 +12,24 @@ map('i', '<C-j>', '<Down>')
 map('i', '<C-k>', '<Up>')
 map('i', '<C-l>', '<Right>')
 
--- Other mappings
+-- Normal mode other keys
+map('n', '<C-s>', ':w <CR>')
+map('n', '<C-q>', ':bd!<CR>')
+
+
+-- Bufferline 
 map('n', '<TAB>', ':BufferLineCycleNext<CR>')
 map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>')
-map('n', '<C-a>', ':NvimTreeToggle<CR>')
-map('n', '<leader>ff', ':Telescope find_files <CR>')
-map('n', '<A-t>', ':ToggleTerm <CR>')
-map('n', '<C-s>', ':w <CR>')
 
-map('n', '<C-q>', ':bd!<CR>')
+
+-- Nvim tree
+map('n', '<C-a>', ':NvimTreeToggle<CR>')
+
+
+-- Telescope
+map('n', '<leader>ff', ':Telescope find_files <CR>')
+
+
+
 
 

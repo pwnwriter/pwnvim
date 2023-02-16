@@ -24,23 +24,35 @@ lazy.setup({
     end
 },
 
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require("rose-pine").setup()
-        vim.cmd('colorscheme rose-pine')
-    end
+--{
+--  'rose-pine/neovim',
+--  name = 'rose-pine',
+--  lazy = false,
+--  priority = 1000,
+--  config = function()
+--      require("rose-pine").setup()
+--      vim.cmd('colorscheme rose-pine')
+--  end
+--  },
+
+{
+        'JoosepAlviste/palenightfall.nvim',
+        name = 'palenightfall',
+        lazy = false,
+        priority = 1000,
+        config = function()
+                require("palenightfall").setup()
+                vim.cmd('colorscheme palenightfall')
+        end
 },
+
   {
     'akinsho/bufferline.nvim',
     name = 'bufferline',
     lazy = false,
     priority = 1000,
     config = function()
-        require("bufferline").setup()
+        require("plugins.config.bufferline")
     end
 },
 
@@ -54,6 +66,18 @@ lazy.setup({
         lazy = false,
         config = function()
             require("plugins.config.nvim-tree")
+        end
+},
+
+{
+        
+        'nvim-lua/plenary.nvim',
+        'alvarosevilla95/telescope.nvim',
+        name = 'telescope',
+        lazy = false,
+        priotity = 1000,
+        config = function()
+                require("plugins.config.telescope")
         end
 },
 
