@@ -1,8 +1,7 @@
 local modules = {
         "core.options", 
         "core.mappings",
-        "core.statusline", 
-        "plugins.plugins", 
+        "plugins.init", 
 
 }
 
