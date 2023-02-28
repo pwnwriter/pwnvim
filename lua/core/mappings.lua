@@ -27,7 +27,7 @@ map('n', '<C-a>', ':NvimTreeToggle<CR>')
 
 
 -- Telescope
-map('n', '<leader>ff', ':Telescope find_files <CR>')
+map('n', '<leader>F', ':Telescope find_files <CR>')
 map('n', '<leader>fl', ':Telescope live_grep <CR>')
 map('n', '<leader>th', ':Telescope colorscheme  <CR>')
 

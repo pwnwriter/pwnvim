@@ -23,31 +23,52 @@ lazy.setup({
     end
 },
 
-
-
-{
-  'rose-pine/neovim',
-  name = 'rose-pine',
-  lazy = false,
-  priority = 1000,
-  config = function()
-      require("rose-pine").setup()
-      vim.cmd('colorscheme rose-pine')
-  end
-  },
-
 --{
---        'JoosepAlviste/palenightfall.nvim',
---        name = 'palenightfall',
+--        'nyoom-engineering/oxocarbon.nvim',
+--        name = 'oxocarbon',
 --        lazy = false,
 --        priority = 1000,
 --        config = function()
---                require("palenightfall").setup()
---                vim.cmd('colorscheme palenightfall')
+--                vim.cmd('colorscheme oxocarbon')
 --        end
 --},
---
+
 {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+        lazy = false,
+        priority = 1000,
+        config = function()
+                vim.cmd('colorscheme rose-pine')
+        end
+},
+
+
+{
+        'neovim/nvim-lspconfig',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'hrsh7th/nvim-cmp',
+        'L3MON4D3/LuaSnip',
+},
+
+{
+        
+        'saadparwaiz1/cmp_luasnip',
+            name = 'luasnip',
+            lazy = false,
+            priority = 1000,
+            config = function()
+                    require("plugins.config.cmp-config")
+            end
+
+
+},
+
+{
+
     'akinsho/bufferline.nvim',
     name = 'bufferline',
     lazy = false,
@@ -58,7 +79,7 @@ lazy.setup({
 },
 
 {
-   'kyazdani42/nvim-web-devicons',
+        'kyazdani42/nvim-web-devicons'
 },
 
 {
@@ -83,14 +104,29 @@ lazy.setup({
 },
 
 {
-
         'nvim-lualine/lualine.nvim',
         name = 'lualine',
         lazy = false,
+        priotity = 1000,
         config = function()
                 require("plugins.config.lualine")
         end
 },
+
+
+{
+        'nvim-treesitter/nvim-treesitter',
+        name = 'treesitter',
+        lazy = false,
+        priotity = 1000,
+        config = function()
+                require("plugins.config.treesitter")
+        end
+},
+
+
+      -- cmp sources pluging 
+
 
 
 })
