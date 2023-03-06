@@ -126,8 +126,6 @@ lazy.setup({
         end
 },
 
-
-
 {
         'akinsho/toggleterm.nvim',
         name = 'toggleterm',
@@ -137,6 +135,15 @@ lazy.setup({
         end
 },
 
+
+{
+        'lewis6991/gitsigns.nvim',
+        name = 'gitsigns',
+        lazy = false,
+        config = function()
+                require("plugins.config.gitsigns")
+        end
+},
 
 })
 
