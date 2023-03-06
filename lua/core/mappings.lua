@@ -23,7 +23,7 @@ map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>')
 
 
 -- Nvim tree
-map('n', '<C-a>', ':NvimTreeToggle<CR>')
+map('n', '<leader>a', ':NvimTreeToggle<CR>')
 
 
 -- Telescope

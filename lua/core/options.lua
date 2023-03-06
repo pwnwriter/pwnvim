@@ -30,7 +30,7 @@ set_option('cmdheight', 1)
 set_option('whichwrap', 'b,s,<,>,[,[,h,l')
 set_option('splitbelow', true)
 set_option('splitright', true)
-vim.opt.termguicolors = true
+set_option('termguicolors', true)
 set_option('conceallevel', 0)
 set_option('showtabline', 2)
 set_option('showmode', false)
