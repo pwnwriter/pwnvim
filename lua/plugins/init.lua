@@ -15,7 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 local ok, lazy = pcall(require, 'lazy')
 if not ok then return end
 lazy.setup({
-  { 
+
+        -- Autopairings --
+{ 
     'windwp/nvim-autopairs',
     name = 'nvim-autopairs',
     lazy = false,
@@ -24,16 +26,7 @@ lazy.setup({
     end
 },
 
---{
---        'nyoom-engineering/oxocarbon.nvim',
---        name = 'oxocarbon',
---        lazy = false,
---        priority = 1000,
---        config = function()
---                vim.cmd('colorscheme oxocarbon')
---        end
---},
-
+        -- Colorscheme --
 {
         'rose-pine/neovim',
         name = 'rose-pine',
@@ -44,8 +37,7 @@ lazy.setup({
         end
 },
 
-
-
+        -- lsp stuffs --
 {
         'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
@@ -69,6 +61,8 @@ lazy.setup({
 
 },
 
+        -- Bufferline --
+
 {
 
     'akinsho/bufferline.nvim',
@@ -79,10 +73,12 @@ lazy.setup({
         require("plugins.config.bufferline")
     end
 },
-
+        -- icon pack for bufferline --
 {
         'kyazdani42/nvim-web-devicons'
 },
+
+        -- Nvim tree file viewer --
 
 {
         'nvim-tree/nvim-tree.lua',
@@ -93,6 +89,7 @@ lazy.setup({
         end
 },
 
+        -- Telescope stuffs --
 {
         
         'nvim-lua/plenary.nvim',
@@ -105,8 +102,7 @@ lazy.setup({
         end
 },
 
-
-
+        -- Treesitter stuffs --
 {
         'nvim-treesitter/nvim-treesitter',
         name = 'treesitter',
@@ -116,6 +112,7 @@ lazy.setup({
         end
 },
 
+        -- Statusline (staline) --
 
 {
         'tamton-aquib/staline.nvim',
@@ -126,6 +123,7 @@ lazy.setup({
         end
 },
 
+        -- Floating terminal --
 {
         'akinsho/toggleterm.nvim',
         name = 'toggleterm',
@@ -135,6 +133,7 @@ lazy.setup({
         end
 },
 
+        -- gitsigns stuffs --
 
 {
         'lewis6991/gitsigns.nvim',
