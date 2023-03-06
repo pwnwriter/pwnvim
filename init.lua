@@ -2,7 +2,6 @@ local modules = {
         "core.options", 
         "core.mappings",
         "plugins.init", 
-
 }
 
 for i = 1, #modules do

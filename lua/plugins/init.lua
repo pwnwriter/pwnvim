@@ -62,7 +62,7 @@ lazy.setup({
             lazy = false,
             priority = 1000,
             config = function()
-                    require("plugins.config.cmp-config")
+                    require("plugins.config.cmp")
             end
 
 
@@ -125,6 +125,16 @@ lazy.setup({
         end
 },
 
+
+
+{
+        'akinsho/toggleterm.nvim',
+        name = 'toggleterm',
+        lazy = false,
+        config = function()
+                require("plugins.config.term")
+        end
+},
 
 
 })
