@@ -19,10 +19,30 @@ $ git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim
 
 ## Features
 - 🎨 Colorscheme [`rosepine`](https://github.com/rose-pine/neovim)
+- 🌱 File exp [`nvim-tree`](https://github.com/nvim-tree/nvim-tree.lua)
 - 📩 Plugin manager [`lazy.nvim`](https://github.com/folke/lazy.nvim)
+- 🤍 Terminal [`toggleterm`](https://github.com/akinsho/toggleterm.nvim)
 - ✨ Lspconfig with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
 - 😻 Statusline [`staline`](https://github.com/tamton-aquib/staline.nvim) & [`bufferline`](https://github.com/akinsho/bufferline.nvim)
 - 🔭 Find/pick/preview code [`telescope`](https://github.com/nvim-telescope/telescope.nvim) 
 - & [`many more`](/lua)
 
 ## Showcase 
+
+- File preview
+
+    - A fuzzy file finder, picker, sorter, previewer and much more:
+    
+    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/telescope.png)
+
+- Autocompletion
+    - Autocompletion with previously used words / [`rust-analyzer`](https://github.com/rust-lang/rust-analyzer) (main for me)
+    
+    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/rust.png)
+    
+- Terminal
+    - A floating terminal to do stuffs easily:
+    
+    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/term.png)
+    
+
