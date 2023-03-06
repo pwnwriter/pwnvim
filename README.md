@@ -45,4 +45,8 @@ $ git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim && nvim
     
     ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/term.png)
     
+   
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> @pwnwriter</a> // <a href="https://opensource.org/licenses/MIT">MIT </a> License
+
 
