@@ -44,6 +44,7 @@ lazy.setup({
 },
 
 
+
 {
         'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
@@ -103,29 +104,26 @@ lazy.setup({
         end
 },
 
-{
-        'nvim-lualine/lualine.nvim',
-        name = 'lualine',
-        lazy = false,
-        priotity = 1000,
-        config = function()
-                require("plugins.config.lualine")
-        end
-},
 
 
 {
         'nvim-treesitter/nvim-treesitter',
         name = 'treesitter',
         lazy = false,
-        priotity = 1000,
         config = function()
                 require("plugins.config.treesitter")
         end
 },
 
 
-      -- cmp sources pluging 
+{
+        'tamton-aquib/staline.nvim',
+        name = 'staline',
+        lazy = false,
+        config = function()
+                require("plugins.config.staline")
+        end
+},
 
 
 
