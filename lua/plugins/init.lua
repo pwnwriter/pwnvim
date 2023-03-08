@@ -27,15 +27,37 @@ lazy.setup({
 },
 
         -- Colorscheme --
+--{
+--        'rose-pine/neovim',
+--        name = 'rose-pine',
+--        lazy = false,
+--        priority = 1000,
+--        config = function()
+--                vim.cmd('colorscheme rose-pine')
+--        end
+--},
+--
 {
-        'rose-pine/neovim',
-        name = 'rose-pine',
+        'catppuccin/nvim',
+        name = 'catppuccin',
         lazy = false,
         priority = 1000,
         config = function()
-                vim.cmd('colorscheme rose-pine')
+                vim.cmd('colorscheme catppuccin-mocha')
         end
 },
+
+
+--{
+--        'Everblush/nvim',
+--        name = 'Everblush',
+--        lazy = false,
+--        priority = 1000,
+--        config = function()
+--                vim.cmd('colorscheme everblush')
+--        end
+--},
+
 
         -- lsp stuffs --
 {
@@ -89,10 +111,14 @@ lazy.setup({
         end
 },
 
-        -- Telescope stuffs --
+        -- Telescope stuffs -- 
+
+        {
+                'nvim-lua/plenary.nvim',
+        },
+
 {
         
-        'nvim-lua/plenary.nvim',
         'alvarosevilla95/telescope.nvim',
         name = 'telescope',
         lazy = false,
@@ -143,6 +169,8 @@ lazy.setup({
                 require("plugins.config.gitsigns")
         end
 },
+
+
 
 })
 
