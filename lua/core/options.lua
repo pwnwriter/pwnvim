@@ -57,4 +57,3 @@ set_option('autoindent', true)
 set_buffer_option('autoindent', true)
 set_option('expandtab', true)
 set_buffer_option('expandtab', true)
-

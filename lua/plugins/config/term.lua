@@ -1,10 +1,10 @@
 require"toggleterm".setup {
-  size = 5,
+  size = 6,
   open_mapping = [[<A-t>]],
   shade_filetypes = {},
   shade_terminals = true,
   shading_factor = '1',
   start_in_insert = true,
-  persist_size = false,
+  persist_size = true,
   direction = 'float'
 }

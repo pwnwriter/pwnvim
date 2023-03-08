@@ -27,6 +27,7 @@ map('n', '<leader>a', ':NvimTreeToggle<CR>')
 map('n', '<leader>F', ':Telescope find_files <CR>')
 map('n', '<leader>fl', ':Telescope live_grep <CR>')
 map('n', '<leader>th', ':Telescope colorscheme  <CR>')
+map('n', '<leader>b', ':Telescope buffers<CR>')
 
 -- Window splitting
 map('n', '<leader>v', ':vsplit<CR>')
@@ -37,3 +38,6 @@ map('n', '<C-w>k', '<C-w>k')
 map('n', '<C-w>l', '<C-w>l')
 map('n', '<leader>x', '<C-w>c')
 
+
+-- Extras
+map('n', '<C-c>', ':%y+<CR>')
