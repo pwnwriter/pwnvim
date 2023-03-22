@@ -14,7 +14,7 @@
 ## Installation 🌙
 
 ```bash
-$ git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim && nvim
+$ git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.config/nvim && nvim
 ```
 
 ## Features
