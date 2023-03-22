@@ -18,10 +18,10 @@ $ git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim && nvim
 ```
 
 ## Features
-- 🎨 Colorscheme [`rosepine`](https://github.com/rose-pine/neovim)
+- 🎨 Colorscheme [`catppuccin`](https://github.com/catppuccin/nvim)
 - 🌱 File exp [`nvim-tree`](https://github.com/nvim-tree/nvim-tree.lua)
 - 📩 Plugin manager [`lazy.nvim`](https://github.com/folke/lazy.nvim)
-- 🤍 Terminal [`toggleterm`](https://github.com/akinsho/toggleterm.nvim)
+- 🤍 Terminal [`nvterm`](https://github.com/nvchad/nvterm)
 - ✨ Lspconfig with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
 - 😻 Statusline [`staline`](https://github.com/tamton-aquib/staline.nvim) & [`bufferline`](https://github.com/akinsho/bufferline.nvim)
 - 🔭 Find/pick/preview code [`telescope`](https://github.com/nvim-telescope/telescope.nvim) 
