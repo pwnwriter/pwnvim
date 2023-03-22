@@ -14,6 +14,8 @@ lazy.setup(
                 require("nvim-autopairs").setup()
             end
         },
+
+        -- catppuccin colorscheme
         {
             "catppuccin/nvim",
             name = "catppuccin",
@@ -64,6 +66,7 @@ lazy.setup(
                 require("plugins.config.nvim-tree")
             end
         },
+
         -- Telescope stuffs --
 
         {
@@ -77,7 +80,9 @@ lazy.setup(
                 require("telescope").setup {}
             end
         },
+
         -- Treesitter stuffs --
+        
         {
             "nvim-treesitter/nvim-treesitter",
             name = "treesitter",
@@ -106,6 +111,7 @@ lazy.setup(
                 require("plugins.config.gitsigns")
             end
         },
+        -- Nvterm (terminal)
         {
             "NvChad/nvterm",
             name = "nvterm",
@@ -113,7 +119,8 @@ lazy.setup(
             config = function()
                 require("nvterm").setup {}
             end
-        }
+        },
+        
     }
 )
 
