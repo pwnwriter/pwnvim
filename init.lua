@@ -1,6 +1,5 @@
 local modules = {
     "core.options",
-    "core.bootstrap",
     "core.mappings",
     "plugins.init"
 }
