@@ -142,6 +142,14 @@ lazy.setup(
                 require("nvterm").setup {}
             end
         },
+--        {
+--            "Pocco81/true-zen.nvim",
+--            name = "true-zen",
+--            lazy = false,
+--            config = function()
+--                require("true-zen").setup {}
+--            end
+--        },
         
     }
 )

@@ -45,6 +45,8 @@ map("n", "<A-t>", ':lua require("nvterm.terminal").toggle "float"<CR>') -- (Norm
 map("t", "<A-t>", '<C-\\><C-n><cmd>lua require("nvterm.terminal").toggle "float"<CR>') -- (Terminal mode)
 map("n", "<A-h>", ':lua require("nvterm.terminal").toggle "horizontal"<CR>')-- (Normal mode)
 map("t", "<A-h>", '<C-\\><C-n><cmd>lua require("nvterm.terminal").toggle "horizontal"<CR>') -- (Terminal mode)
-
+map("n", "<A-H>", ':lua require("nvterm.terminal").toggle "vertical"<CR>') -- (Normal mode)
+map("t", "<A-H>", '<C-\\><C-n><cmd>lua require("nvterm.terminal").toggle "vertical"<CR>') -- (Terminal mode)
 -- Extras
 map("n", "<C-c>", ":%y+<CR>")
+
