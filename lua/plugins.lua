@@ -61,7 +61,7 @@ lazy.setup(
             name = "luasnip",
             lazy = false,
             config = function()
-                require("plugins.config.cmp")
+                require("config.cmp")
             end
         },
         -- Bufferline --
@@ -71,7 +71,7 @@ lazy.setup(
             name = "bufferline",
             lazy = false,
             config = function()
-                require("plugins.config.bufferline")
+                require("config.bufferline")
             end
         },
         -- icon pack for bufferline --
@@ -85,7 +85,7 @@ lazy.setup(
             name = "nvim-tree",
             lazy = false,
             config = function()
-                require("plugins.config.nvim-tree")
+                require("config.nvim-tree")
             end
         },
 
@@ -110,7 +110,7 @@ lazy.setup(
             name = "treesitter",
             lazy = false,
             config = function()
-                require("plugins.config.treesitter")
+                require("config.treesitter")
             end
         },
         -- Statusline (staline) --
@@ -120,7 +120,7 @@ lazy.setup(
             name = "staline",
             lazy = false,
             config = function()
-                require("plugins.config.staline")
+                require("config.staline")
             end
         },
         -- gitsigns stuffs --
@@ -130,7 +130,7 @@ lazy.setup(
             name = "gitsigns",
             lazy = false,
             config = function()
-                require("plugins.config.gitsigns")
+                require("config.gitsigns")
             end
         },
         -- Nvterm (terminal)
@@ -142,15 +142,6 @@ lazy.setup(
                 require("nvterm").setup {}
             end
         },
---        {
---            "Pocco81/true-zen.nvim",
---            name = "true-zen",
---            lazy = false,
---            config = function()
---                require("true-zen").setup {}
---            end
---        },
-        
     }
 )
 
