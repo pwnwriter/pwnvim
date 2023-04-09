@@ -10,14 +10,6 @@ local opt = function(option, value)
     end
 end
 
-local bopt = function(option, value)
-    if type(vim.bo[option]) == "boolean" then
-        vim.bo[option] = value
-    else
-        vim.bo[option] = tostring(value)
-    end
-end
-
 local wopt = function(option, value)
     if type(vim.wo[option]) == "boolean" then
         vim.wo[option] = value
@@ -26,6 +18,15 @@ local wopt = function(option, value)
     end
 end
 
+local bopt = function(option, value)
+    if type(vim.bo[option]) == "boolean" then
+        vim.bo[option] = value
+    else
+        vim.bo[option] = tostring(value)
+    end
+end
+
+-- Set global options
 vim.cmd("filetype plugin indent on")
 opt("shortmess", vim.o.shortmess .. "c")
 opt("pumheight", 0)
@@ -48,10 +49,14 @@ opt("ignorecase", true)
 opt("scrolloff", 3)
 opt("sidescrolloff", 5)
 opt("mouse", "a")
+
+-- Set window options
 wopt("wrap", false)
 wopt("number", true)
 opt("relativenumber", true)
 wopt("signcolumn", "yes")
+
+-- Set buffer options
 opt("tabstop", 2)
 opt("softtabstop", 2)
 bopt("tabstop", 2)
