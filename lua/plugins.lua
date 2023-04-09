@@ -27,6 +27,7 @@ end
 
 lazy.setup(
     {
+
         -- Autopairings --
         {
             "windwp/nvim-autopairs",
@@ -36,6 +37,7 @@ lazy.setup(
                 require("nvim-autopairs").setup()
             end
         },
+
         -- catppuccin colorscheme
         {
             "catppuccin/nvim",
@@ -45,6 +47,7 @@ lazy.setup(
                 vim.cmd("colorscheme catppuccin-mocha")
             end
         },
+
         -- lsp stuffs --
         {
             "neovim/nvim-lspconfig",
@@ -64,8 +67,8 @@ lazy.setup(
                 require("config.cmp")
             end
         },
-        -- Bufferline --
 
+        -- Bufferline --
         {
             "akinsho/bufferline.nvim",
             name = "bufferline",
@@ -76,8 +79,8 @@ lazy.setup(
                 require("config.bufferline")
             end
         },
-        -- Nvim tree file viewer --
 
+        -- Nvim tree file viewer --
         {
             "nvim-tree/nvim-tree.lua",
             name = "nvim-tree",
@@ -87,8 +90,8 @@ lazy.setup(
                 require("config.nvim-tree")
             end
         },
-        -- Telescope stuffs --
 
+        -- Telescope stuffs --
         {
             "alvarosevilla95/telescope.nvim",
             name = "telescope",
@@ -98,8 +101,8 @@ lazy.setup(
                 require("telescope").setup {}
             end
         },
-        -- Treesitter stuffs --
 
+        -- Treesitter stuffs --
         {
             "nvim-treesitter/nvim-treesitter",
             name = "treesitter",
@@ -111,17 +114,18 @@ lazy.setup(
                 require("config.treesitter")
             end
         },
-        -- Statusline (staline) --
 
+        -- Statusline (staline) --
         {
             "tamton-aquib/staline.nvim",
             name = "staline",
             lazy = false,
-            event = "BufWinEnter",
+	    event = { "BufReadPre", "BufNew" },
             config = function()
                 require("config.staline")
             end
         },
+
         -- gitsigns stuffs --
         {
             "lewis6991/gitsigns.nvim",
@@ -145,6 +149,7 @@ lazy.setup(
                 )
             end
         },
+
         -- Nvterm (terminal)
         {
             "NvChad/nvterm",
