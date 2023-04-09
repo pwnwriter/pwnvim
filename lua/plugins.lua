@@ -36,7 +36,6 @@ lazy.setup(
                 require("nvim-autopairs").setup()
             end
         },
-
         -- catppuccin colorscheme
         {
             "catppuccin/nvim",
@@ -60,6 +59,7 @@ lazy.setup(
             "saadparwaiz1/cmp_luasnip",
             name = "luasnip",
             lazy = false,
+            event = "InsertEnter",
             config = function()
                 require("config.cmp")
             end
@@ -70,13 +70,11 @@ lazy.setup(
             "akinsho/bufferline.nvim",
             name = "bufferline",
             lazy = false,
+            event = "BufWinEnter",
+            dependencies = "kyazdani42/nvim-web-devicons",
             config = function()
                 require("config.bufferline")
             end
-        },
-        -- icon pack for bufferline --
-        {
-            "kyazdani42/nvim-web-devicons"
         },
         -- Nvim tree file viewer --
 
@@ -84,31 +82,31 @@ lazy.setup(
             "nvim-tree/nvim-tree.lua",
             name = "nvim-tree",
             lazy = false,
+            cmd = {"NvimTreeToggle", "NvimTreeFocus"},
             config = function()
                 require("config.nvim-tree")
             end
         },
-
         -- Telescope stuffs --
 
-        {
-            "nvim-lua/plenary.nvim"
-        },
         {
             "alvarosevilla95/telescope.nvim",
             name = "telescope",
             lazy = false,
+            dependencies = "nvim-lua/plenary.nvim",
             config = function()
                 require("telescope").setup {}
             end
         },
-
         -- Treesitter stuffs --
-        
+
         {
             "nvim-treesitter/nvim-treesitter",
             name = "treesitter",
             lazy = false,
+            event = "BufWinEnter",
+            cmd = {"TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo"},
+            build = ":TSUpdate",
             config = function()
                 require("config.treesitter")
             end
@@ -119,6 +117,7 @@ lazy.setup(
             "tamton-aquib/staline.nvim",
             name = "staline",
             lazy = false,
+            event = "BufWinEnter",
             config = function()
                 require("config.staline")
             end
@@ -141,7 +140,7 @@ lazy.setup(
             config = function()
                 require("nvterm").setup {}
             end
-        },
+        }
     }
 )
 
