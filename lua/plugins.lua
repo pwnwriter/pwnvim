@@ -123,13 +123,26 @@ lazy.setup(
             end
         },
         -- gitsigns stuffs --
-
         {
             "lewis6991/gitsigns.nvim",
             name = "gitsigns",
-            lazy = false,
-            config = function()
-                require("config.gitsigns")
+            lazy = true,
+            ft = "gitcommit",
+            init = function()
+                -- Load gitsigns only when a git file is opened
+                vim.api.nvim_create_autocmd(
+                    {"BufRead"},
+                    {
+                        group = vim.api.nvim_create_augroup("GitSignsLazyLoad", {clear = true}),
+                        callback = function()
+                            vim.fn.system("git -C " .. vim.fn.expand("%:p:h") .. " rev-parse")
+                            if vim.v.shell_error == 0 then
+                                vim.api.nvim_del_augroup_by_name("GitSignsLazyLoad")
+                                require("config.gitsigns") -- Load gitsigns configuration
+                            end
+                        end
+                    }
+                )
             end
         },
         -- Nvterm (terminal)
