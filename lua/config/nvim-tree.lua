@@ -7,7 +7,7 @@ plugin.setup {
     },
     disable_netrw = true,
     hijack_netrw = true,
-    open_on_setup = false,
+    --open_on_setup = false,
     hijack_cursor = true,
     hijack_unnamed_buffer_when_opening = false,
     sync_root_with_cwd = false,

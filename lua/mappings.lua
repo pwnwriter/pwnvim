@@ -29,7 +29,11 @@ map("n", "<leader>a", ":NvimTreeToggle<CR>")
 map("n", "<leader>F", ":Telescope find_files <CR>")
 map("n", "<leader>fl", ":Telescope live_grep <CR>")
 map("n", "<leader>th", ":Telescope colorscheme  <CR>")
-map("n", "<leader>b", ":Telescope buffers<CR>")
+map("n", "<leader>tb", ":Telescope buffers<CR>")
+
+-- muscle memory for me
+map ("i", "jj", "<esc>")
+
 
 -- Window splitting
 map("n", "<leader>v", ":vsplit<CR>")
