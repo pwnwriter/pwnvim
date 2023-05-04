@@ -1,0 +1,11 @@
+{
+  "diagnostics": {
+    "globals": ["vim"]
+  },
+  "format": {
+    "enable": false
+  },
+  "runtime": {
+    "version": "LuaJIT"
+  }
+}

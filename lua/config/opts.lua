@@ -1,3 +1,11 @@
+local icons = require("config.icons")
+vim.opt.listchars = {
+  tab = icons.layout.tab .. "  ",
+}
+vim.opt.showbreak = icons.layout.wrap .. " "
+
+vim.opt.undofile = true
+
 -- opt -> Normal option
 -- wopt -> Window options
 -- bopt -> Buffer options

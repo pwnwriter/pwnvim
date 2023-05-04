@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 local map = function(mode, lhs, rhs, opts)
     local options = {noremap = true, silent = true}
     if opts then
