@@ -45,9 +45,17 @@ end
 function spec:config()
   local lspconfig = require("lspconfig")
   -- $ rustup component add rust-analyzer
-  lspconfig.rust_analyzer.setup({
-    cmd = { "rustup", "run", "stable", "rust-analyzer" },
-  })
+--  lspconfig.rust_analyzer.setup({
+--    cmd = { "rustup", "run", "stable", "rust-analyzer" },
+--  })
+--
+  local servers = { 'rust_analyzer', 'lua_ls', 'clangd', 'pylsp' }
+
+for _, server in ipairs(servers) do
+  lspconfig[server].setup {
+    capabilities = capabilities
+  }
+end
 
   local windows = require("lspconfig.ui.windows")
   local cmp = require("cmp_nvim_lsp")
