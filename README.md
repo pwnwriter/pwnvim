@@ -29,6 +29,11 @@ $ git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.confi
 
 ## Showcase 
 
+- Fast
+    - Lazy loaded plugins.
+     
+    ![](https://user-images.githubusercontent.com/90331517/236382994-a5eae56b-2907-4f75-86bc-747b00f31f74.png)
+
 - File preview
 
     - A fuzzy file finder, picker, sorter, previewer and much more:
