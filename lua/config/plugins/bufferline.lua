@@ -1,14 +1,25 @@
 local spec = {
   "akinsho/bufferline.nvim",
   priority = 10000,
- event = "BufWinEnter",
-
+  event = "BufWinEnter",
 }
 
 function spec:config()
-  local nvimtree= require("bufferline")
+  local buff= require("bufferline")
+  buff.setup({
+    highlights = {
+      fill = {},
+      background = {},
+      tab_selected = {},
+      buffer_selected = {italic = true},
+      diagnostic_selected = {italic = false},
+      hint_selected = {italic = false},
+      pick_selected = {italic = false},
+      pick_visible = {italic = false},
+      pick = {italic = false}
+    },
 
-  nvimtree.setup()
+  })
 end
 
 return spec
