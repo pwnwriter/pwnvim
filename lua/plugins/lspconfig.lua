@@ -1,5 +1,5 @@
 local Binder = require("core.binder")
-local icons = require("config.icons")
+local icons = require("core.icons")
 
 local spec = {
   "neovim/nvim-lspconfig",

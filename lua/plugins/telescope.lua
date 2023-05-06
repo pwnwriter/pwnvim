@@ -1,5 +1,5 @@
 local Binder = require("core.binder")
-local icons = require("config.icons")
+local icons = require("core.icons")
 
 local spec = {
   "nvim-telescope/telescope.nvim",
@@ -58,7 +58,7 @@ function spec:config()
   binder:clone():desc("Find Type"):bind("<leader>ft", builtin.filetypes)
   binder:clone():desc("Find File"):bind("<leader>F", builtin.find_files)
   binder:clone():desc("Find Word"):bind("<leader>fw", builtin.live_grep)
-  binder:clone():desc("Find Buffer"):bind("<leader><space>", builtin.buffers)
+  binder:clone():desc("Find Buffer"):bind("<leader><b>", builtin.buffers)
 end
 
 return spec

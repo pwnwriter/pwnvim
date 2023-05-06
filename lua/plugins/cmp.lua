@@ -1,4 +1,4 @@
-local icons = require("config.icons")
+local icons = require("core.icons")
 
 local spec = {
   "hrsh7th/nvim-cmp",
