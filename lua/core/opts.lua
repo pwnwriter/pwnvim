@@ -1,3 +1,4 @@
+vim.g.mapleader = " " -- remap \ (leader) to space
 local icons = require("config.icons")
 vim.opt.listchars = {
   tab = icons.layout.tab .. "  ",

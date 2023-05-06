@@ -1,4 +1,4 @@
-local Binder = require("config.binder")
+local Binder = require("core.binder")
 local icons = require("config.icons")
 
 local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
