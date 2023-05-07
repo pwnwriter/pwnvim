@@ -4,6 +4,11 @@ local icons = require("core.icons")
 local spec = {
   "nvim-telescope/telescope.nvim",
   cmd = { "Telescope" },
+    pickers = {
+    colorscheme = {
+      enable_preview = true
+    }
+},
   keys = {
     "<leader>fr",
     "<leader>ft",

@@ -49,6 +49,7 @@ function spec:config()
 --    cmd = { "rustup", "run", "stable", "rust-analyzer" },
 --  })
 --
+  
   local servers = { 'rust_analyzer', 'lua_ls', 'clangd', 'pylsp' }
 
 for _, server in ipairs(servers) do

@@ -1,7 +1,7 @@
 local spec = {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdateSync",
-  cmd = { "TSUpdateSync" },
+  cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+  build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
 }
 
