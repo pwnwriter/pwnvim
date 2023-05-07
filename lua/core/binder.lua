@@ -1,6 +1,6 @@
 ---@class Binder
 ---@field private modes string[]
----@field private opts { buffer: integer, desc: string, expr: boolean, remap: boolean }
+---@field private opts { buffer: integer, desc: string, expr: boolean, remap: boolean, silent: boolean }
 local Binder = {}
 
 ---@param modes string[]
@@ -53,7 +53,10 @@ function Binder:bind(lhs, rhs, ...)
     rhs = function() return fn(unpack(params)) end
   end
 
+  self.opts.silent = true
   vim.keymap.set(self.modes, lhs, rhs, self.opts)
+  self.opts.silent = false
 end
 
 return Binder
+
