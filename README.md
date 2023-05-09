@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">pwnwriter's neovim</h2>
+    <h2 align="center">Neovim for METISLINUX 🐥</h2>
 </p>
 
 <p align="center">Blazing fast neovim config, embodying the K1SS philosophy 🌿 </p>
@@ -14,7 +14,7 @@
 ## Installation 🌙
 
 ```bash
-$ git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.config/nvim && nvim
+rm -rf ~/.config/nvim ~/.local/{share/nvim,state/nvim} && git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.config/nvim && nvim 
 ```
 
 ## Features
@@ -52,6 +52,6 @@ $ git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.confi
     
    
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> @pwnwriter</a> // <a href="https://opensource.org/licenses/MIT">MIT </a> License
+<p align="center">Copyright &copy; 2023<a href="https://metislinux.org" target="_blank"> METISLINUX</a> // <a href="https://opensource.org/licenses/MIT">MIT </a> License
 
 
