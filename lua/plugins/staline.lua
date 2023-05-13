@@ -23,9 +23,9 @@ function spec:config()
 
 	defaults={
 		fg = "#986fec",
-		cool_symbol = "  ",
-		left_separator = "",
-		right_separator = "",
+		cool_symbol = "  ",
+		left_separator = "",
+		right_separator = "",
 		-- line_column = "%l:%c [%L]",
 		true_colors = true,
 		line_column = "[%l:%c] 並%p%% "
@@ -36,7 +36,8 @@ function spec:config()
 		i  = "#181a23",
 		ic = "#181a23",
 		c  = "#181a23",
-		v  = "#181a23"       -- etc
+		v  = "#181a23",       -- etc
+		t  = "#181a23",       -- etc
 	}
 
   })

@@ -6,7 +6,7 @@
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
   "gitsigns.nvim": { "branch": "main", "commit": "e5edefd9976039f5352e0c900f35206770b33a2d" },
-  "lazy.nvim": { "branch": "main", "commit": "9ac19880b677d08f416c5189ffc2dc023084a159" },
+  "lazy.nvim": { "branch": "main", "commit": "652b6febf8d5c99eb8cf4a1cec63da6db62e77d2" },
   "mason.nvim": { "branch": "main", "commit": "057ac5ca159c83e302a55bd839a96ff1ea2396db" },
   "null-ls.nvim": { "branch": "main", "commit": "71797bb303ac99a4435592e15068f127970513d7" },
   "nvim-autopairs": { "branch": "master", "commit": "7747bbae60074acf0b9e3a4c13950be7a2dff444" },
@@ -18,6 +18,6 @@
   "nvterm": { "branch": "main", "commit": "5ae78fb332e92447121d2af58a6313189a7799fb" },
   "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
   "sentiment.nvim": { "branch": "main", "commit": "3417f7c0422145d1822ace66629a93234094e40e" },
-  "telescope.nvim": { "branch": "master", "commit": "d77b37f4520e5fc2cf4c74c12e42ed4b589bd367" },
-  "ui": { "branch": "v2.0", "commit": "487795d5244811c19063b0634123a4642917f59d" }
+  "staline.nvim": { "branch": "main", "commit": "8992f9a98df40160c8932fb3aacda46921c89485" },
+  "telescope.nvim": { "branch": "master", "commit": "d77b37f4520e5fc2cf4c74c12e42ed4b589bd367" }
 }
