@@ -23,13 +23,12 @@ function spec:config()
 
 	defaults={
 		fg = "#986fec",
-		cool_symbol = "  ",
+		cool_symbol = "",
 		left_separator = "",
 		right_separator = "",
-		-- line_column = "%l:%c [%L]",
 		true_colors = true,
-		line_column = "[%l:%c] 並%p%% "
-		-- font_active = "bold"
+		line_column = "[%l:%c] 並%p%% ",
+		-- font_active = "italic"
 	},
 	mode_colors = {
 		n  = "#181a23",

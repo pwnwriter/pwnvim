@@ -2,9 +2,15 @@ local spec = {
   "akinsho/bufferline.nvim",
   priority = 10000,
   event = "BufWinEnter",
+
+  dependeicies = {
+        "nvim-tree/nvim-web-devicons",
+  },
+
+
 }
 
-function spec:config()
+  function spec:config()
   local buff= require("bufferline")
   buff.setup({
     highlights = {
