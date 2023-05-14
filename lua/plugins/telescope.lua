@@ -19,7 +19,7 @@ local spec = {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
-  },
+ },
 }
 
 function spec:config()
