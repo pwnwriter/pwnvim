@@ -25,8 +25,8 @@ Binder.new({"n"}):bind("<leader>a", ":NvimTreeToggle<CR>")
 
 -- muscle memory for me
 Binder.new({"i"}):bind("jj", "<esc>")
-Binder.new({"n"}):bind("j", "jzz")
-Binder.new({"n"}):bind("k", "kzz")
+Binder.new({"n"}):bind("J", "jzz")
+Binder.new({"n"}):bind("K", "kzz")
 
 
 -- Window splitting
