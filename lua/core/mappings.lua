@@ -25,8 +25,9 @@ Binder.new({"n"}):bind("<leader>tb", ":Telescope buffers<CR>")
 
 -- muscle memory for me
 Binder.new({"i"}):bind("jj", "<esc>")
-Binder.new({"n"}):bind("j", "jzz")
-Binder.new({"n"}):bind("k", "kzz")
+Binder.new({"n"}):bind("J", "jzz")
+Binder.new({"n"}):bind("K", "kzz")
+
 
 -- Window splitting
 Binder.new({"n"}):bind("<leader>v", ":vsplit<CR>")
