@@ -13,9 +13,21 @@
 
 ## Installation 🌙
 
+- Take backup of your old conf..
 ```bash
-rm -rf ~/.config/nvim ~/.local/{share/nvim,state/nvim} && git clone --depth=1 https://github.com/pwnwriter/pwnvim --branch=main ~/.config/nvim && nvim 
+# required
+mv ~/.config/nvim ~/.config/nvim-backup
+
+# optional
+mv ~/.cache/nvim ~/.cache/nvim-backup
+mv ~/.local/share/nvim ~/.local/share/nvim-backup
+mv ~/.local/state/nvim ~/.local/state/nvim-backup
 ```
+- pwnvim new configuration
+```bash
+git clone https://github.com/metis-os/pwnvim/ --depth=1 ~/.config/nvim && nvim --headless +q
+```
+
 
 ## Features
 - 🎨 Colorscheme [`catppuccin`](https://github.com/catppuccin/nvim)
@@ -41,7 +53,7 @@ rm -rf ~/.config/nvim ~/.local/{share/nvim,state/nvim} && git clone --depth=1 ht
     ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/telescope.png)
 
 - Autocompletion
-    - Autocompletion with previously used words / [`rust-analyzer`](https://github.com/rust-lang/rust-analyzer) (main for me)
+    - Autocompletion with previously used words / and lsp's
     
     ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/rust.png)
     
