@@ -44,7 +44,7 @@ git clone https://github.com/metis-os/pwnvim/ --depth=1 ~/.config/nvim && nvim -
 - Fast
     - Lazy loaded plugins.
      
-    ![](https://user-images.githubusercontent.com/90331517/236382994-a5eae56b-2907-4f75-86bc-747b00f31f74.png)
+    ![](https://user-images.githubusercontent.com/109761382/239726580-690d24c2-7c18-4fe8-90f0-ba9907e2b273.png)
 
 - File preview
 
