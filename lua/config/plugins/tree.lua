@@ -9,7 +9,7 @@ local spec = {
     "<leader>A",
   },
 
-  dependeicies = {
+  dependencies = {
         "nvim-tree/nvim-web-devicons",
   },
 
