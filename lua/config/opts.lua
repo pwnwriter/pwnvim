@@ -42,7 +42,7 @@ vim.opt.relativenumber = true
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "
 
-vim.opt.incsearch = false
+vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
