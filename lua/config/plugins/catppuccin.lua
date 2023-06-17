@@ -31,6 +31,11 @@ function spec:config()
       }
     end,
     integrations = {
+      nvimtree = true,
+      telescope = true,
+      cmp = true,
+      treesitter = true,
+
       barbecue = {
         bold_basename = false,
         dim_context = true,

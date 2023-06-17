@@ -4,13 +4,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.opt.wildmenu = true
 
-
-if vim.g.neovide then
-  vim.opt.guifont = { "JetBrainsMono Nerd Font", "h6" }
-  vim.g.neovide_scale_factor = 0.8
-end
-
-
 vim.opt.undofile = true
 
 vim.opt.timeout = false
@@ -33,12 +26,19 @@ vim.opt.list = true
 vim.opt.listchars = { tab = icons.layout.tab .. "  " }
 vim.opt.fillchars:append({ eob = " " })
 
+
 vim.opt.laststatus = 0
+vim.opt.statusline = " "
+vim.opt.ruler = true
 vim.opt.colorcolumn = "+1"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- vim.opt.cursorline = true
+vim.opt.breakindent = true
+vim.opt.cursorlineopt = { "number", "screenline" }
+
+
+
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "
 
@@ -56,5 +56,3 @@ vim.opt.shiftwidth = 4
 vim.opt.spell = true
 vim.opt.spelllang:append({ "programming" })
 vim.opt.spelloptions:append({ "camel" })
-
-

@@ -1,7 +1,8 @@
 local spec = {
   "utilyre/sentiment.nvim",
   name = "sentiment",
-  event = { "InsertEnter" },
+  event = { "InsertCharPre",
+          "InsertEnter" },
 }
 
 function spec:config()

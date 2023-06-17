@@ -22,7 +22,7 @@ lazy.setup("config.plugins", {
     colorscheme = { "catppuccin", "habamax" },
   },
   dev = {
-    path = os.getenv("NVIM_DEV"),
+    path = vim.env.NVIM_DEV
   },
   performance = {
     rtp = {

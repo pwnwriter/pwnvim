@@ -2,12 +2,11 @@ local spec = {
   "echasnovski/mini.nvim",
   name = "mini",
   version = '*',
-  event = { "InsertEnter" },
+  event = { "InsertCharPre" },
 }
 
 function spec:config()
   local pairs = require("mini.pairs")
-  local surround = require("mini.surround")
 
   pairs.setup({
     modes = { insert = true, command = false, terminal = false },
@@ -25,10 +24,6 @@ function spec:config()
       ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^%a\\].', register = { cr = false } },
       ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^\\].', register = { cr = false } },
     },
-  })
-
-  surround.setup({
-
   })
 
 end

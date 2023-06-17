@@ -36,6 +36,3 @@ binder:bind("<C-q>", ":bd!<CR>")
 
 binder:with_modes { "n" }
 binder:bind("<leader>lp", ":LspInfo<CR>")
-
-
-
