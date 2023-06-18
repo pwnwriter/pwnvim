@@ -19,12 +19,13 @@ local lazy = require("lazy")
 lazy.setup("config.plugins", {
   concurrency = 4,
   install = {
-    colorscheme = { "catppuccin", "habamax" },
+    colorscheme = { "catppuccin" },
   },
   dev = {
     path = vim.env.NVIM_DEV
   },
   performance = {
+
     rtp = {
       disabled_plugins = {
         "gzip",
