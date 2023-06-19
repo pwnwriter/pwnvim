@@ -1,58 +1,52 @@
 local icons = require("config.icons")
 
-vim.opt.clipboard = "unnamedplus"
-vim.g.mapleader = " "
-vim.opt.wildmenu = true
-
-vim.opt.undofile = true
-
-vim.opt.timeout = false
-vim.opt.updatetime = 400
-
-vim.opt.termguicolors = true
-vim.opt.confirm = false
-vim.opt.equalalways = false
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.scrolloff = 2
-vim.opt.sidescrolloff = 2
-vim.opt.shortmess = {
-  a = true,
-  I = true,
-  F = true,
+local options = {
+  opt = {
+    clipboard = "unnamedplus",
+    wildmenu = true,
+    undofile = true,
+    mouse = "",
+    timeout = false,
+    updatetime = 400,
+    termguicolors = true,
+    confirm = false,
+    equalalways = false,
+    splitbelow = true,
+    splitright = true,
+    scrolloff = 2,
+    sidescrolloff = 2,
+    shortmess = { a = true, I = true, F = true },
+    list = true,
+    listchars = { tab = icons.layout.tab .. "  " },
+    fillchars = { eob = " " },
+    laststatus = 0,
+    colorcolumn = "+1",
+    number = true,
+    relativenumber = true,
+    linebreak = true,
+    showbreak = icons.layout.wrap .. " ",
+    incsearch = true,
+    ignorecase = true,
+    smartcase = true,
+    pumheight = 20,
+    complete = {},
+    expandtab = true,
+    tabstop = 4,
+    shiftwidth = 4,
+    spell = true,
+    spelllang = { "programming" },
+    spelloptions = { "camel" }
+  },
+  g = {
+    mapleader = " ",
+    guifont = vim.g.neovide and { "JetBrainsMono Nerd Font", "h6" },
+    neovide_scale_factor = vim.g.neovide and 0.8,
+  }
 }
 
-vim.opt.list = true
-vim.opt.listchars = { tab = icons.layout.tab .. "  " }
-vim.opt.fillchars:append({ eob = " " })
+for scope, table in pairs(options) do
+  for setting, value in pairs(table) do
+    vim[scope][setting] = value
+  end
+end
 
-
-vim.opt.laststatus = 0
-vim.opt.statusline = " "
-vim.opt.ruler = true
-vim.opt.colorcolumn = "+1"
-vim.opt.number = true
-vim.opt.relativenumber = true
-
-vim.opt.breakindent = true
-vim.opt.cursorlineopt = { "number", "screenline" }
-
-
-
-vim.opt.linebreak = true
-vim.opt.showbreak = icons.layout.wrap .. " "
-
-vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.pumheight = 20
-vim.opt.complete = {}
-
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-
-vim.opt.spell = true
-vim.opt.spelllang:append({ "programming" })
-vim.opt.spelloptions:append({ "camel" })
