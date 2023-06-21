@@ -5,8 +5,7 @@ local spec = {
   priority = 10000,
   cmd = {"NvimTreeToggle", "NvimTreeFocus"},
   keys = {
-    "<leader>a",
-    "<leader>A",
+    "<leader>e",
   },
 
   dependencies = {
@@ -118,8 +117,7 @@ function spec:config()
   })
 
   local binder = Binder.new():with_modes({ "n" })
-  binder:bind("<leader>a", function() vim.cmd("NvimTreeToggle") end)
-  binder:bind("<leader>A", function() vim.cmd("NvimTreeFocus") end)
+  binder:bind("<leader>e", function() vim.cmd("NvimTreeToggle") end)
 end
 
 return spec

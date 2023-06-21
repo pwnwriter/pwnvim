@@ -23,8 +23,8 @@ binder:bind("K", ":m '<-2<CR>gv=gv")
 
 -- Window splitting
 binder:with_modes { "n" }
-binder:bind("<leader>v", ":vsplit<CR>")
-binder:bind("<leader>h", ":split<CR>")
+binder:bind("|", ":vsplit<CR>")
+binder:bind("-", ":split<CR>")
 binder:bind("<C-h>", "<C-w>h")
 binder:bind("<C-j>", "<C-w>j")
 binder:bind("<C-k>", "<C-w>k")
