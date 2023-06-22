@@ -1,7 +1,7 @@
 local Binder = require("config.Binder")
 
 local spec = {
-   "j-morano/buffer_manager.nvim",
+   "pwnwriter/buffer_manager.nvim",
    name = "buffer_manager",
    dependencies = {
       "nvim-lua/plenary.nvim",
