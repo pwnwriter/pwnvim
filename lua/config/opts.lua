@@ -9,6 +9,8 @@ vim.opt.undofile = true
 vim.opt.timeout = false
 vim.opt.updatetime = 400
 
+
+
 vim.opt.termguicolors = true
 vim.opt.confirm = false
 vim.opt.equalalways = false
@@ -42,7 +44,7 @@ vim.opt.cursorlineopt = { "number", "screenline" }
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "
 
-vim.opt.incsearch = true
+-- vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
