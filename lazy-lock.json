@@ -1,5 +1,4 @@
 {
-  "LuaSnip": { "branch": "master", "commit": "c7984d1cca3d8615e4daefc196597872a0b8d590" },
   "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
   "buffer_manager": { "branch": "main", "commit": "4a36fb58a932c4a8ac6061fc7ca3fa084f171dfa" },
   "catppuccin": { "branch": "main", "commit": "8d02781a638123394f9bc160aad47a9560a113f9" },

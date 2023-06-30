@@ -4,6 +4,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.opt.wildmenu = true
 
+vim.opt.swapfile= false
 vim.opt.undofile = true
 
 vim.opt.timeout = false

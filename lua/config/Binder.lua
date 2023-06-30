@@ -60,6 +60,7 @@ function Binder:bind(lhs, rhs, ...)
     remap = self.remap,
     expr = self.expr,
     desc = self.desc,
+    silent = true,
   })
 end
 

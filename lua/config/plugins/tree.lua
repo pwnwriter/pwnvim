@@ -3,6 +3,7 @@ local Binder = require("config.Binder")
 local spec = {
   "nvim-tree/nvim-tree.lua",
   priority = 10000,
+  lazy = true,
   cmd = {"NvimTreeToggle", "NvimTreeFocus"},
   keys = {
     "<leader>e",
