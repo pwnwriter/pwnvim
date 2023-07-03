@@ -35,37 +35,28 @@ git clone https://github.com/metis-os/pwnvim/ --depth=1 ~/.config/nvim && nvim -
 - 📩 Plugin manager [`lazy.nvim`](https://github.com/folke/lazy.nvim)
 - 🤍 Terminal [`nvterm`](https://github.com/nvchad/nvterm)
 - ✨ Lspconfig with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
-- 😻 Statusline [`staline`](https://github.com/tamton-aquib/staline.nvim) & [`bufferline`](https://github.com/akinsho/bufferline.nvim)
 - 🔭 Find/pick/preview code [`telescope`](https://github.com/nvim-telescope/telescope.nvim)
 - & [`many more`](/lua)
 
 ## Showcase
 
+![out](https://github.com/metis-os/pwnvim/assets/90331517/7904278c-b3db-4e46-a6e1-e105ba43fe82)
+
+
 - Fast
     - Lazy loaded plugins.
-
-     ![616974](https://github.com/metis-os/pwnvim/assets/90331517/f013bf54-05f2-4e94-8111-3342cbae384e)
-
-    ![](https://user-images.githubusercontent.com/109761382/239726580-690d24c2-7c18-4fe8-90f0-ba9907e2b273.png)
-
+    
 - File preview
 
     - A fuzzy file finder, picker, sorter, previewer and much more:
 
-    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/telescope.png)
-
 - Autocompletion
     - Autocompletion with previously used words / and lsp's
-
-    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/rust.png)
 
 - Terminal
     - A floating terminal to do stuffs easily:
 
-    ![](https://raw.githubusercontent.com/pwnwriter/pwnvim/showcase/showcase/term.png)
 
-
-  https://github.com/metis-os/pwnvim/assets/109761382/2e62886a-e5dd-40f5-a65e-e19db1e68d24
 
 
 
