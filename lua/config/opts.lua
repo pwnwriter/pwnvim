@@ -1,61 +1,51 @@
 local icons = require("config.icons")
+local opt = vim.opt
 
-vim.opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
-vim.opt.wildmenu = true
+opt.wildmenu = true
 
-vim.opt.swapfile= false
-vim.opt.undofile = true
+opt.swapfile = false
+opt.undofile = true
 
-vim.opt.timeout = false
-vim.opt.updatetime = 400
+opt.timeout = false
+opt.updatetime = 400
 
+opt.termguicolors = true
+opt.confirm = false
+opt.equalalways = false
+opt.splitbelow = true
+opt.splitright = true
+opt.scrolloff = 2
+opt.sidescrolloff = 2
+opt.shortmess:append("aIF")
 
+opt.list = true
+opt.listchars = { tab = icons.layout.tab .. "  " }
+opt.fillchars:append({ eob = " " })
 
-vim.opt.termguicolors = true
-vim.opt.confirm = false
-vim.opt.equalalways = false
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.scrolloff = 2
-vim.opt.sidescrolloff = 2
-vim.opt.shortmess = {
-  a = true,
-  I = true,
-  F = true,
-}
+opt.laststatus = 0
+opt.statusline = " "
+opt.ruler = true
+opt.colorcolumn = "+1"
+opt.number = true
+opt.relativenumber = true
+opt.breakindent = true
+opt.cursorlineopt:append("number", "screenline")
 
-vim.opt.list = true
-vim.opt.listchars = { tab = icons.layout.tab .. "  " }
-vim.opt.fillchars:append({ eob = " " })
+opt.linebreak = true
+opt.showbreak = icons.layout.wrap .. " "
 
+opt.ignorecase = true
+opt.smartcase = true
 
-vim.opt.laststatus = 0
-vim.opt.statusline = " "
-vim.opt.ruler = true
-vim.opt.colorcolumn = "+1"
-vim.opt.number = true
-vim.opt.relativenumber = true
+opt.pumheight = 20
+opt.complete = {}
 
-vim.opt.breakindent = true
-vim.opt.cursorlineopt = { "number", "screenline" }
+opt.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
 
-
-
-vim.opt.linebreak = true
-vim.opt.showbreak = icons.layout.wrap .. " "
-
--- vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.pumheight = 20
-vim.opt.complete = {}
-
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-
-vim.opt.spell = true
-vim.opt.spelllang:append({ "programming" })
-vim.opt.spelloptions:append({ "camel" })
+opt.spell = true
+opt.spelllang:append("programming")
+opt.spelloptions:append("camel")
