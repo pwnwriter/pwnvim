@@ -57,7 +57,7 @@ function Binder:bind(lhs, rhs, ...)
         local fn = rhs
         local params = { ... }
         rhs = function()
-            return fn(unpack(params))
+            return fn(table.unpack(params))
         end
     end
 
