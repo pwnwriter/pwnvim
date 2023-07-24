@@ -8,6 +8,7 @@ local spec = {
 function spec:config()
     local pairs = require("mini.pairs")
     local surround = require("mini.surround")
+    local comment = require("mini.comment")
 
     pairs.setup({
         modes = { insert = true, command = false, terminal = false },
@@ -43,6 +44,15 @@ function spec:config()
         respect_selection_type = false,
         search_method = "cover",
         silent = true,
+    })
+    comment.setup({
+        comment = "gc",
+
+        -- Toggle comment on current line
+        comment_line = "gcc",
+
+        -- Define 'comment' textobject (like `dgc` - delete whole comment block)
+        textobject = "gc",
     })
 end
 

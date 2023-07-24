@@ -9,6 +9,11 @@ binder:bind("<C-j>", "<Down>")
 binder:bind("<C-k>", "<Up>")
 binder:bind("<C-l>", "<Right>")
 
+binder:with_modes({ "i" })
+--- smarter indenting
+binder:bind("<", "<gv")
+binder:bind(">", ">gv")
+
 -- Muscle memory for me
 binder:with_modes({ "i" })
 binder:bind("jj", "<esc>")
@@ -39,3 +44,5 @@ binder:with_modes({ "n" })
 binder:bind("<leader>lp", ":LspInfo<CR>")
 binder:bind("<leader>lr", ":LspRestart<CR>")
 binder:bind("<leader>ls", ":LspStart<CR>")
+
+
