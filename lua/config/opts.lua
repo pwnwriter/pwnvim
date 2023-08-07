@@ -25,7 +25,8 @@ opt.listchars = { tab = icons.layout.tab .. "  " }
 opt.fillchars:append({ eob = " " })
 
 opt.laststatus = 0
-opt.statusline = '%#Normal#⊱ ────── {⋆⌘⋆} ────── ⊰%='
+local statusline_ascii = '⊱ ────── {⋆⌘⋆} ────── ⊰'
+vim.opt.statusline = '%#Normal#' .. statusline_ascii .. '%='
 
 
 opt.ruler = true
