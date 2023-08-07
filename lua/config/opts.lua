@@ -25,7 +25,8 @@ opt.listchars = { tab = icons.layout.tab .. "  " }
 opt.fillchars:append({ eob = " " })
 
 opt.laststatus = 0
-opt.statusline = '%#Normal#'
+opt.statusline = '%#Normal#⊱ ────── {⋆⌘⋆} ────── ⊰%='
+
 
 opt.ruler = true
 opt.colorcolumn = "+1"
