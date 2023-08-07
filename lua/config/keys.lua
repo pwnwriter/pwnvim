@@ -9,11 +9,6 @@ binder:bind("<C-j>", "<Down>")
 binder:bind("<C-k>", "<Up>")
 binder:bind("<C-l>", "<Right>")
 
-binder:with_modes({ "i" })
---- smarter indenting
-binder:bind("<", "<gv")
-binder:bind(">", ">gv")
-
 -- Muscle memory for me
 binder:with_modes({ "i" })
 binder:bind("jj", "<esc>")
