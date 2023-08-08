@@ -1,9 +1,9 @@
-<h3 align="center"><img src="https://github.com/metis-os/pwnvim/blob/images/logos/pwnvim-logo-12622-crop.png" width="300px" height="180px" ></h3>
+<h3 align="center"><img src="https://github.com/pwnwriter/pwnvim/blob/images/logos/pwnvim-logo-12622-crop.png" width="300px" height="180px" ></h3>
 
 <p align="center">
-<a href="https://github.com/metis-os/pwnvim"><img src="https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim"></a>
-<a href="https://github.com/metis-os/pwnvim/issues"><img src="https://img.shields.io/github/issues/metis-os/pwnvim.svg?style=flat-square&label=Issues&color=d77982"></a>
-<a href="https://github.com/pwnwriter/metis-os/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE"></a>
+<a href="https://github.com/pwnwriter/pwnvim"><img src="https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim"></a>
+<a href="https://github.com/pwnwriter/pwnvim/issues"><img src="https://img.shields.io/github/issues/pwnwriter/pwnvim.svg?style=flat-square&label=Issues&color=d77982"></a>
+<a href="https://github.com/pwnwriter/pwnwriter/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE"></a>
 <a href="https://ko-fi.com/pwnwriter"><img src="https://img.shields.io/badge/support-pwnwriter%20-pink?logo=kofi&logoColor=white" alt="Ko-fi"></a>
 <br>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600" />
@@ -32,20 +32,20 @@
 
 - **Nvim-tree**:- Fast file tree written in lua
 
-![](https://github.com/metis-os/pwnvim/blob/images/features/nvtree.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/features/nvtree.png)
 
 - **Lsp**:- Well configured env for lsp servers
 
-![](https://github.com/metis-os/pwnvim/blob/images/features/lsp.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/features/lsp.png)
 
 - **Telescope**:- A fuzzy file finder, picker, sorter, previewer and a lot more
 
-![](https://github.com/metis-os/pwnvim/blob/images/features/telescope.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/features/telescope.png)
 
 - **Nostatusline**:- With noice.nvim's comprehensive notifications, the statusline becomes redundant.
 
-![](https://github.com/metis-os/pwnvim/blob/images/features/statusline.png)
-![](https://github.com/metis-os/pwnvim/blob/images/features/noice.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/features/statusline.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/features/noice.png)
 
 Actually there's a lot you can explore, you may want to discover its array of features by installing and exploring pwnvim yourself.
 
@@ -83,14 +83,14 @@ mv ~/.local/state/nvim{,-backup}
 
 ```bash
 export NVIM_APPNAME=pwnvim # This line must be in your shellrc 
-git clone https://github.com/metis-os/pwnvim.git ~/.config/$NVIM_APPNAME
+git clone https://github.com/pwnwriter/pwnvim.git ~/.config/$NVIM_APPNAME
 nvim --headless +q
 ```
 
 - Install the standard way
 
 ```bash
-git clone https://github.com/metis-os/pwnvim.git --depth=1 ~/.config/nvim && nvim --headless +q
+git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nvim --headless +q
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
@@ -132,9 +132,9 @@ git clone https://github.com/metis-os/pwnvim.git --depth=1 ~/.config/nvim && nvi
 
 <details><summary> <b>Images (Click to expand!)</b></summary>
  
-![](https://github.com/metis-os/pwnvim/blob/images/showcase/113881.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/showcase/113881.png)
 
-![](https://github.com/metis-os/pwnvim/blob/images/showcase/157639.png)
+![](https://github.com/pwnwriter/pwnvim/blob/images/showcase/157639.png)
 
 
 </details>
@@ -142,7 +142,7 @@ git clone https://github.com/metis-os/pwnvim.git --depth=1 ~/.config/nvim && nvi
 
 <a name="contribution"></a>
 ## 💖 Contribution
- There is always scope for improvements and bugs to be fixed as contributors can make a valuable impact by addressing improvements and bugs through [**issue**](https://github.com/metis-os/pwnvim/issues) submissions or [**pull requests**](https://github.com/metis-os/pwnvim/pulls).
+ There is always scope for improvements and bugs to be fixed as contributors can make a valuable impact by addressing improvements and bugs through [**issue**](https://github.com/pwnwriter/pwnvim/issues) submissions or [**pull requests**](https://github.com/pwnwriter/pwnvim/pulls).
 
    
 <a name="license"></a> 
