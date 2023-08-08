@@ -17,6 +17,7 @@
 * [`Requirements`](#requirements)
 * [`Installation`](#installation)
 * [`Tips`](#tips)
+* [`Showcase`](#showcase)
 * [`Contribution`](#contribution)
 * [`License`](#license)
 </div>
@@ -26,6 +27,8 @@
 ## 🦄 Features
 
 **𝒘𝒉𝒂𝒕𝒔𝒐𝒆𝒗𝒆𝒓 𝒂 𝒎𝒂𝒏 𝒔𝒐𝒘𝒆𝒕𝒉, 𝒕𝒉𝒂𝒕 𝒔𝒉𝒂𝒍𝒍 𝒉𝒆 𝒂𝒍𝒔𝒐 𝒓𝒆𝒂𝒑**
+
+<details><summary> <b>Features (Click to expand!)</b></summary>
 
 - **Nvim-tree**:- Fast file tree written in lua
 
@@ -45,6 +48,9 @@
 ![](https://github.com/metis-os/pwnvim/blob/images/features/noice.png)
 
 Actually there's a lot you can explore, you may want to discover its array of features by installing and exploring pwnvim yourself.
+
+</details>
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
@@ -120,6 +126,19 @@ git clone https://github.com/metis-os/pwnvim.git --depth=1 ~/.config/nvim && nvi
     -- $ cargo install stylua
     null.register(null.builtins.formatting.stylua)
     ```
+
+<a name="showcase"></a>
+## ❤️‍🩹 Showcase
+
+<details><summary> <b>Images (Click to expand!)</b></summary>
+ 
+![](https://github.com/metis-os/pwnvim/blob/images/showcase/113881.png)
+
+![](https://github.com/metis-os/pwnvim/blob/images/showcase/157639.png)
+
+
+</details>
+
 
 <a name="contribution"></a>
 ## 💖 Contribution
