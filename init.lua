@@ -1,3 +1,10 @@
+-- ╔═╗┬ ┬┌┐┌╦  ╦╦╔╦╗
+-- ╠═╝││││││╚╗╔╝║║║║
+-- ╩  └┴┘┘└┘ ╚╝ ╩╩ ╩
+-- Neo(vim) the K1ss way
+--    @metis-os/pwnvim
+--            by @PwnWriter
+
 local modules = {
   "config.opts",
   "config.lazy",
@@ -7,4 +14,3 @@ local modules = {
 for _, module in ipairs(modules) do
   require(module)
 end
-

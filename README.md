@@ -1,66 +1,138 @@
-<p align="center">
-    <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Neovim for METISLINUX 🐥</h2>
-</p>
-
-<p align="center">Blazing fast neovim config, embodying the K1SS philosophy 🌿 </p>
+<h3 align="center"><img src="https://github.com/metis-os/pwnvim/blob/images/logos/pwnvim-logo-12622-crop.png" width="300px" height="180px" ></h3>
 
 <p align="center">
-    <a href="https://github.com/pwnwriter/pwnvim">
-        <img src="https://img.shields.io/badge/pwn-⁠♡%20neovim-26233a?labelColor=191724&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIzNyIgdmlld0JveD0iMCAwIDI1MCAyMzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjEuMjI3IDE2MS4yNTFDMTMyLjE1NCAxNjkuMDQxIDExNC45MDEgMTk4LjkyNCAxMjIuNjkxIDIyNy45OTdDMTIzLjkyNSAyMzIuNjAzIDEyOC42NTkgMjM1LjMzNiAxMzMuMjY0IDIzNC4xMDJMMTg1LjkwNyAyMTkuOTk2QzIxOS41ODUgMjEwLjk3MiAyMzkuNTcgMTc2LjM1NCAyMzAuNTQ2IDE0Mi42NzdMMTYxLjIyNyAxNjEuMjUxWiIgZmlsbD0iIzI0NjI3QiIvPgo8cGF0aCBkPSJNODguMTgzNiAxNTkuOTg4QzExNy4yNTcgMTY3Ljc3OCAxMzQuNTEgMTk3LjY2MiAxMjYuNzIgMjI2LjczNUMxMjUuNDg2IDIzMS4zNCAxMjAuNzUyIDIzNC4wNzMgMTE2LjE0NyAyMzIuODM5TDYzLjUwNDEgMjE4LjczM0MyOS44MjY0IDIwOS43MSA5Ljg0MDk0IDE3NS4wOTIgMTguODY0OSAxNDEuNDE0TDg4LjE4MzYgMTU5Ljk4OFoiIGZpbGw9IiMyNDYyN0IiLz4KPHBhdGggZD0iTTE4Ni44NjcgMTcyLjk4QzE1Mi4wMDIgMTcyLjk4IDEyMy43MzcgMjAxLjI0NSAxMjMuNzM3IDIzNi4xMTFIMTg2Ljg3QzIyMS43MzYgMjM2LjExMSAyNTAgMjA3Ljg0NiAyNTAgMTcyLjk4TDE4Ni44NjcgMTcyLjk4WiIgZmlsbD0iIzMxNzQ4RiIvPgo8cGF0aCBkPSJNNjMuMTMyNyAxNzIuOThDOTcuOTk4NCAxNzIuOTggMTI2LjI2MyAyMDEuMjQ1IDEyNi4yNjMgMjM2LjExMUg2My4xM0MyOC4yNjQyIDIzNi4xMTEgLTEuNTI0MDNlLTA2IDIwNy44NDYgMCAxNzIuOThMNjMuMTMyNyAxNzIuOThaIiBmaWxsPSIjMzE3NDhGIi8+CjxwYXRoIGQ9Ik0xNzEuNzE3IDc1LjEyNjNDMTcxLjcxNyAxMDEuMjc2IDE1MC41MTggMTIyLjQ3NSAxMjQuMzY5IDEyMi40NzVDOTguMjE4OCAxMjIuNDc1IDc3LjAyMDIgMTAxLjI3NiA3Ny4wMjAyIDc1LjEyNjNDNzcuMDIwMiA0OC45NzY0IDk4LjIxODggMjcuNzc3OCAxMjQuMzY5IDI3Ljc3NzhDMTUwLjUxOCAyNy43Nzc4IDE3MS43MTcgNDguOTc2NCAxNzEuNzE3IDc1LjEyNjNaIiBmaWxsPSIjRUJCQ0JBIi8+CjxwYXRoIGQ9Ik0xNDQuMjE3IDg2LjIzNzlDMTYxLjY0OSA1Ni4wNDMyIDE1MS4zMDMgMTcuNDMyOSAxMjEuMTA4IDBMMTA2LjA2IDI2LjA2NDRDODguNjI3IDU2LjI1OSA5OC45NzM2IDk0Ljg2OTQgMTI5LjE2OCAxMTIuMzAyTDE0NC4yMTcgODYuMjM3OVoiIGZpbGw9IiNFQkJDQkEiLz4KPHBhdGggZD0iTTEyNS4yOTkgNjAuOTc4OUMxMTYuMjc1IDI3LjMwMTIgODEuNjU3NSA3LjMxNTY3IDQ3Ljk3OTcgMTYuMzM5Nkw2NC4zMTk3IDc3LjMyMTFDNzMuMzQzNiAxMTAuOTk5IDEwNy45NjEgMTMwLjk4NCAxNDEuNjM5IDEyMS45NkwxMjUuMjk5IDYwLjk3ODlaIiBmaWxsPSIjRUJCQ0JBIi8+CjxwYXRoIGQ9Ik0xMjQuOTI2IDYwLjk3ODlDMTMzLjk1IDI3LjMwMTIgMTY4LjU2NyA3LjMxNTY3IDIwMi4yNDUgMTYuMzM5NkwxODUuOTA1IDc3LjMyMTFDMTc2Ljg4MSAxMTAuOTk5IDE0Mi4yNjMgMTMwLjk4NCAxMDguNTg2IDEyMS45NkwxMjQuOTI2IDYwLjk3ODlaIiBmaWxsPSIjRUJCQ0JBIi8+Cjwvc3ZnPgo=&style=for-the-badge" />
-    </a>
+<a href="https://github.com/metis-os/pwnvim"><img src="https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim"></a>
+<a href="https://github.com/metis-os/pwnvim/issues"><img src="https://img.shields.io/github/issues/metis-os/pwnvim.svg?style=flat-square&label=Issues&color=d77982"></a>
+<a href="https://github.com/pwnwriter/metis-os/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE"></a>
+<a href="https://ko-fi.com/pwnwriter"><img src="https://img.shields.io/badge/support-pwnwriter%20-pink?logo=kofi&logoColor=white" alt="Ko-fi"></a>
+<br>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600" />
 </p>
 
-## Installation 🌙
+[`Pwn(nvim)`](/) is a neovim config living by the [`KISS`](https://en.wikipedia.org/wiki/KISS_principle) philosophy. Crafted using pure Lua, it blends high performance, pleasing aesthetics, and maximum productivity. Right from the start, you get it all out of the box, ⊱ ─── ⊰ carefully loaded plugins and a snappy startup time `<25ms` 
 
-- Take backup of your old conf..
+## 📔 Table of contents 
+
+* [`Features`](#features)
+* [`Requirements`](#requirements)
+* [`Installation`](#installation)
+* [`Tips`](#tips)
+* [`Contribution`](#contribution)
+* [`License`](#license)
+</div>
+
+
+<a name="features"></a>
+## 🦄 Features
+
+**𝒘𝒉𝒂𝒕𝒔𝒐𝒆𝒗𝒆𝒓 𝒂 𝒎𝒂𝒏 𝒔𝒐𝒘𝒆𝒕𝒉, 𝒕𝒉𝒂𝒕 𝒔𝒉𝒂𝒍𝒍 𝒉𝒆 𝒂𝒍𝒔𝒐 𝒓𝒆𝒂𝒑**
+
+- **Nvim-tree**:- Fast file tree written in lua
+
+![](https://github.com/metis-os/pwnvim/blob/images/features/nvtree.png)
+
+- **Lsp**:- Well configured env for lsp servers
+
+![](https://github.com/metis-os/pwnvim/blob/images/features/lsp.png)
+
+- **Telescope**:- A fuzzy file finder, picker, sorter, previewer and a lot more
+
+![](https://github.com/metis-os/pwnvim/blob/images/features/telescope.png)
+
+- **Nostatusline**:- With noice.nvim's comprehensive notifications, the statusline becomes redundant.
+
+![](https://github.com/metis-os/pwnvim/blob/images/features/statusline.png)
+![](https://github.com/metis-os/pwnvim/blob/images/features/noice.png)
+
+Actually there's a lot you can explore, you may want to discover its array of features by installing and exploring pwnvim yourself.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+<a name="requirements"></a>
+## ⚡ Requirements
+
+-   🍺 Get yourself a fresh install of [`Neovim`](https://neovim.io).
+
+-   🚀 Use a [`Nerd Fonts`](https://nerdfonts.com/) within your terminal.
+
+-   🔍 Install [`fd-find`](https://github.com/sharkdp/fd) and [`ripgrep`](https://github.com/BurntSushi/ripgrep) through your package manager.
+
+-   🐙 Setup [`git`](https://en.wikipedia.org/wiki/Git) if you haven't already.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+
+<a name="installation"></a>
+## 📩 Installation
+**𝒀𝒐𝒖 𝒓𝒆𝒂𝒑 𝒘𝒉𝒂𝒕 𝒚𝒐𝒖 𝒔𝒐𝒘**
+- Take backup (optional)
+ 
+ ```bash
+mv ~/.config/nvim{,-backup}
+mv ~/.cache/nvim{,-backup}
+mv ~/.local/share/nvim{,-backup}
+mv ~/.local/state/nvim{,-backup}
+ ```
+- Install pwnvim using `NVIM_APPNAME`
+
 ```bash
-# required
-mv ~/.config/nvim ~/.config/nvim-backup
-
-# optional
-mv ~/.cache/nvim ~/.cache/nvim-backup
-mv ~/.local/share/nvim ~/.local/share/nvim-backup
-mv ~/.local/state/nvim ~/.local/state/nvim-backup
+export NVIM_APPNAME=pwnvim # This line must be in your shellrc 
+git clone https://github.com/metis-os/pwnvim.git ~/.config/$NVIM_APPNAME
+nvim --headless +q
 ```
-- pwnvim new configuration
+
+- Install the standard way
+
 ```bash
-git clone https://github.com/metis-os/pwnvim/ --depth=1 ~/.config/nvim && nvim --headless +q
+git clone https://github.com/metis-os/pwnvim.git --depth=1 ~/.config/nvim && nvim --headless +q
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 
-## Features
-- 🎨 Colorscheme [`catppuccin`](https://github.com/catppuccin/nvim)
-- 🌱 File exp [`nvim-tree`](https://github.com/nvim-tree/nvim-tree.lua)
-- 📩 Plugin manager [`lazy.nvim`](https://github.com/folke/lazy.nvim)
-- 🤍 Terminal [`nvterm`](https://github.com/nvchad/nvterm)
-- ✨ Lspconfig with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
-- 🔭 Find/pick/preview code [`telescope`](https://github.com/nvim-telescope/telescope.nvim)
-- & [`many more`](/lua)
+<a name="tips"></a>
+## ☕ Tips
 
-## Showcase
+-   You can Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
+    should look for `dev = true` plugins.
 
-![out](https://github.com/metis-os/pwnvim/assets/90331517/7904278c-b3db-4e46-a6e1-e105ba43fe82)
+-   To install tresitter of `x` language Run `:TSInstall [x]`.
 
+-   See [`:help lspconfig-all`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) to get an understanding of how
+    you would setup a language server protocol.
 
-- Fast
-    - Lazy loaded plugins.
-    
-- File preview
+    ```lua
+    -- settings/servers.lua
+    local lspconfig = require("lspconfig")
 
-    - A fuzzy file finder, picker, sorter, previewer and much more:
+    -- $ rustup component add rust-analyzer
+    lspconfig.rust_analyzer.setup({
+      cmd = { "rustup", "run", "stable", "rust-analyzer" },
+    })
+    ```
 
-- Autocompletion
-    - Autocompletion with previously used words / and lsp's
+-   View [the doc](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md) to figure out how you are expected to
+    configure a source.
 
-- Terminal
-    - A floating terminal to do stuffs easily:
+    ```lua
+    -- settings/sources.lua
+    local null = require("null-ls")
 
+    -- $ cargo install stylua
+    null.register(null.builtins.formatting.stylua)
+    ```
 
+<a name="contribution"></a>
+## 💖 Contribution
+ There is always scope for improvements and bugs to be fixed as contributors can make a valuable impact by addressing improvements and bugs through [**issue**](https://github.com/metis-os/pwnvim/issues) submissions or [**pull requests**](https://github.com/metis-os/pwnvim/pulls).
 
-
-
+   
+<a name="license"></a> 
+## 🔐 License
+ As always, this project is also Licensed under the [**`MIT LICENSE`**](/LICENSE) 
+  
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2023<a href="https://metislinux.org" target="_blank"> METISLINUX</a> // <a href="https://opensource.org/licenses/MIT">MIT </a> License
+<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz ☘️ </a> 
+
+
 
 
