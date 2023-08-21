@@ -27,7 +27,7 @@ function spec:config()
 
 	telescope.setup({
 		defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
-			file_ignore_patterns = { "^%.git/", "^node_modules/" },
+			file_ignore_patterns = { ".git", "^node_modules", "target"},
 			path_display = { "truncate" },
 			prompt_prefix = icons.widget.telescope .. " ",
 			selection_caret = "  ",
