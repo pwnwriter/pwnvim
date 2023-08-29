@@ -82,7 +82,7 @@ mv ~/.local/state/nvim{,-backup}
 - Install pwnvim using `NVIM_APPNAME`
 
 ```bash
-export NVIM_APPNAME=pwnvim # This line must be in your shellrc 
+export NVIM_APPNAME="pwnvim" # This line must be in your shellrc 
 git clone https://github.com/pwnwriter/pwnvim.git ~/.config/$NVIM_APPNAME
 nvim --headless +q
 ```
