@@ -109,7 +109,9 @@ function spec:config()
   })
 
   local binder = Binder.new():with_modes({ "n" })
-  binder:bind("<leader>e", function() vim.cmd("NvimTreeToggle") end)
+  binder:bind("<leader>e", function()
+    vim.cmd("NvimTreeToggle")
+  end)
 end
 
 return spec

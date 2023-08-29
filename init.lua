@@ -2,8 +2,7 @@
 -- ╠═╝││││││╚╗╔╝║║║║
 -- ╩  └┴┘┘└┘ ╚╝ ╩╩ ╩
 -- Neo(vim) the K1ss way
---    @metis-os/pwnvim
---            by @PwnWriter
+--    @pwnwriter/pwnvim
 
 local modules = {
   "config.opts",

@@ -2,20 +2,20 @@
 local lspconfig = require("lspconfig")
 
 lspconfig.rust_analyzer.setup({
-	capabilities = capabilities,
-	filetypes = { "rust" },
-	cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  capabilities = capabilities,
+  filetypes = { "rust" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
 })
 
 -- lspconfig.clangd.setup({
 --     capabilities = capabilities,
 -- })
 --
--- lspconfig.lua_ls.setup({
---     capabilities = capabilities,
---     filetypes = { "lua" },
---     -- single_file_support = true,
--- })
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+  filetypes = { "lua" },
+  -- single_file_support = true,
+})
 --
 -- lspconfig.bashls.setup({
 --     capabilities = capabilities,
