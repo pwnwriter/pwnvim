@@ -10,6 +10,7 @@ local spec = {
 
 function spec:config()
   local noice = require("noice")
+
   noice.setup({
     lsp = {
       override = {

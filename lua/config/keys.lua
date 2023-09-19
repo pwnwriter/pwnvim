@@ -34,6 +34,8 @@ binder:bind("<C-l>", "<C-w>l")
 binder:bind("<leader>x", "<C-w>c")
 binder:bind("<C-s>", ":w <CR>")
 binder:bind("<C-q>", ":bd!<CR>")
+binder:bind("<Tab>", ":bnext<CR>")
+binder:bind("<s-Tab>", ":bprev<CR>")
 
 binder:with_modes({ "n" })
 binder:bind("<leader>lp", ":LspInfo<CR>")

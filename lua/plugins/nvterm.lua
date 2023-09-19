@@ -4,6 +4,7 @@ local spec = {
   name = "nvterm",
   keys = {
     "<A-t>",
+    "<A-T>",
     "<A-h>",
     "<A-H>",
   },
@@ -11,7 +12,22 @@ local spec = {
 
 function spec:config()
   local nvterm = require("nvterm")
-  nvterm.setup({})
+  nvterm.setup({
+    terminals = {
+      shell = vim.o.shell,
+      list = {},
+      type_opts = {
+        float = {
+          relative = "editor",
+          row = 0.3,
+          col = 0.25,
+          width = 0.50,
+          height = 0.50,
+          border = "single",
+        },
+      },
+    },
+  })
 
   local binder = Binder.new():with_modes({ "n", "t" })
   local terminal = require("nvterm.terminal")

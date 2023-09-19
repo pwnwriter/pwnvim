@@ -29,7 +29,7 @@ local statusline_ascii = "⊱ ────── {⋆⌘⋆} ────── 
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 
 opt.ruler = true
-opt.colorcolumn = "+1"
+-- opt.colorcolumn = "+1"
 opt.number = true
 opt.relativenumber = true
 opt.breakindent = true
@@ -48,6 +48,6 @@ opt.expandtab = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 
-opt.spell = true
+opt.spell = false
 opt.spelllang:append("programming")
 opt.spelloptions:append("camel")
