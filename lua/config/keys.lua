@@ -41,3 +41,4 @@ binder:with_modes({ "n" })
 binder:bind("<leader>lp", ":LspInfo<CR>")
 binder:bind("<leader>lr", ":LspRestart<CR>")
 binder:bind("<leader>ls", ":LspStart<CR>")
+

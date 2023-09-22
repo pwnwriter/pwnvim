@@ -9,6 +9,7 @@ function spec:config()
   local pairs = require("mini.pairs")
   local surround = require("mini.surround")
   local comment = require("mini.comment")
+  local files = require("mini.files")
 
   pairs.setup({
     modes = { insert = true, command = false, terminal = false },
