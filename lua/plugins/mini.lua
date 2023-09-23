@@ -75,6 +75,8 @@ function spec:config()
     -- Define 'comment' textobject (like `dgc` - delete whole comment block)
     textobject = "gc",
   })
+  files.setup({})
 end
+
 
 return spec
