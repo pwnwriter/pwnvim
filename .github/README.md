@@ -30,9 +30,10 @@
 
 <details><summary> <b>Features (Click to expand!)</b></summary>
 
-- **Nvim-tree**:- Fast file tree written in lua
+- **oil.nvim**:- Fast file tree, edit like a buffer
+  
+  ![oil](https://github.com/pwnwriter/pwnvim/assets/90331517/c9380ba5-c8a5-47ab-93e1-5a75decd685c)
 
-![](https://github.com/pwnwriter/pwnvim/blob/images/features/nvtree.png)
 
 - **Lsp**:- Well configured env for lsp servers
 
@@ -42,7 +43,7 @@
 
 ![](https://github.com/pwnwriter/pwnvim/blob/images/features/telescope.png)
 
-- **Nostatusline**:- With noice.nvim's comprehensive notifications, the statusline becomes redundant.
+- **Nostatusline**:- Not using statusline, coz everything can be seen with noice :P 
 
 ![](https://github.com/pwnwriter/pwnvim/blob/images/features/statusline.png)
 ![](https://github.com/pwnwriter/pwnvim/blob/images/features/noice.png)
