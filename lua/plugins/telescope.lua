@@ -17,6 +17,7 @@ local spec = {
     "<leader>ft",
     "<leader>ff",
     "<leader>fw",
+    "<leader>b",
   },
 }
 
@@ -53,6 +54,7 @@ function spec:config()
   binder:bind("<leader>ft", builtin.filetypes)
   binder:bind("<leader>ff", builtin.find_files)
   binder:bind("<leader>fw", builtin.live_grep)
+  binder:bind("<leader>b", builtin.buffers)
   binder:bind("<leader>ch", builtin.command_history)
   binder:bind("<leader>cf", builtin.current_buffer_fuzzy_find)
 end
