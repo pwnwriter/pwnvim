@@ -108,7 +108,7 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
     you would setup a language server protocol.
 
     ```lua
-    -- settings/servers.lua
+    -- config/servers.lua
     local lspconfig = require("lspconfig")
 
     -- $ rustup component add rust-analyzer
@@ -117,16 +117,6 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
     })
     ```
 
--   View [the doc](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md) to figure out how you are expected to
-    configure a source.
-
-    ```lua
-    -- settings/sources.lua
-    local null = require("null-ls")
-
-    -- $ cargo install stylua
-    null.register(null.builtins.formatting.stylua)
-    ```
 
 <a name="showcase"></a>
 ## ❤️‍🩹 Showcase
