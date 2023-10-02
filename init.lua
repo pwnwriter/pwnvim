@@ -4,13 +4,8 @@
 -- Neo(vim) the K1ss way
 --    @pwnwriter/pwnvim
 
-local modules = {
-  "config.opts",
-  "config.lazy",
-  "config.keys",
-  "config.diagnostic",
-}
+local modules = {"opts", "lazy", "keys", "diagnostic"}
 
 for _, module in ipairs(modules) do
-  require(module)
+  require("config." .. module)
 end
