@@ -2,15 +2,15 @@ local Binder = require("config.Binder")
 local icon = require("config.icons")
 
 vim.diagnostic.config({
-    severity_sort = true,
-    virtual_text = false,
-    float = {
-        source = true,
-        scope = "cursor",
-        header = "",
-        prefix = " " .. icon.layout.list .. " ",
-        suffix = " ",
-    },
+  severity_sort = true,
+  virtual_text = false,
+  float = {
+    source = true,
+    scope = "cursor",
+    header = "",
+    prefix = " " .. icon.layout.list .. " ",
+    suffix = " ",
+  },
 })
 
 vim.fn.sign_define("DiagnosticSignError")
