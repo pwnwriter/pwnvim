@@ -30,9 +30,9 @@
 
 <details><summary> <b>Features (Click to expand!)</b></summary>
 
-- **oil.nvim**:- Fast file tree, edit like a buffer
-  
-  ![oil](https://github.com/pwnwriter/pwnvim/assets/90331517/c9380ba5-c8a5-47ab-93e1-5a75decd685c)
+- **mini.files**:- Fast file tree, edit like a buffer and more
+
+![mini-files](https://github.com/pwnwriter/pwnvim/assets/90331517/e411196d-1617-4303-9a43-29efa15c2066)
 
 
 - **Lsp**:- Well configured env for lsp servers
