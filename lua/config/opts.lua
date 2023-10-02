@@ -29,7 +29,6 @@ local statusline_ascii = "⊱ ────── {⋆⌘⋆} ────── 
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 
 opt.ruler = true
--- opt.colorcolumn = "+1"
 opt.number = true
 opt.relativenumber = true
 opt.breakindent = true
@@ -47,10 +46,6 @@ opt.complete = {}
 opt.expandtab = true
 opt.tabstop = 4
 opt.shiftwidth = 4
-
-opt.spell = false
-opt.spelllang:append("programming")
-opt.spelloptions:append("camel")
 
 -- add binaries installed by mason.nvim to path
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"

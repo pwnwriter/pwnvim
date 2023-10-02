@@ -52,7 +52,7 @@ function spec:config()
       vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
   end)
 
-  local servers_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
+  local servers_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/lua/config/servers.lua")
   if vim.loop.fs_access(servers_path, "R") then
     dofile(servers_path)
   end
