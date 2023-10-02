@@ -64,4 +64,3 @@ binder:with_desc("Restart the LSP server")
 binder:bind("<leader>lr", ":LspRestart<CR>")
 binder:with_desc("Start the LSP server")
 binder:bind("<leader>ls", ":LspStart<CR>")
-

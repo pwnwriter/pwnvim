@@ -4,7 +4,7 @@ local spec = {
   "stevearc/oil.nvim",
   name = "oil",
   keys = {
-    "<leader>e",
+    "<leader>o",
   },
 
   dependencies = {
@@ -75,10 +75,7 @@ function spec:config()
   })
 
   local binder = Binder.new():with_modes({ "n" })
-  binder:bind("<leader>E", function()
-    vim.cmd("Oil")
-  end)
-  binder:bind("<leader>e", function()
+  binder:bind("<leader>o", function()
     vim.cmd("Oil --float")
   end)
 end
