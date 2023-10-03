@@ -79,7 +79,10 @@ function spec:config()
   local binder = Binder.new():with_modes({ "n" })
   files.setup({
     binder:bind("<leader>e", function()
-      files.open()
+      local success = files.close()
+      if not success then
+        files.open()
+      end
     end),
   })
 end
