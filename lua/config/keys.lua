@@ -47,9 +47,9 @@ binder:bind("p", "_dP")
 
 binder:with_modes({ "v" })
 binder:with_desc("Move the selected text down")
-binder:bind("J", "<cmd>m '>+1<CR>gv=gv")
+binder:bind("J", ":m '>+1<CR>gv=gv")
 binder:with_desc("Move the selected text up")
-binder:bind("K", "<cmd>m '<-2<CR>gv=gv")
+binder:bind("K", ":m '<-2<CR>gv=gv")
 
 -- Window splitting
 binder:with_modes({ "n" })
