@@ -16,6 +16,7 @@ function spec:config()
   local comment = require("mini.comment")
   local files = require("mini.files")
 
+  -- Configure pairs
   pairs.setup({
     modes = { insert = true, command = false, terminal = false },
     mappings = {
@@ -52,10 +53,12 @@ function spec:config()
     },
   })
 
+  -- Configure surround
   surround.setup({
     custom_surroundings = nil,
     highlight_duration = 500,
     mappings = {
+      -- Define your surround mappings here
       add = "sa",
       delete = "sd",
       find = "sf",
@@ -71,12 +74,16 @@ function spec:config()
     search_method = "cover",
     silent = true,
   })
+
+  -- Configure comment
   comment.setup({
     comment = "gc",
     comment_line = "gcc",
     textobject = "gc",
   })
+
   local binder = Binder.new():with_modes({ "n" })
+
   files.setup({
     binder:bind("<leader>e", function()
       local success = files.close()
