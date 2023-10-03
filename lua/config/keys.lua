@@ -25,19 +25,22 @@ binder:with_desc("Move the current line up and keep cursor position")
 binder:bind("K", "kzz")
 binder:with_desc("Clear search highlight")
 binder:bind("<leader>h", "<cmd>nohlsearch<CR>")
-binder:with_desc("Toggle line number")
-binder:bind("<leader>n", "<cmd> set nu! <CR>")
-binder:with_desc("Toggle relative number")
-binder:bind("<leader>rn", "<cmd> set rnu! <CR>")
 
-binder:with_modes({ "v" })
-binder:with_desc("Move down")
-binder:bind("j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", { expr = true })
 
-binder:with_modes({ "v" })
-binder:with_desc("Move up")
-binder:bind("k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", { expr = true })
-
+----xx toggle between 'nu', 'rnu', and no numbers xx-------------
+local current_option = "rnu"
+local function toggle_numbering()
+    if current_option == "nu" then
+        current_option = "rnu"
+    elseif current_option == "rnu" then
+        current_option = "nonu"
+    else
+        current_option = "nu"
+    end
+    vim.cmd('set ' .. current_option .. '!')
+end
+binder:with_desc("Toggle line/relative number/no number")
+binder:bind("<leader>n", toggle_numbering)
 
 
 -- Preserve original clipboard when pasting selected words.
@@ -61,6 +64,8 @@ binder:with_desc("Move to the top window")
 binder:bind("<C-k>", "<C-w>k")
 binder:with_desc("Move to the right window")
 binder:bind("<C-l>", "<C-w>l")
+
+
 binder:with_desc("Close the current window")
 binder:bind("<leader>x", "<C-w>c")
 binder:with_desc("Save the current file")
@@ -71,11 +76,3 @@ binder:with_desc("Switch to the next buffer")
 binder:bind("<Tab>", "<cmd>bnext<CR>")
 binder:with_desc("Switch to the previous buffer")
 binder:bind("<s-Tab>", "<cmd>bprev<CR>")
-
-binder:with_modes({ "n" })
-binder:with_desc("Show LSP information")
-binder:bind("<leader>lp", "<cmd>LspInfo<CR>")
-binder:with_desc("Restart the LSP server")
-binder:bind("<leader>lr", "<cmd>LspRestart<CR>")
-binder:with_desc("Start the LSP server")
-binder:bind("<leader>ls", "<cmd>LspStart<CR>")
