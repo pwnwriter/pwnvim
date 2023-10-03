@@ -1,6 +1,4 @@
-local binder = require("config.binder")
-
-local binder = binder.new()
+local binder = require("config.binder").new()
 
 -- Navigation keys in insert mode
 binder:with_modes({ "i" })
@@ -12,7 +10,6 @@ binder:with_desc("Navigate up in insert mode")
 binder:bind("<C-k>", "<Up>")
 binder:with_desc("Navigate right in insert mode")
 binder:bind("<C-l>", "<Right>")
-
 
 -- Muscle memory for me
 binder:with_modes({ "i" })
@@ -26,18 +23,16 @@ binder:bind("K", "kzz")
 binder:with_desc("Clear search highlight")
 binder:bind("<leader>h", "<cmd>nohlsearch<CR>")
 
-
 ----xx toggle between 'nu', 'rnu', and no numbers xx-------------
 local options = { nu = "rnu", rnu = "nonu", nonu = "nu" }
 local current_option = "nu"
 
 local function toggle_numbering()
-    current_option = options[current_option]
-    vim.cmd('set ' .. current_option .. '!')
+  current_option = options[current_option]
+  vim.cmd("set " .. current_option .. "!")
 end
 binder:with_desc("Toggle line/relative number/no number")
 binder:bind("<leader>n", toggle_numbering)
-
 
 -- Preserve original clipboard when pasting selected words.
 binder:with_modes({ "x" })
@@ -60,7 +55,6 @@ binder:with_desc("Move to the top window")
 binder:bind("<C-k>", "<C-w>k")
 binder:with_desc("Move to the right window")
 binder:bind("<C-l>", "<C-w>l")
-
 
 binder:with_desc("Close the current window")
 binder:bind("<leader>x", "<C-w>c")
