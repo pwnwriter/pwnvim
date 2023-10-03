@@ -1,6 +1,6 @@
-local Binder = require("config.Binder")
+local binder = require("config.binder")
 
-local binder = Binder.new()
+local binder = binder.new()
 
 -- Navigation keys in insert mode
 binder:with_modes({ "i" })
@@ -12,6 +12,7 @@ binder:with_desc("Navigate up in insert mode")
 binder:bind("<C-k>", "<Up>")
 binder:with_desc("Navigate right in insert mode")
 binder:bind("<C-l>", "<Right>")
+
 
 -- Muscle memory for me
 binder:with_modes({ "i" })

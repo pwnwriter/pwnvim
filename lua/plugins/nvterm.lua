@@ -1,4 +1,4 @@
-local Binder = require("config.Binder")
+local binder = require("config.binder")
 local spec = {
   "NvChad/nvterm",
   name = "nvterm",
@@ -29,7 +29,7 @@ function spec:config()
     },
   })
 
-  local binder = Binder.new():with_modes({ "n", "t" })
+  local binder = binder.new():with_modes({ "n", "t" })
   local terminal = require("nvterm.terminal")
   binder:bind("<A-t>", function()
     terminal.toggle("float")

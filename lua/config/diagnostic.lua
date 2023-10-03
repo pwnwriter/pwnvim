@@ -1,4 +1,4 @@
-local Binder = require("config.Binder")
+local binder = require("config.binder")
 local icon = require("config.icons")
 
 vim.diagnostic.config({
@@ -18,7 +18,7 @@ vim.fn.sign_define("DiagnosticSignWarn")
 vim.fn.sign_define("DiagnosticSignInfo")
 vim.fn.sign_define("DiagnosticSignHint")
 
-local binder = Binder.new():with_modes("n")
+local binder = binder.new():with_modes("n")
 binder:bind("[g", vim.diagnostic.goto_prev, { float = false })
 binder:bind("]g", vim.diagnostic.goto_next, { float = false })
 binder:bind("<leader>g", vim.diagnostic.open_float)

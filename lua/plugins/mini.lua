@@ -1,4 +1,4 @@
-local Binder = require("config.Binder")
+local binder = require("config.binder")
 
 local spec = {
   "echasnovski/mini.nvim",
@@ -82,7 +82,7 @@ function spec:config()
     textobject = "gc",
   })
 
-  local binder = Binder.new():with_modes({ "n" })
+  local binder = binder.new():with_modes({ "n" })
 
   files.setup({
     binder:bind("<leader>e", function()

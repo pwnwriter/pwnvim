@@ -1,5 +1,5 @@
 local plugin = "harpoon"
-local Binder = require("config.Binder")
+local binder = require("config.binder")
 
 return {
   "ThePrimeagen/" .. plugin,
@@ -34,7 +34,7 @@ return {
     local mark = require(plugin .. ".mark")
     local ui = require(plugin .. ".ui")
 
-    local binder = Binder.new():with_modes({ "n", "i" })
+    local binder = binder.new():with_modes({ "n", "i" })
 
     -- Harpoon marked files 1 through 4.
     binder:bind("<a-1>", function()
