@@ -1,4 +1,4 @@
-local binder = require("config.binder")
+local binder = require("config.binder").new()
 local icons = require("config.icons")
 
 local spec = {
@@ -9,34 +9,6 @@ local spec = {
     "BufNewFile",
   },
 }
-
-function spec:init()
-  vim.diagnostic.config({
-    severity_sort = true,
-    virtual_text = {
-      spacing = 2,
-      prefix = " " .. icons.layout.list,
-      suffix = " ",
-    },
-    float = {
-      source = true,
-      border = "rounded",
-      header = "",
-      prefix = " " .. icons.layout.list .. " ",
-      suffix = " ",
-    },
-  })
-
-  vim.fn.sign_define("DiagnosticSignError", { linehl = "DiagnosticLineError" })
-  vim.fn.sign_define("DiagnosticSignWarn", { linehl = "DiagnosticLineWarn" })
-  vim.fn.sign_define("DiagnosticSignInfo", { linehl = "DiagnosticLineInfo" })
-  vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
-
-  local binder = binder.new():with_modes({ "n" })
-  binder:bind("[d", vim.diagnostic.goto_prev, { float = false })
-  binder:bind("]d", vim.diagnostic.goto_next, { float = false })
-  binder:bind("<leader>d", vim.diagnostic.open_float)
-end
 
 function spec:config()
   local lspconfig = require("lspconfig")
@@ -60,7 +32,7 @@ function spec:config()
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
     callback = function(args)
-      local binder = binder.new():with_modes({ "n" }):with_buffer(args.buf)
+      binder:with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
       binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
       binder:bind("<leader>it", vim.lsp.buf.type_definition, {
@@ -78,7 +50,7 @@ function spec:config()
   vim.api.nvim_create_autocmd({ "LspDetach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.detacher", {}),
     callback = function(args)
-      local binder = binder.new():with_modes({ "n" }):with_buffer(args.buf)
+      binder:with_modes({ "n" }):with_buffer(args.buf)
       binder:unbind("<leader>ih")
       binder:unbind("<leader>id")
       binder:unbind("<leader>it")

@@ -8,7 +8,7 @@ vim.diagnostic.config({
     source = true,
     scope = "cursor",
     header = "",
-    prefix = " " .. icon.layout.list .. " ",
+    prefix = " " .. icon.kind.Event .. " ",
     suffix = " ",
   },
 })
@@ -18,7 +18,7 @@ vim.fn.sign_define("DiagnosticSignWarn")
 vim.fn.sign_define("DiagnosticSignInfo")
 vim.fn.sign_define("DiagnosticSignHint")
 
-local binder = binder.new():with_modes("n")
+binder:with_modes("n")
 binder:bind("[g", vim.diagnostic.goto_prev, { float = false })
 binder:bind("]g", vim.diagnostic.goto_next, { float = false })
 binder:bind("<leader>g", vim.diagnostic.open_float)
