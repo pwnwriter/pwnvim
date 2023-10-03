@@ -28,15 +28,11 @@ binder:bind("<leader>h", "<cmd>nohlsearch<CR>")
 
 
 ----xx toggle between 'nu', 'rnu', and no numbers xx-------------
-local current_option = "rnu"
+local options = { nu = "rnu", rnu = "nonu", nonu = "nu" }
+local current_option = "nu"
+
 local function toggle_numbering()
-    if current_option == "nu" then
-        current_option = "rnu"
-    elseif current_option == "rnu" then
-        current_option = "nonu"
-    else
-        current_option = "nu"
-    end
+    current_option = options[current_option]
     vim.cmd('set ' .. current_option .. '!')
 end
 binder:with_desc("Toggle line/relative number/no number")
