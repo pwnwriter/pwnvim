@@ -83,7 +83,7 @@ function spec:config()
   binder:with_modes({ "n" })
   binder:with_desc("Remove current buffers")
   require("mini.bufremove").setup({
-    silent = false,
+    silent = true,
     binder:bind("<c-q>", function()
       require("mini.bufremove").delete()
     end),
