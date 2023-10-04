@@ -1,3 +1,4 @@
+-- Clipboard and key mappings
 local icons = require("config.icons")
 local opt = vim.opt
 
@@ -5,12 +6,13 @@ opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 opt.wildmenu = true
 
+-- File-related options
 opt.swapfile = false
 opt.undofile = true
 
+-- Performance and appearance options
 opt.timeout = false
 opt.updatetime = 400
-
 opt.termguicolors = true
 opt.confirm = false
 opt.equalalways = false
@@ -20,33 +22,39 @@ opt.scrolloff = 2
 opt.sidescrolloff = 2
 opt.shortmess:append("aIF")
 
+-- line number highlighting
+vim.opt.cursorline = true
+vim.cmd([[autocmd VimEnter * highlight CursorLine guibg=None]])
+vim.cmd([[autocmd VimEnter * highlight CursorLineNr cterm=None gui=None guibg=None guifg=#d9c7d1]])
+
+-- Display options
 opt.list = true
 opt.listchars = { tab = icons.layout.tab .. "  " }
 opt.fillchars:append({ eob = " " })
-
 opt.laststatus = 0
 local statusline_ascii = "⊱ ────── {⋆⌘⋆} ────── ⊰"
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
-
 opt.ruler = true
 opt.number = true
 opt.relativenumber = true
 opt.breakindent = true
-opt.cursorlineopt:append("number", "screenline")
+-- opt.cursorlineopt:append("number", "screenline")
 
+-- Text and search options
 opt.linebreak = true
 opt.showbreak = icons.layout.wrap .. " "
-
 opt.ignorecase = true
 opt.smartcase = true
 
+-- Completion options
 opt.pumheight = 20
 opt.complete = {}
 
+-- Indentation and formatting options
 opt.expandtab = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 
--- add binaries installed by mason.nvim to path
+-- Add binaries installed by mason.nvim to the PATH
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath("data") .. "/mason/bin"

@@ -9,9 +9,6 @@ local spec = {
     "<A-H>",
     "<A-R>",
   },
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
 }
 
 function spec:config()
