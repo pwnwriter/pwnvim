@@ -9,6 +9,9 @@ local spec = {
     "<A-H>",
     "<A-R>",
   },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
 }
 
 function spec:config()
@@ -19,12 +22,8 @@ function spec:config()
       list = {},
       type_opts = {
         float = {
-          relative = "editor",
           row = 0.3,
           col = 0.25,
-          width = 0.50,
-          height = 0.50,
-          border = "single",
         },
       },
     },
