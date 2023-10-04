@@ -23,22 +23,23 @@ opt.sidescrolloff = 2
 opt.shortmess:append("aIF")
 
 -- line number highlighting
-vim.opt.cursorline = true
-vim.cmd([[autocmd VimEnter * highlight CursorLine guibg=None]])
-vim.cmd([[autocmd VimEnter * highlight CursorLineNr cterm=None gui=None guibg=None guifg=#d9c7d1]])
+opt.cursorline = true
+opt.cursorlineopt = "number"
 
 -- Display options
 opt.list = true
 opt.listchars = { tab = icons.layout.tab .. "  " }
 opt.fillchars:append({ eob = " " })
+
+-- statusline
 opt.laststatus = 0
 local statusline_ascii = "⊱ ────── {⋆⌘⋆} ────── ⊰"
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+
 opt.ruler = true
 opt.number = true
 opt.relativenumber = true
 opt.breakindent = true
--- opt.cursorlineopt:append("number", "screenline")
 
 -- Text and search options
 opt.linebreak = true
