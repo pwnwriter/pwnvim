@@ -5,21 +5,11 @@ local spec = {
   name = "mini",
   version = "*",
   event = { "VeryLazy" },
-  keys = {
-    "<leader>e",
-  },
+  keys = { "<leader>e" },
 }
 
 function spec:config()
-  local pairs = require("mini.pairs")
-  local surround = require("mini.surround")
-  local comment = require("mini.comment")
-  local files = require("mini.files")
-  local hipatterns = require("mini.hipatterns")
-  local bufremove = require("mini.bufremove")
-
-  -- Configure pairs
-  pairs.setup({
+  require("mini.pairs").setup({
     modes = { insert = true, command = false, terminal = false },
     mappings = {
       ["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]." },
@@ -28,39 +18,16 @@ function spec:config()
       [")"] = { action = "close", pair = "()", neigh_pattern = "[^\\]." },
       ["]"] = { action = "close", pair = "[]", neigh_pattern = "[^\\]." },
       ["}"] = { action = "close", pair = "{}", neigh_pattern = "[^\\]." },
-      ["\""] = {
-        action = "closeopen",
-        pair = "\"\"",
-        neigh_pattern = "[^\\].",
-        register = { cr = false },
-      },
-      ["'"] = {
-        action = "closeopen",
-        pair = "''",
-        neigh_pattern = "[^%a\\].",
-        register = { cr = false },
-      },
-      ["`"] = {
-        action = "closeopen",
-        pair = "``",
-        neigh_pattern = "[^\\].",
-        register = { cr = false },
-      },
-      ["<"] = {
-        action = "closeopen",
-        pair = "<>",
-        neigh_pattern = "[^\\].",
-        register = { cr = false },
-      },
+      ["\""] = { action = "closeopen", pair = "\"\"", neigh_pattern = "[^\\].", register = { cr = false } },
+      ["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^%a\\].", register = { cr = false } },
+      ["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\].", register = { cr = false } },
+      ["<"] = { action = "closeopen", pair = "<>", neigh_pattern = "[^\\].", register = { cr = false } },
     },
   })
 
-  -- Configure surround
-  surround.setup({
-    custom_surroundings = nil,
+  require("mini.surround").setup({
     highlight_duration = 500,
     mappings = {
-      -- Define your surround mappings here
       add = "sa",
       delete = "sd",
       find = "sf",
@@ -77,47 +44,48 @@ function spec:config()
     silent = true,
   })
 
-  -- Configure comment
-  comment.setup({
-    comment = "gc",
-    comment_line = "gcc",
-    textobject = "gc",
-  })
+  require("mini.comment").setup({ comment = "gc", comment_line = "gcc", textobject = "gc" })
 
-  -- Configure files
   binder:with_modes({ "n" })
   binder:with_desc("Toggle mini files")
-  files.setup({
+  require("mini.files").setup({
+    mappings = {
+      close = "<leader>e",
+      go_in = "l",
+      go_in_plus = "L",
+      go_out = "h",
+      go_out_plus = "H",
+      reset = "<BS>",
+      reveal_cwd = "@",
+      show_help = "g?",
+      synchronize = "=",
+      trim_left = "<",
+      trim_right = ">",
+    },
     binder:bind("<leader>e", function()
-      local success = files.close()
+      local success = require("mini.files").close()
       if not success then
-        files.open()
+        require("mini.files").open()
       end
     end),
   })
 
-  -- Configure patterns
-  hipatterns.setup({
+  require("mini.hipatterns").setup({
     highlighters = {
-      -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-      -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
       fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
       hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
       todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
       note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-
-      -- Highlight hex color strings (`#rrggbb`) using that color
-      hex_color = hipatterns.gen_highlighter.hex_color(),
+      hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
     },
   })
 
-  -- Configure buffer-remover
   binder:with_modes({ "n" })
   binder:with_desc("Remove current buffers")
-  bufremove.setup({
+  require("mini.bufremove").setup({
     silent = false,
     binder:bind("<c-q>", function()
-      bufremove.delete()
+      require("mini.bufremove").delete()
     end),
   })
 end

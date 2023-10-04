@@ -28,7 +28,9 @@ lazy.setup("plugins", {
     path = vim.env.NVIM_DEV,
   },
   performance = {
-
+    cache = {
+      enabled = true,
+    },
     rtp = {
       disabled_plugins = {
         "gzip",

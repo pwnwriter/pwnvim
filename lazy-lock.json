@@ -6,7 +6,7 @@
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
-  "lazy.nvim": { "branch": "main", "commit": "59335c5b9d116f5d3948f833288a89e2a829a005" },
+  "lazy.nvim": { "branch": "main", "commit": "28a80136b5253a8de6dea87f335919ac9f67116d" },
   "lspconfig": { "branch": "master", "commit": "361a2878a41f23452457eec12a807ff59bc75882" },
   "mason": { "branch": "main", "commit": "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a" },
   "mini": { "branch": "main", "commit": "707dca4f4152c2d9c9b4c5e02635f78dfd33db50" },
