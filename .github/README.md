@@ -127,6 +127,9 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
 
 ![](https://github.com/pwnwriter/pwnvim/blob/images/showcase/157639.png)
 
+![lazy-loaded](https://github.com/pwnwriter/pwnvim/assets/90331517/bd122c6d-8836-4e2e-8c97-c0a8cf96f79e)
+
+
 
 </details>
 
