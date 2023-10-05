@@ -51,6 +51,7 @@ function spec:config()
       rust = "cargo run -q",
       sh = "bash " .. vim.fn.expand("%"),
       python = "python3 " .. vim.fn.expand("%"),
+      lua = "lua " .. vim.fn.expand("%"),
     }
     local cmd = ft_cmds[vim.bo.filetype]
     run_command(cmd)

@@ -15,7 +15,7 @@ lspconfig.lua_ls.setup({
       diagnostics = {
         globals = { "vim" },
       },
-      format = { enable = false },
+      -- format = { enable = false },
     },
   },
 })
