@@ -48,7 +48,7 @@ function spec:config()
 
   binder:bind("<A-R>", function()
     local ft_cmds = {
-      rust = "cargo run -q",
+      rust = "cargo run",
       sh = "bash " .. vim.fn.expand("%"),
       python = "python3 " .. vim.fn.expand("%"),
       lua = "lua " .. vim.fn.expand("%"),

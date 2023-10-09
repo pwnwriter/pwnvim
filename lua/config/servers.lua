@@ -5,6 +5,20 @@ lspconfig.rust_analyzer.setup({
   cmd = { "rustup", "run", "stable", "rust-analyzer" },
 })
 
+lspconfig.clangd.setup({
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  -- root_dir:root_pattern(
+  --     '.clangd',
+  --     '.clang-tidy',
+  --     '.clang-format',
+  --     'compile_commands.json',
+  --     'compile_flags.txt',
+  --     'configure.ac',
+  --     '.git'
+  -- ),
+  single_file_support = true,
+})
+
 lspconfig.lua_ls.setup({
   filetypes = { "lua" },
   settings = {
@@ -18,4 +32,8 @@ lspconfig.lua_ls.setup({
       -- format = { enable = false },
     },
   },
+})
+
+lspconfig.bashls.setup({
+  single_file_support = true,
 })
