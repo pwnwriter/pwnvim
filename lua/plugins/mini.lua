@@ -4,7 +4,7 @@ local spec = {
   "echasnovski/mini.nvim",
   name = "mini",
   version = "*",
-  event = { "VeryLazy" },
+  event = { "UiEnter" },
   keys = { "<leader>e" },
 }
 
@@ -49,6 +49,14 @@ function spec:config()
   binder:with_modes({ "n" })
   binder:with_desc("Toggle mini files")
   require("mini.files").setup({
+    windows = {
+    preview = false,
+    width_focus = 25,
+    width_preview = 40,
+    height_focus = 20,
+    border = "solid",
+  },
+  use_as_default_explorer = true,
     mappings = {
       close = "<leader>e",
       go_in = "l",

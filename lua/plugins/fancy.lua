@@ -1,6 +1,6 @@
 local spec = {
   "folke/noice.nvim",
-  event = "VeryLazy",
+  event = "UiEnter",
   name = "noice",
   dependencies = {
     "MunifTanjim/nui.nvim",
@@ -10,6 +10,7 @@ local spec = {
 
 function spec:config()
   local noice = require("noice")
+  local notify = require("notify")
 
   noice.setup({
     lsp = {
@@ -27,6 +28,12 @@ function spec:config()
       lsp_doc_border = true,
     },
   })
-end
 
+notify.setup({
+  fps = 60,
+  render = "compact",
+  timeout = 5,
+  fade_in_slide_out = "fade",
+})
+end
 return spec
