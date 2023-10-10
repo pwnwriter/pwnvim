@@ -48,7 +48,7 @@ lazy.setup("plugins", {
     },
   },
   ui = {
-    border = "rounded",
+    border = "solid",
     icons = {
       lazy = icons.widget.lazy .. "  ",
       not_loaded = icons.widget.inactive,

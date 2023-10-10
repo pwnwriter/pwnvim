@@ -29,11 +29,11 @@ function spec:config()
     },
   })
 
-notify.setup({
-  fps = 60,
-  render = "compact",
-  timeout = 5,
-  fade_in_slide_out = "fade",
-})
+  notify.setup({
+    fps = 60,
+    render = "compact",
+    timeout = 5,
+    fade_in_slide_out = "fade",
+  })
 end
 return spec
