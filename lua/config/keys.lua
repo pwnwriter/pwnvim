@@ -21,7 +21,7 @@ binder:bind("J", "jzz")
 binder:with_desc "Move the current line up and keep cursor position"
 binder:bind("K", "kzz")
 binder:with_desc "Clear search highlight"
-binder:bind("<ESC>", "<cmd>nohlsearch<CR>")
+binder:bind("<leader>ch", "<cmd>nohlsearch<CR>")
 
 ----xx toggle between 'nu', 'rnu', and no numbers xx-------------
 local commands = { "nu!", "rnu!", "nonu!" }

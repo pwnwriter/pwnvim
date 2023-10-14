@@ -2,7 +2,7 @@ local binder = require("config.binder").new()
 local plugin = "harpoon"
 
 return {
-  "ThePrimeagen/" .. plugin,
+  "ThePrimeagen/harpoon",
 
   keys = {
     "<a-1>",
