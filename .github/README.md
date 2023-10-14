@@ -39,14 +39,16 @@
 
 ![](https://github.com/pwnwriter/pwnvim/blob/images/features/lsp.png)
 
-- **Telescope**:- A fuzzy file finder, picker, sorter, previewer and a lot more
+- **mini.pick**:- A fuzzy file finder, picker, sorter, previewer and a lot more
 
-![](https://github.com/pwnwriter/pwnvim/blob/images/features/telescope.png)
+![mini-pick](https://github.com/pwnwriter/pwnvim/assets/90331517/337c06d6-3a9c-45be-9f0c-8ca1a9b36037)
+
 
 - **Nostatusline**:- Not using statusline, coz everything can be seen with noice :P 
 
 ![](https://github.com/pwnwriter/pwnvim/blob/images/features/statusline.png)
-![](https://github.com/pwnwriter/pwnvim/blob/images/features/noice.png)
+![noice](https://github.com/pwnwriter/pwnvim/assets/90331517/97be8cf7-e623-4fbb-a667-1be23e8e85e6)
+
 
 Actually there's a lot you can explore, you may want to discover its array of features by installing and exploring pwnvim yourself.
 
