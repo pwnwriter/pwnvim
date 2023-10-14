@@ -1,4 +1,4 @@
-local icons = require("config.icons")
+local icons = require "config.icons"
 
 local spec = {
   "hrsh7th/nvim-cmp",
@@ -13,10 +13,10 @@ local spec = {
 }
 
 function spec:config()
-  local cmp = require("cmp")
-  local luasnip = require("luasnip")
+  local cmp = require "cmp"
+  local luasnip = require "luasnip"
 
-  cmp.setup({
+  cmp.setup {
     snippet = {
       expand = function(opts)
         luasnip.lsp_expand(opts.body)
@@ -111,7 +111,7 @@ function spec:config()
         luasnip.jump(1)
       end, { "i", "s" }),
     },
-  })
+  }
 end
 
 return spec

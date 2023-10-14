@@ -34,7 +34,7 @@ return {
     local mark = require(plugin .. ".mark")
     local ui = require(plugin .. ".ui")
 
-    binder:with_modes({ "n", "i" })
+    binder:with_modes { "n", "i" }
 
     -- Harpoon marked files 1 through 4.
     binder:bind("<a-1>", function()

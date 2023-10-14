@@ -1,5 +1,5 @@
 -- Clipboard and key mappings
-local icons = require("config.icons")
+local icons = require "config.icons"
 local opt = vim.opt
 
 opt.clipboard = "unnamedplus"
@@ -20,7 +20,7 @@ opt.splitbelow = true
 opt.splitright = true
 opt.scrolloff = 2
 opt.sidescrolloff = 2
-opt.shortmess:append("aIF")
+opt.shortmess:append "aIF"
 
 -- line number highlighting
 opt.cursorline = true
@@ -29,7 +29,7 @@ opt.cursorlineopt = "number"
 -- Display options
 opt.list = true
 opt.listchars = { tab = icons.layout.tab .. "  " }
-opt.fillchars:append({ eob = " " })
+opt.fillchars:append { eob = " " }
 
 -- statusline
 opt.laststatus = 3
@@ -59,4 +59,4 @@ opt.shiftwidth = 4
 
 -- Add binaries installed by mason.nvim to the PATH
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
-vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath("data") .. "/mason/bin"
+vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"

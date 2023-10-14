@@ -1,20 +1,20 @@
 local binder = require("config.binder").new()
-local icons = require("config.icons")
+local icons = require "config.icons"
 
-local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
+local lazy_path = vim.fs.normalize(vim.fn.stdpath "data" .. "/lazy/lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
-  vim.fn.system({
+  vim.fn.system {
     "git",
     "clone",
     "--single-branch",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     lazy_path,
-  })
+  }
 end
-vim.opt.runtimepath:prepend({ lazy_path })
+vim.opt.runtimepath:prepend { lazy_path }
 
-local lazy = require("lazy")
+local lazy = require "lazy"
 
 lazy.setup("plugins", {
   concurrency = 4,
@@ -75,7 +75,7 @@ lazy.setup("plugins", {
   },
 })
 
-binder:with_modes({ "n" })
+binder:with_modes { "n" }
 binder:bind("<leader>ph", lazy.home)
 binder:bind("<leader>pi", lazy.install)
 binder:bind("<leader>pu", lazy.update)

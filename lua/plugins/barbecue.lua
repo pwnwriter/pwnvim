@@ -1,4 +1,4 @@
-local icons = require("config.icons")
+local icons = require "config.icons"
 
 local spec = {
   "utilyre/barbecue.nvim",
@@ -14,15 +14,15 @@ local spec = {
 }
 
 function spec:config()
-  local barbecue = require("barbecue")
+  local barbecue = require "barbecue"
 
-  barbecue.setup({
+  barbecue.setup {
     show_modified = true,
     kinds = icons.kind,
     symbols = {
       separator = icons.widget.nesting,
     },
-  })
+  }
 end
 
 return spec

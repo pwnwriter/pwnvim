@@ -6,10 +6,10 @@ local spec = {
 }
 
 function spec:config()
-  local catppuccin = require("catppuccin")
-  local utils = require("catppuccin.utils.colors")
+  local catppuccin = require "catppuccin"
+  local utils = require "catppuccin.utils.colors"
 
-  catppuccin.setup({
+  catppuccin.setup {
     flavour = "macchiato",
     custom_highlights = function(palette)
       return {
@@ -50,7 +50,7 @@ function spec:config()
         dim_context = true,
       },
     },
-  })
+  }
 
   catppuccin.load()
 end

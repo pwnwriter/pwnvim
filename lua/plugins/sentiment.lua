@@ -5,7 +5,7 @@ local spec = {
 }
 
 function spec:config()
-  local sentiment = require("sentiment")
+  local sentiment = require "sentiment"
 
   sentiment.setup()
 end

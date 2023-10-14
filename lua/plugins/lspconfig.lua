@@ -1,5 +1,4 @@
 local binder = require("config.binder").new()
-local icons = require("config.icons")
 
 local spec = {
   "neovim/nvim-lspconfig",
@@ -11,9 +10,9 @@ local spec = {
 }
 
 function spec:config()
-  local lspconfig = require("lspconfig")
-  local windows = require("lspconfig.ui.windows")
-  local cmp = require("cmp_nvim_lsp")
+  local lspconfig = require "lspconfig"
+  local windows = require "lspconfig.ui.windows"
+  local cmp = require "cmp_nvim_lsp"
 
   windows.default_options.border = "rounded"
   lspconfig.util.on_setup = lspconfig.util.add_hook_after(lspconfig.util.on_setup, function(config)
@@ -24,7 +23,7 @@ function spec:config()
       vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
   end)
 
-  local servers_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/lua/config/servers.lua")
+  local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/config/servers.lua")
   if vim.loop.fs_access(servers_path, "R") then
     dofile(servers_path)
   end
@@ -51,14 +50,14 @@ function spec:config()
     group = vim.api.nvim_create_augroup("config.plugins.lsp.detacher", {}),
     callback = function(args)
       binder:with_modes({ "n" }):with_buffer(args.buf)
-      binder:unbind("<leader>ih")
-      binder:unbind("<leader>id")
-      binder:unbind("<leader>it")
-      binder:unbind("<leader>ii")
-      binder:unbind("<leader>ir")
-      binder:unbind("<leader>ia")
-      binder:unbind("<leader>if")
-      binder:unbind("<leader>ic")
+      binder:unbind "<leader>ih"
+      binder:unbind "<leader>id"
+      binder:unbind "<leader>it"
+      binder:unbind "<leader>ii"
+      binder:unbind "<leader>ir"
+      binder:unbind "<leader>ia"
+      binder:unbind "<leader>if"
+      binder:unbind "<leader>ic"
     end,
   })
 end

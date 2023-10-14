@@ -1,11 +1,11 @@
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 
-lspconfig.rust_analyzer.setup({
+lspconfig.rust_analyzer.setup {
   filetypes = { "rust" },
   cmd = { "rustup", "run", "stable", "rust-analyzer" },
-})
+}
 
-lspconfig.clangd.setup({
+lspconfig.clangd.setup {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   -- root_dir:root_pattern(
   --     '.clangd',
@@ -17,9 +17,9 @@ lspconfig.clangd.setup({
   --     '.git'
   -- ),
   single_file_support = true,
-})
+}
 
-lspconfig.lua_ls.setup({
+lspconfig.lua_ls.setup {
   filetypes = { "lua" },
   settings = {
     Lua = {
@@ -32,8 +32,8 @@ lspconfig.lua_ls.setup({
       -- format = { enable = false },
     },
   },
-})
+}
 
-lspconfig.bashls.setup({
+lspconfig.bashls.setup {
   single_file_support = true,
-})
+}

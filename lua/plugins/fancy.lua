@@ -9,10 +9,10 @@ local spec = {
 }
 
 function spec:config()
-  local noice = require("noice")
-  local notify = require("notify")
+  local noice = require "noice"
+  local notify = require "notify"
 
-  noice.setup({
+  noice.setup {
     lsp = {
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -27,13 +27,13 @@ function spec:config()
       inc_rename = false,
       lsp_doc_border = true,
     },
-  })
+  }
 
-  notify.setup({
+  notify.setup {
     fps = 60,
     render = "compact",
     timeout = 5,
     fade_in_slide_out = "fade",
-  })
+  }
 end
 return spec

@@ -12,8 +12,8 @@ local spec = {
 }
 
 function spec:config()
-  local nvterm = require("nvterm")
-  nvterm.setup({
+  local nvterm = require "nvterm"
+  nvterm.setup {
     terminals = {
       shell = vim.o.shell,
       list = {},
@@ -24,18 +24,18 @@ function spec:config()
         },
       },
     },
-  })
+  }
 
-  binder:with_modes({ "n", "t" })
-  local terminal = require("nvterm.terminal")
+  binder:with_modes { "n", "t" }
+  local terminal = require "nvterm.terminal"
   binder:bind("<A-t>", function()
-    terminal.toggle("float")
+    terminal.toggle "float"
   end)
   binder:bind("<A-h>", function()
-    terminal.toggle("horizontal")
+    terminal.toggle "horizontal"
   end)
   binder:bind("<A-H>", function()
-    terminal.toggle("vertical")
+    terminal.toggle "vertical"
   end)
 
   local function run_command(cmd)
@@ -49,9 +49,9 @@ function spec:config()
   binder:bind("<A-R>", function()
     local ft_cmds = {
       rust = "cargo run",
-      sh = "bash " .. vim.fn.expand("%"),
-      python = "python3 " .. vim.fn.expand("%"),
-      lua = "lua " .. vim.fn.expand("%"),
+      sh = "bash " .. vim.fn.expand "%",
+      python = "python3 " .. vim.fn.expand "%",
+      lua = "lua " .. vim.fn.expand "%",
     }
     local cmd = ft_cmds[vim.bo.filetype]
     run_command(cmd)
