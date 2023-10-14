@@ -1,4 +1,3 @@
-local binder = require("config.binder").new()
 local icons = require "config.icons"
 
 local lazy_path = vim.fs.normalize(vim.fn.stdpath "data" .. "/lazy/lazy.nvim")
@@ -74,15 +73,3 @@ lazy.setup("plugins", {
     },
   },
 })
-
-binder:with_modes { "n" }
-binder:bind("<leader>ph", lazy.home)
-binder:bind("<leader>pi", lazy.install)
-binder:bind("<leader>pu", lazy.update)
-binder:bind("<leader>ps", lazy.sync)
-binder:bind("<leader>px", lazy.clean)
-binder:bind("<leader>pc", lazy.check)
-binder:bind("<leader>pl", lazy.log)
-binder:bind("<leader>pr", lazy.restore)
-binder:bind("<leader>pp", lazy.profile)
-binder:bind("<leader>pd", lazy.debug)

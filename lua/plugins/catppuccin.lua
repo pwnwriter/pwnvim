@@ -39,12 +39,6 @@ function spec:config()
       mini = true,
       noice = true,
       notify = true,
-
-      telescope = {
-        enabled = true,
-        -- style = "nvchad"
-      },
-
       barbecue = {
         bold_basename = false,
         dim_context = true,

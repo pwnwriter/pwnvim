@@ -2,8 +2,14 @@ local spec = {
   "echasnovski/mini.nvim",
   name = "mini",
   version = false,
-  event = { "UiEnter" },
+  event = {
+    "BufReadPre",
+    "BufNewFile",
+  },
   keys = { "<leader>e", "<leader>ff", "<leader>b", "<leader>fr", "<leader>fw", "<leader>q" },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
 }
 
 function spec:config()
