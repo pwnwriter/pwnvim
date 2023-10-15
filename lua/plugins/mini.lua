@@ -13,14 +13,12 @@ local spec = {
 }
 
 function spec:config()
-  local miniOpts = require "config.mini-opts"
-  require("mini.pairs").setup(miniOpts.pairs)
-  require("mini.surround").setup(miniOpts.surround)
-  require("mini.comment").setup { comment = "gc", comment_line = "gcc", textobject = "gc" }
-  require("mini.files").setup(miniOpts.files)
-  require("mini.hipatterns").setup(miniOpts.hipatterns)
-  require("mini.bufremove").setup(miniOpts.bufremove)
-  require("mini.pick").setup(miniOpts.pick)
+  local mini_opts = require "config.mini-opts"
+  local mini_modules = { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move" }
+
+  for _, module in ipairs(mini_modules) do
+    require("mini." .. module).setup(mini_opts[module])
+  end
 end
 
 return spec

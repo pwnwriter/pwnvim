@@ -23,9 +23,9 @@ M.surround = {
     add = "sa",
     delete = "sd",
     find = "sf",
-    find_left = "sF",
     highlight = "sh",
     replace = "sr",
+    find_left = "sF",
     update_n_lines = "sn",
     suffix_last = "l",
     suffix_next = "n",
@@ -100,6 +100,23 @@ M.pick = {
   binder:with_desc("Grep live"):bind("<leader>fw", function()
     builtin.grep_live()
   end),
+}
+
+M.move = {
+
+mappings = {
+    -- Move visual selection in Visual mode. Changing from Alt (Meta) + hjkl to Shift + hjkl.
+    left = '<S-h>',
+    right = '<S-l>',
+    down = '<S-j>',
+    up = '<S-k>',
+
+    -- Move current line in Normal mode
+    line_left = '<S-h>',
+    line_right = '<S-l>',
+    line_down = '<S-j>',
+    line_up = '<S-k>',
+},
 }
 
 return M

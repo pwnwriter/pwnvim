@@ -16,10 +16,6 @@ binder:with_modes { "i" }
 binder:with_desc "Quickly exit insert mode"
 binder:bind("jj", "<esc>")
 binder:with_modes { "n" }
-binder:with_desc "Move the current line down and keep cursor position"
-binder:bind("J", "jzz")
-binder:with_desc "Move the current line up and keep cursor position"
-binder:bind("K", "kzz")
 binder:with_desc "Clear search highlight"
 binder:bind("<leader>ch", "<cmd>nohlsearch<CR>")
 
@@ -39,12 +35,6 @@ binder:bind("<leader>n", toggle_numbering)
 binder:with_modes { "x" }
 binder:with_desc "Paste and replace selected text"
 binder:bind("p", "_dP")
-
-binder:with_modes { "v" }
-binder:with_desc "Move the selected text down"
-binder:bind("J", ":m '>+1<CR>gv=gv")
-binder:with_desc "Move the selected text up"
-binder:bind("K", ":m '<-2<CR>gv=gv")
 
 -- Window splitting
 binder:with_modes { "n" }
