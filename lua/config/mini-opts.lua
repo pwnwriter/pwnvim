@@ -104,19 +104,19 @@ M.pick = {
 
 M.move = {
 
-mappings = {
+  mappings = {
     -- Move visual selection in Visual mode. Changing from Alt (Meta) + hjkl to Shift + hjkl.
-    left = '<S-h>',
-    right = '<S-l>',
-    down = '<S-j>',
-    up = '<S-k>',
+    left = "<S-h>",
+    right = "<S-l>",
+    down = "<S-j>",
+    up = "<S-k>",
 
     -- Move current line in Normal mode
-    line_left = '<S-h>',
-    line_right = '<S-l>',
-    line_down = '<S-j>',
-    line_up = '<S-k>',
-},
+    line_left = "<S-h>",
+    line_right = "<S-l>",
+    line_down = "<S-j>",
+    line_up = "<S-k>",
+  },
 }
 
 return M

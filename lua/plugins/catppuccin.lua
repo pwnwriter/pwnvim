@@ -36,12 +36,20 @@ function spec:config()
       treesitter = true,
       mason = true,
       harpoon = true,
-      mini = true,
       noice = true,
       notify = true,
       barbecue = {
         bold_basename = false,
         dim_context = true,
+      },
+      mini = {
+        enabled = true,
+        indentscope_color = "",
+      },
+      indent_blankline = {
+        enabled = true,
+        scope_color = "",
+        colored_indent_levels = false,
       },
     },
   }
