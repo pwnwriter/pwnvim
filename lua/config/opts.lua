@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 -- Clipboard and key mappings
 local icons = require "config.icons"
 local opt = vim.opt
