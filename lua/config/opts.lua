@@ -34,7 +34,7 @@ opt.listchars = { tab = icons.layout.tab .. "  " }
 opt.fillchars:append { eob = " " }
 --
 -- statusline
-opt.laststatus = 1
+opt.laststatus = 0
 local statusline_ascii = ""
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 
