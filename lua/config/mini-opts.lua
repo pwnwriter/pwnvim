@@ -118,7 +118,7 @@ M.move = {
 }
 
 M.indentscope = {
- symbol = '┊',
+  symbol = "┊",
 }
 
 return M

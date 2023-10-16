@@ -14,7 +14,8 @@ local spec = {
 
 function spec:config()
   local mini_opts = require "config.mini-opts"
-  local mini_modules = { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move","indentscope"}
+  local mini_modules =
+    { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move", "indentscope" }
 
   for _, module in ipairs(mini_modules) do
     require("mini." .. module).setup(mini_opts[module])
