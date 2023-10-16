@@ -33,7 +33,6 @@ opt.fillchars:append { eob = " " }
 
 -- statusline
 opt.laststatus = 3
--- local statusline_ascii = "⊱ ────── {⋆⌘⋆} ────── ⊰"
 local statusline_ascii = ""
 vim.opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 
@@ -60,3 +59,14 @@ opt.shiftwidth = 4
 -- Add binaries installed by mason.nvim to the PATH
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"
+
+-- Load shada after UI-enter
+local shada = vim.o.shada
+vim.o.shada = ""
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    vim.o.shada = shada
+    pcall(vim.api.nvim_exec2, "rshada", {})
+  end,
+})
