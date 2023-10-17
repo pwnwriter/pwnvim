@@ -11,6 +11,7 @@ function spec:config()
 
   catppuccin.setup {
     flavour = "macchiato",
+    transparent = true,
     custom_highlights = function(palette)
       return {
         ["DiagnosticLineError"] = {

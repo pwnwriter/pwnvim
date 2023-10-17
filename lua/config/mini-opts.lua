@@ -94,7 +94,7 @@ M.pick = {
   binder:with_desc("Open buffers"):bind("<leader>b", function()
     builtin.buffers()
   end),
-  binder:with_desc("Resume using"):bind("<leader>fr", function()
+  binder:with_desc("Resume"):bind("<leader>fr", function()
     builtin.resume()
   end),
   binder:with_desc("Grep live"):bind("<leader>fw", function()
@@ -118,7 +118,16 @@ M.move = {
 }
 
 M.indentscope = {
-  symbol = "┊",
+  symbol = "┋",
 }
+
+local disable_indentscope = function(data)
+  vim.b[data.buf].miniindentscope_disable = true
+end
+
+vim.api.nvim_create_autocmd("TermOpen", {
+  desc = "Disable 'mini.indentscope' in terminal buffer",
+  callback = disable_indentscope,
+})
 
 return M

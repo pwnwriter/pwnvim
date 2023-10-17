@@ -28,13 +28,13 @@ function spec:config()
 
   binder:with_modes { "n", "t" }
   local terminal = require "nvterm.terminal"
-  binder:bind("<A-t>", function()
+  binder:with_desc("Toggle float terminal"):bind("<A-t>", function()
     terminal.toggle "float"
   end)
-  binder:bind("<A-h>", function()
+  binder:with_desc("toggle horizontal terminal"):bind("<A-h>", function()
     terminal.toggle "horizontal"
   end)
-  binder:bind("<A-H>", function()
+  binder:with_desc("toggle vertical terminal"):bind("<A-H>", function()
     terminal.toggle "vertical"
   end)
 
@@ -46,7 +46,7 @@ function spec:config()
     end
   end
 
-  binder:bind("<A-R>", function()
+  binder:with_desc("Run code in horizontal terminal split"):bind("<A-R>", function()
     local ft_cmds = {
       rust = "cargo run",
       sh = "bash " .. vim.fn.expand "%",
