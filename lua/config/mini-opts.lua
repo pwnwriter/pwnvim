@@ -72,7 +72,7 @@ M.hipatterns = {
   },
 }
 
-binder:with_modes { "n" }
+binder:with_modes { "n", "t" }
 M.bufremove = {
   silent = true,
   binder:with_desc("Remove current buffers"):bind("<c-q>", function()
@@ -121,13 +121,17 @@ M.indentscope = {
   symbol = "┋",
 }
 
-local disable_indentscope = function(data)
-  vim.b[data.buf].miniindentscope_disable = true
-end
+vim.b[0].miniindentscope_disable = true
+
+binder:with_desc("Toggle mini indentscope"):bind("<leader>ti", function()
+  vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable
+end)
 
 vim.api.nvim_create_autocmd("TermOpen", {
   desc = "Disable 'mini.indentscope' in terminal buffer",
-  callback = disable_indentscope,
+  callback = function(data)
+    vim.b[data.buf].miniindentscope_disable = true
+  end,
 })
 
 return M

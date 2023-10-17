@@ -20,14 +20,15 @@ binder:with_desc "Clear search highlight"
 binder:bind("<leader>ch", "<cmd>nohlsearch<CR>")
 
 ----xx toggle between 'nu', 'rnu', and no numbers xx-------------
-local commands = { "nu!", "rnu!", "nonu!" }
-local current_command_index = 1
+local cmds = { "nu!", "rnu!", "nonu!" }
+local current_index = 1
 
 local function toggle_numbering()
-  current_command_index = current_command_index % #commands + 1
-  local current_command = commands[current_command_index]
-  vim.cmd("set " .. current_command)
+  current_index = current_index % #cmds + 1
+  local cmd = cmds[current_index]
+  vim.cmd("set " .. cmd)
 end
+
 binder:with_desc "Toggle line/relative number/no number"
 binder:bind("<leader>n", toggle_numbering)
 
