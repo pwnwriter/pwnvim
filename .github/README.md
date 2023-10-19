@@ -18,7 +18,6 @@
 * [`Installation`](#installation)
 * [`Tips`](#tips)
 * [`Showcase`](#showcase)
-* [`Contribution`](#contribution)
 * [`License`](#license)
 </div>
 
@@ -135,18 +134,13 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
 
 </details>
 
-
-<a name="contribution"></a>
-## 💖 Contribution
- There is always scope for improvements and bugs to be fixed as contributors can make a valuable impact by addressing improvements and bugs through [**issue**](https://github.com/pwnwriter/pwnvim/issues) submissions or [**pull requests**](https://github.com/pwnwriter/pwnvim/pulls).
-
    
 <a name="license"></a> 
 ## 🔐 License
- As always, this project is also Licensed under the [**`MIT LICENSE`**](/LICENSE) 
+ Licensed under the [**`MIT LICENSE`**](/LICENSE) 
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz ☘️ </a> 
+<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a>🍀 </a> 
 
 
 
