@@ -59,7 +59,7 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 
 -- Do not load system vimfiles
-vim.api.nvim_command("set rtp-=/usr/share/vim/vimfiles")
+vim.api.nvim_command "set rtp-=/usr/share/vim/vimfiles"
 
 -- Add binaries installed by mason.nvim to the PATH
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
