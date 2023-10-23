@@ -8,8 +8,22 @@ if vim.loader then
   vim.loader.enable()
 end
 
-local modules = { "opts", "lazy", "keys", "diagnostic" }
+local modules = {
+  "opts",
+  "lazy",
+  "keys",
+  "diagnostic",
+}
 
-for _, module in ipairs(modules) do
-  require("config." .. module)
+for i = 1, 2 do
+  require("config." .. modules[i])
 end
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    for i = 3, 4 do
+      require("config." .. modules[i])
+    end
+  end,
+})
