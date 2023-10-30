@@ -37,7 +37,7 @@ M.terminal = function()
     require("nvterm.terminal").toggle "horizontal"
   end, opts)
 
-  map({ "n", "t" }, "<A-V>", function()
+  map({ "n", "t" }, "<A-H>", function()
     require("nvterm.terminal").toggle "vertical"
   end, opts)
 

@@ -67,9 +67,6 @@ M.bufremove = {
   silent = true,
 }
 
-local MiniPick = require "mini.pick"
-local builtin = MiniPick.builtin
-
 M.pick = {
   options = {
     use_cache = true,

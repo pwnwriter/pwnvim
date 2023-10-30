@@ -1,4 +1,4 @@
-local default_plugins = {
+local plugins = {
   {
     "catppuccin/nvim",
     lazy = false,
@@ -158,4 +158,4 @@ local default_plugins = {
   },
 }
 
-require("lazy").setup(default_plugins, require "plugins.configs.lazy_nvim")
+require("lazy").setup(plugins, require "plugins.configs.lazy_nvim")
