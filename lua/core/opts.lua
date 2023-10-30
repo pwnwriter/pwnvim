@@ -2,7 +2,6 @@ local vim_loader = require "vim.loader"
 local icons = require "core.icons"
 
 local opt = vim.opt
-local o = vim.o
 local g = vim.g
 
 local M = {}
@@ -28,7 +27,6 @@ M.initial = function()
   opt.showbreak = icons.layout.wrap .. " "
   opt.complete = {}
   opt.expandtab = true
-  o.shada = ""
 end
 
 M.final = function()
@@ -49,15 +47,6 @@ M.final = function()
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
   opt.sidescrolloff = 2
 end
-
-local shada = vim.o.shada
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy",
-  callback = function()
-    vim.o.shada = shada
-    pcall(vim.cmd.rshada, { bang = true })
-  end,
-})
 
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"

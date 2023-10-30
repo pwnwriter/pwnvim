@@ -1,8 +1,28 @@
--- Global mappings.
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+local lspconfig = require "lspconfig"
+local windows = require "lspconfig.ui.windows"
+local cmp = require "cmp_nvim_lsp"
+
+local map = function(mode, lhs, rhs, options)
+  vim.keymap.set(mode, lhs, rhs, options)
+end
+
+windows.default_options.border = "rounded"
+lspconfig.util.on_setup = lspconfig.util.add_hook_after(lspconfig.util.on_setup, function(config)
+  config.capabilities = vim.tbl_deep_extend("force", config.capabilities, cmp.default_capabilities())
+
+  config.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+  config.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+end)
+
+local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/plugins/configs/servers.lua")
+if vim.loop.fs_access(servers_path, "R") then
+  dofile(servers_path)
+end
+
+map("n", "<space>e", vim.diagnostic.open_float)
+map("n", "[d", vim.diagnostic.goto_prev)
+map("n", "]d", vim.diagnostic.goto_next)
+map("n", "<space>q", vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -11,15 +31,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
     local opts = { buffer = ev.buf }
-    vim.keymap.set("n", "<leader>ih", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<leader>id", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "<leader>it", vim.lsp.buf.type_definition, opts)
-    vim.keymap.set("n", "<leader>ii", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "<leader>ir", vim.lsp.buf.references, opts)
-    vim.keymap.set({ "n", "v" }, "<leader>ia", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>if", vim.lsp.buf.format, opts)
-    vim.keymap.set("n", "<leader>ic", vim.lsp.buf.rename, opts)
-    vim.keymap.set({ "i", "s" }, "<c-space>", vim.lsp.buf.signature_help, opts)
+    map("n", "<leader>ih", vim.lsp.buf.hover, opts)
+    map("n", "<leader>id", vim.lsp.buf.definition, opts)
+    map("n", "<leader>it", vim.lsp.buf.type_definition, opts)
+    map("n", "<leader>ii", vim.lsp.buf.implementation, opts)
+    map("n", "<leader>ir", vim.lsp.buf.references, opts)
+    map({ "n", "v" }, "<leader>ia", vim.lsp.buf.code_action, opts)
+    map("n", "<leader>if", vim.lsp.buf.format, opts)
+    map("n", "<leader>ic", vim.lsp.buf.rename, opts)
+    map({ "i", "s" }, "<c-space>", vim.lsp.buf.signature_help, opts)
   end,
 })
 
@@ -42,20 +62,3 @@ capabilities.textDocument.completion.completionItem = {
     },
   },
 }
--- Setup language servers.
-local lspconfig = require "lspconfig"
-
-lspconfig.lua_ls.setup {
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      diagnostics = { globals = { "vim" } },
-    },
-  },
-}
-
-lspconfig.rust_analyzer.setup {
-  filetypes = { "rust" },
-  cmd = { "rustup", "run", "stable", "rust-analyzer" },
-}
-

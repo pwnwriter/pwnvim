@@ -12,21 +12,8 @@ local default_plugins = {
       require("catppuccin").load()
     end,
   },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    build = ":TSUpdate",
-    name = "treesitter",
-    init = function()
-      require("core.utils").lazy_load "treesitter"
-    end,
-    config = function()
-      local opts = require "plugins.configs.treesitter"
-      require("nvim-treesitter.configs").setup(opts)
-    end,
-  },
   { "nvim-tree/nvim-web-devicons", lazy = true },
+
   {
     "echasnovski/mini.nvim",
     name = "mini",
@@ -46,9 +33,22 @@ local default_plugins = {
     end,
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    name = "treesitter",
+    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+    build = ":TSUpdate",
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
+    config = function()
+      local opts = require "plugins.configs.treesitter"
+      require("nvim-treesitter.configs").setup(opts)
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     name = "cmp",
-    config = true,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "L3MON4D3/LuaSnip",
@@ -95,6 +95,7 @@ local default_plugins = {
     end,
   },
 
+  --- Terminal
   {
     "NvChad/nvterm",
     keys = { "<A-R>", "<A-h>", "<A-H>", "<A-t>" },
@@ -103,6 +104,9 @@ local default_plugins = {
       require("nvterm").setup()
     end,
   },
+
+  --- Fancy stuffs
+
   {
     "rcarriga/nvim-notify",
     event = "UiEnter",
@@ -137,12 +141,12 @@ local default_plugins = {
       "BufReadPre",
       "BufNewFile",
     },
-
     config = function()
       local opts = require("plugins.configs.fancy").barbecue
       require("barbecue").setup(opts)
     end,
   },
+
   {
     "utilyre/sentiment.nvim",
     version = "*",

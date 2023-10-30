@@ -19,15 +19,16 @@ M.lazy_load = function(plugin)
     group = vim.api.nvim_create_augroup("BeLazyOnFileOpen" .. plugin, {}),
     callback = function()
       local file = vim.fn.expand "%"
-      local condition = file ~= "[lazy]" and file ~= "" and vim.fn.empty(vim.fn.glob(file)) == 0
+      local condition = file ~= "NvimTree_1" and file ~= "[lazy]" and file ~= ""
 
       if condition then
         vim.api.nvim_del_augroup_by_name("BeLazyOnFileOpen" .. plugin)
+
         if plugin ~= "treesitter" then
           vim.schedule(function()
             require("lazy").load { plugins = plugin }
 
-            if plugin == "lspconfig" or plugin == "nvim-lspconfig" then
+            if plugin == "lspconfig" then
               vim.cmd "silent! do FileType"
             end
           end, 0)

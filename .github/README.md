@@ -109,7 +109,7 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
     you would setup a language server protocol.
 
     ```lua
-    -- plugins/configs/lspconfig.lua
+    -- plugins/configs/servers.lua
     local lspconfig = require("lspconfig")
 
     -- $ rustup component add rust-analyzer
