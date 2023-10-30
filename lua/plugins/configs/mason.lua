@@ -1,22 +1,7 @@
-local icons = require "config.icons"
+local icons = require "core.icons"
+local mason = require "mason"
 
-local spec = {
-  "williamboman/mason.nvim",
-  name = "mason",
-  cmd = {
-    "Mason",
-    "MasonInstall",
-    "MasonInstallAll",
-    "MasonUninstall",
-    "MasonUninstallAll",
-    "MasonLog",
-    "MasonUpdate",
-  },
-  build = ":MasonUpdate",
-}
-
-function spec:config()
-  local mason = require "mason"
+local options = {
   mason.setup {
     ui = {
       icons = {
@@ -37,7 +22,7 @@ function spec:config()
       },
     },
     max_concurrent_installers = 10,
-  }
-end
+  },
+}
 
-return spec
+return options

@@ -1,21 +1,6 @@
-local icons = require "config.icons"
+local icons = require "core.icons"
 
-local lazy_path = vim.fs.normalize(vim.fn.stdpath "data" .. "/lazy/lazy.nvim")
-if not vim.loop.fs_access(lazy_path, "R") then
-  vim.fn.system {
-    "git",
-    "clone",
-    "--single-branch",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    lazy_path,
-  }
-end
-vim.opt.runtimepath:prepend { lazy_path }
-
-local lazy = require "lazy"
-
-lazy.setup("plugins", {
+return {
   concurrency = 4,
   defaults = {
     lazy = true,
@@ -72,4 +57,4 @@ lazy.setup("plugins", {
       },
     },
   },
-})
+}

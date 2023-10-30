@@ -1,4 +1,3 @@
-local binder = require("config.binder").new()
 local M = {}
 
 M.pairs = {
@@ -36,8 +35,6 @@ M.surround = {
   silent = true,
 }
 
-binder:with_modes { "n" }
-
 M.files = {
   windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, border = "solid" },
   use_as_default_explorer = true,
@@ -54,12 +51,6 @@ M.files = {
     trim_left = "<",
     trim_right = ">",
   },
-  binder:with_desc("Toggle mini files"):bind("<leader>e", function()
-    local success = require("mini.files").close()
-    if not success then
-      require("mini.files").open()
-    end
-  end),
 }
 
 M.hipatterns = {
@@ -72,15 +63,10 @@ M.hipatterns = {
   },
 }
 
-binder:with_modes { "n", "t" }
 M.bufremove = {
   silent = true,
-  binder:with_desc("Remove current buffers"):bind("<c-q>", function()
-    require("mini.bufremove").delete()
-  end),
 }
 
-binder:with_modes { "n" }
 local MiniPick = require "mini.pick"
 local builtin = MiniPick.builtin
 
@@ -88,28 +74,14 @@ M.pick = {
   options = {
     use_cache = true,
   },
-  binder:with_desc("Open files "):bind("<leader>ff", function()
-    builtin.files()
-  end),
-  binder:with_desc("Open buffers"):bind("<leader>b", function()
-    builtin.buffers()
-  end),
-  binder:with_desc("Resume"):bind("<leader>fr", function()
-    builtin.resume()
-  end),
-  binder:with_desc("Grep live"):bind("<leader>fw", function()
-    builtin.grep_live()
-  end),
 }
 
 M.move = {
-
   mappings = {
     left = "<S-h>",
     right = "<S-l>",
     down = "<S-j>",
     up = "<S-k>",
-
     line_left = "<S-h>",
     line_right = "<S-l>",
     line_down = "<S-j>",
@@ -121,11 +93,7 @@ M.indentscope = {
   symbol = "┋",
 }
 
-vim.b[0].miniindentscope_disable = true
-
-binder:with_desc("Toggle mini indentscope"):bind("<leader>ti", function()
-  vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable
-end)
+vim.b.miniindentscope_disable = true
 
 vim.api.nvim_create_autocmd("TermOpen", {
   desc = "Disable 'mini.indentscope' in terminal buffer",
@@ -133,5 +101,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.b[data.buf].miniindentscope_disable = true
   end,
 })
+
+M.completion = {
+  window = {
+    info = { border = "rounded" },
+    signature = { border = "rounded" },
+  },
+}
 
 return M
