@@ -1,18 +1,4 @@
-local icons = require "config.icons"
-
-local spec = {
-  "hrsh7th/nvim-cmp",
-  event = { "InsertEnter" },
-  name = "cmp",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "L3MON4D3/LuaSnip",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-  },
-}
-
-function spec:config()
+local icons = require "core.icons"
   local cmp = require "cmp"
   local luasnip = require "luasnip"
 
@@ -112,6 +98,4 @@ function spec:config()
       end, { "i", "s" }),
     },
   }
-end
 
-return spec

@@ -4,21 +4,24 @@
 -- Neo(vim) the K1ss way
 --    @pwnwriter/pwnvim
 
-if vim.loader then
-  vim.loader.enable()
-end
+vim.loader.enable()
 
-local modules = { "opts", "lazy" }
+require("core.opts").initial()
 
-for _, module in ipairs(modules) do
-  require("config." .. module)
-end
+require("core.utils").lazy(vim.fn.stdpath "data" .. "/lazy/lazy.nvim")
 
+local lazy_path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+vim.opt.runtimepath:prepend(lazy_path)
+
+require "plugins"
+
+local shada = vim.o.shada
 vim.api.nvim_create_autocmd("User", {
   pattern = "VeryLazy",
   callback = function()
-    require "config.keys"
-    require "config.diagnostic"
+    require("core.mappings").general()
+    require("core.opts").final()
+    vim.o.shada = shada
+    pcall(vim.cmd.rshada, { bang = true })
   end,
 })
-
