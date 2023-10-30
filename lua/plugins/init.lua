@@ -2,6 +2,7 @@ local default_plugins = {
   {
     "catppuccin/nvim",
     lazy = false,
+    priority = 1000,
     name = "catppuccin",
     init = function()
       require "catppuccin"
@@ -12,6 +13,7 @@ local default_plugins = {
       require("catppuccin").load()
     end,
   },
+
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
   {
@@ -20,18 +22,17 @@ local default_plugins = {
     version = false,
     event = { "InsertEnter" },
     keys = { "<leader>e", "<leader>ff", "<leader>b", "<leader>fr", "<leader>fw", "<leader>q", "<leader>ti", "<C-q>" },
-    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
       local mini_modules =
         { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move", "indentscope" }
-
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
       end
     end,
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     name = "treesitter",
@@ -42,10 +43,11 @@ local default_plugins = {
       "BufNewFile",
     },
     config = function()
-      local opts = require "plugins.configs.treesitter"
+      local opts = require("plugins.configs.fancy").treesitter
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
+
   {
     "hrsh7th/nvim-cmp",
     name = "cmp",
@@ -83,14 +85,11 @@ local default_plugins = {
       require "plugins.configs.lspconfig"
     end,
   },
-
   {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-    opts = function()
-      return require "plugins.configs.mason"
-    end,
-    config = function(_, opts)
+    config = function()
+      local opts = require("plugins.configs.fancy").mason
       require("mason").setup(opts)
     end,
   },

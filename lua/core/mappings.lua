@@ -72,7 +72,7 @@ M.mini = function()
   end, opts)
 
   map({ "n" }, "<leader>e", function()
-    local files_ui = require("mini.files").close() or require("mini.files").open()
+    local _ = require("mini.files").close() or require("mini.files").open()
   end, opts)
 
   map({ "n" }, "<C-q>", function()

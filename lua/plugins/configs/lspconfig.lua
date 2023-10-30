@@ -19,7 +19,7 @@ if vim.loop.fs_access(servers_path, "R") then
   dofile(servers_path)
 end
 
-map("n", "<space>e", vim.diagnostic.open_float)
+map("n", "<space>d", vim.diagnostic.open_float)
 map("n", "[d", vim.diagnostic.goto_prev)
 map("n", "]d", vim.diagnostic.goto_next)
 map("n", "<space>q", vim.diagnostic.setloclist)
