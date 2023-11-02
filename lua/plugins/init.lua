@@ -6,11 +6,11 @@ local plugins = {
     name = "catppuccin",
     init = function()
       require "catppuccin"
+      vim.cmd.colorscheme "catppuccin"
     end,
     config = function()
       local opts = require "plugins.configs.colorscheme"
       require("catppuccin").setup(opts)
-      require("catppuccin").load()
     end,
   },
 

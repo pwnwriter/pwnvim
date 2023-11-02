@@ -28,3 +28,9 @@ lspconfig.lua_ls.setup {
 lspconfig.bashls.setup {
   single_file_support = true,
 }
+
+lspconfig.gopls.setup {
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  single_file_support = true,
+}

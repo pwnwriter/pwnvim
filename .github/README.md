@@ -9,7 +9,7 @@
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600" />
 </p>
 
-[`Pwn(nvim)`](/) is a neovim config living by the [`KISS`](https://en.wikipedia.org/wiki/KISS_principle) philosophy. Crafted using pure Lua, it blends high performance, pleasing aesthetics, and maximum productivity. Right from the start, you get it all out of the box, ⊱ ─── ⊰ carefully loaded plugins and a snappy startup time `<25ms` 
+[`Pwn(nvim)`](/) is a neovim config living by the [`KISS`](https://en.wikipedia.org/wiki/KISS_principle) philosophy. Crafted using pure Lua, it blends high performance, pleasing aesthetics, and maximum productivity. Right from the start, you get it all out of the box, ⊱ ─── ⊰ carefully loaded plugins and a snappy startup time.
 
 ## 📔 Table of contents 
 
@@ -140,8 +140,4 @@ git clone https://github.com/pwnwriter/pwnvim.git --depth=1 ~/.config/nvim && nv
  Licensed under the [**`MIT LICENSE`**](/LICENSE) 
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a>🍀 </a> 
-
-
-
-
+<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a>🍀</a> 
