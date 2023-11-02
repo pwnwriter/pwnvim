@@ -4,7 +4,6 @@ local options = {
   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
   compile = true,
   flavour = "macchiato",
-  transparent = true,
   custom_highlights = function(palette)
     return {
       ["DiagnosticLineError"] = {
@@ -29,7 +28,6 @@ local options = {
     cmp = true,
     treesitter = true,
     mason = true,
-    harpoon = true,
     noice = true,
     notify = true,
     barbecue = {

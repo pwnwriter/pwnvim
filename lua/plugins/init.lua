@@ -5,7 +5,6 @@ local plugins = {
     priority = 1000,
     name = "catppuccin",
     init = function()
-      require "catppuccin"
       vim.cmd.colorscheme "catppuccin"
     end,
     config = function()
