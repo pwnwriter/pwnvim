@@ -1,7 +1,7 @@
 local plugins = {
   {
     "catppuccin/nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     name = "catppuccin",
     init = function()
