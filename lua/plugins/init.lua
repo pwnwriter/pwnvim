@@ -24,7 +24,7 @@ local plugins = {
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
       local mini_modules =
-        { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move", "indentscope" }
+        { "pairs", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move", "indentscope", "extra" }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
@@ -116,8 +116,8 @@ local plugins = {
 
   {
     "folke/noice.nvim",
-    event = "UiEnter",
     name = "noice",
+    event = "UiEnter",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
