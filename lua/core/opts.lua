@@ -27,14 +27,14 @@ M.initial = function()
   opt.showbreak = icons.layout.wrap .. " "
   opt.complete = {}
   opt.expandtab = true
+  opt.swapfile = false
+  opt.undofile = true
 end
 
 M.final = function()
-  opt.swapfile = false
   opt.pumheight = 20
   opt.ignorecase = true
   opt.smartcase = true
-  opt.undofile = true
   opt.timeout = false
   opt.updatetime = 400
   opt.confirm = false
@@ -44,8 +44,8 @@ M.final = function()
   opt.scrolloff = 2
   opt.laststatus = 0
   local statusline_ascii = ""
-  opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
   opt.sidescrolloff = 2
+  opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"

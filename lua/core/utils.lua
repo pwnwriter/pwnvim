@@ -55,6 +55,7 @@ function M.run_command()
     sh = "bash " .. vim.fn.expand "%",
     python = "python3 " .. vim.fn.expand "%",
     lua = "lua " .. vim.fn.expand "%",
+    markdown = "glow " .. vim.fn.expand "%",
   }
   local command = ft_cmds[vim.bo.filetype]
 

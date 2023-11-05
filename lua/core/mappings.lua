@@ -18,7 +18,7 @@ M.general = function()
   map("n", "<C-k>", "<C-w>k", opts)
   map("n", "<C-l>", "<C-w>l", opts)
   map("n", "<leader>n", function()
-    utils.toggle_numbering()
+    utils.toggle_numbering() -- toggle line numbers
   end, opts)
   map("n", "<C-s>", "<cmd>w<CR>", opts)
   map("n", "<Tab>", "<cmd>bnext<CR>", opts)
@@ -68,7 +68,7 @@ M.mini = function()
   vim.b[0].miniindentscope_disable = true
 
   map({ "n" }, "<leader>ti", function()
-    vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable
+    vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable -- Toggle blankline animations
   end, opts)
 
   map({ "n" }, "<leader>e", function()

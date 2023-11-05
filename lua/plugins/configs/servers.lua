@@ -14,6 +14,9 @@ lspconfig.lua_ls.setup {
   filetypes = { "lua" },
   settings = {
     Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
       completion = {
         callSnippet = "Replace",
       },
@@ -34,3 +37,5 @@ lspconfig.gopls.setup {
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   single_file_support = true,
 }
+
+lspconfig.ocamllsp.setup {}
