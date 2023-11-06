@@ -1,3 +1,6 @@
+local conf_path = vim.fn.stdpath "config" --[[@as string]]
+local shada = vim.o.shada
+
 local plugins = {
   {
     "catppuccin/nvim",
@@ -12,8 +15,6 @@ local plugins = {
       require("catppuccin").setup(opts)
     end,
   },
-
-  { "nvim-tree/nvim-web-devicons", lazy = true },
 
   {
     "echasnovski/mini.nvim",
@@ -153,6 +154,18 @@ local plugins = {
     opts = {},
     init = function()
       vim.g.loaded_matchparen = 1
+    end,
+  },
+
+  {
+    name = "options",
+    event = "VeryLazy",
+    dir = conf_path,
+    config = function()
+      vim.o.shada = shada
+      require("core.opts").final()
+      require("core.mappings").general()
+      pcall(vim.cmd.rshada, { bang = true })
     end,
   },
 }

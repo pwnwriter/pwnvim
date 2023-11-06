@@ -1,4 +1,3 @@
-local vim_loader = require "vim.loader"
 local icons = require "core.icons"
 
 local opt = vim.opt
@@ -7,7 +6,7 @@ local g = vim.g
 local M = {}
 
 M.initial = function()
-  vim_loader.enable()
+  vim.loader.enable()
   g.mapleader = " "
   opt.clipboard = "unnamedplus"
   opt.wildmenu = true
@@ -29,6 +28,7 @@ M.initial = function()
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
+  vim.o.shada = ""
 end
 
 M.final = function()
