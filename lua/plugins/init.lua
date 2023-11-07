@@ -1,5 +1,4 @@
 local conf_path = vim.fn.stdpath "config" --[[@as string]]
-local shada = vim.o.shada
 
 local plugins = {
   {
@@ -162,7 +161,6 @@ local plugins = {
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-      vim.o.shada = shada
       require("core.opts").final()
       require("core.mappings").general()
       pcall(vim.cmd.rshada, { bang = true })

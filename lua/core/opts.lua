@@ -33,6 +33,7 @@ end
 
 M.final = function()
   opt.pumheight = 20
+  vim.o.shada = vim.o.shada
   opt.ignorecase = true
   opt.smartcase = true
   opt.timeout = false
