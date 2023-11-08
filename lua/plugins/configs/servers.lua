@@ -38,4 +38,10 @@ lspconfig.gopls.setup {
   single_file_support = true,
 }
 
+lspconfig.pylsp.setup {
+  cmd = { "pylsp" },
+  filetypes = { "python" },
+  single_file_support = true,
+}
+
 lspconfig.ocamllsp.setup {}
