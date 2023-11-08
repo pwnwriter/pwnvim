@@ -8,9 +8,9 @@ vim.loader.enable()
 
 require("core.opts").initial()
 
-require("core.utils").lazy(vim.fn.stdpath "data" .. "/lazy/lazy.nvim")
-
 local lazy_path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+require("core.utils").lazy(lazy_path)
+
 vim.opt.rtp:prepend(lazy_path)
 
 require "plugins"
