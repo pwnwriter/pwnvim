@@ -81,7 +81,7 @@ local plugins = {
       require("core.utils").lazy_load "lspconfig"
     end,
     config = function()
-      require "plugins.configs.lspconfig"
+      require "plugins.configs.lsp"
     end,
   },
   {
