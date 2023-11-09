@@ -81,16 +81,16 @@ M.mini = function()
 end
 
 M.lsp = function()
-  -- Use LspAttach autocommand to only map the following keys
+  -- map the following keys on lsp attach only
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", {}),
     callback = function(ev)
       vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
-      map("n", "<space>d", vim.diagnostic.open_float)
-      map("n", "[d", vim.diagnostic.goto_prev)
-      map("n", "]d", vim.diagnostic.goto_next)
-      map("n", "<space>q", vim.diagnostic.setloclist)
+      map("n", "<space>d", vim.diagnostic.open_float, opts)
+      map("n", "[d", vim.diagnostic.goto_prev, opts)
+      map("n", "]d", vim.diagnostic.goto_next, opts)
+      map("n", "<space>sd", vim.diagnostic.setloclist, opts)
 
       map("n", "<leader>ih", vim.lsp.buf.hover, opts)
       map("n", "<leader>id", vim.lsp.buf.definition, opts)
