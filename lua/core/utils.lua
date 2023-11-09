@@ -9,9 +9,7 @@ M.lazy = function(lazy_path)
     "--branch=stable",
     lazy_path,
   }
-
   vim.opt.rtp:prepend(lazy_path)
-  return M
 end
 
 M.lazy_load = function(plugin)
@@ -19,7 +17,7 @@ M.lazy_load = function(plugin)
     group = vim.api.nvim_create_augroup("BeLazyOnFileOpen" .. plugin, {}),
     callback = function()
       local file = vim.fn.expand "%"
-      local condition = file ~= "NvimTree_1" and file ~= "[lazy]" and file ~= "mini" and file ~= ""
+      local condition = file ~= "NvimTree_1" and file ~= "[lazy]" and file ~= ""
 
       if condition then
         vim.api.nvim_del_augroup_by_name("BeLazyOnFileOpen" .. plugin)
