@@ -65,7 +65,7 @@ function M.run_command()
 end
 
 vim.api.nvim_create_autocmd("TermOpen", {
-  desc = "Disable 'mini.indentscope' in terminal buffer",
+  desc = "Disable 'mini.indentscope', enable beam in terminal buffer",
   callback = function(data)
     vim.b[data.buf].miniindentscope_disable = true
   end,
