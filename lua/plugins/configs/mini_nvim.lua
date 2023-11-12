@@ -106,4 +106,6 @@ M.completion = {
   },
 }
 
+M.animate = {}
+
 return M

@@ -71,4 +71,13 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
+local inlay_hint_enabled = false
+
+function M.toggle_inlay_hint()
+  if vim.lsp.inlay_hint then
+    inlay_hint_enabled = not inlay_hint_enabled
+    vim.lsp.inlay_hint(0, inlay_hint_enabled)
+  end
+end
+
 return M

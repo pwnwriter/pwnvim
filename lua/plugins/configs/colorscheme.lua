@@ -30,6 +30,12 @@ local options = {
     mason = true,
     noice = true,
     notify = true,
+    native_lsp = {
+      enabled = true,
+      inlay_hints = {
+        background = true,
+      },
+    },
     barbecue = {
       bold_basename = false,
       dim_context = true,

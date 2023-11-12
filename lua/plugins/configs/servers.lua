@@ -24,6 +24,9 @@ lspconfig.lua_ls.setup {
         globals = { "vim" },
       },
       -- format = { enable = false },
+      hint = {
+        enable = true,
+      },
     },
   },
 }
