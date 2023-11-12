@@ -92,7 +92,7 @@ M.lsp = function()
       map("n", "]d", vim.diagnostic.goto_next, opts)
       map("n", "<space>sd", vim.diagnostic.setloclist, opts)
       map("n", "<leader>hi", function()
-        utils.toggle_inlay_hint()
+        utils.toggle_inlay_hint() -- toggle inlay hint 
       end, opts)
 
       map("n", "<leader>ih", vim.lsp.buf.hover, opts)
