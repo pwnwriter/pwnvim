@@ -26,14 +26,6 @@ M.notify = {
   fade_in_slide_out = "fade",
 }
 
-M.barbecue = {
-  show_modified = true,
-  kinds = icons.kind,
-  symbols = {
-    separator = icons.widget.nesting,
-  },
-}
-
 M.mason = {
   ui = {
     icons = {

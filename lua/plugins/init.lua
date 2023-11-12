@@ -74,8 +74,7 @@ local plugins = {
     name = "lspconfig",
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     event = {
-      "BufReadPre",
-      "BufNewFile",
+      "LspAttach",
     },
     init = function()
       require("core.utils").lazy_load "lspconfig"
@@ -129,19 +128,17 @@ local plugins = {
   },
 
   {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
+    "Bekaboo/dropbar.nvim",
+    name = "dropbar",
     event = {
       "BufReadPre",
       "BufNewFile",
     },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
-      local opts = require("plugins.configs.fancy").barbecue
-      require("barbecue").setup(opts)
+      require("dropbar").setup()
     end,
   },
 
