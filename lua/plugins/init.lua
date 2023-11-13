@@ -1,7 +1,7 @@
 local conf_path = vim.fn.stdpath "config" --[[@as string]]
 
 local plugins = {
---- colorschemes
+  --- colorschemes
   {
     "catppuccin/nvim",
     lazy = true,
@@ -16,7 +16,7 @@ local plugins = {
     end,
   },
 
---- Mini stuffs
+  --- Mini stuffs
   {
     "echasnovski/mini.nvim",
     name = "mini",
@@ -49,7 +49,7 @@ local plugins = {
     end,
   },
 
---- Completion menu stuffs
+  --- Completion menu stuffs
   {
     "hrsh7th/nvim-cmp",
     name = "cmp",
@@ -59,7 +59,7 @@ local plugins = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
     },
-    event = "InsertEnter",
+    event = { "LspAttach", "InsertCharPre" },
     config = function()
       require "plugins.configs.cmp"
     end,
@@ -72,7 +72,7 @@ local plugins = {
     end,
   },
 
---- lsp stuffs
+  --- lsp stuffs
   {
     "neovim/nvim-lspconfig",
     name = "lspconfig",
@@ -88,7 +88,7 @@ local plugins = {
     end,
   },
 
---- Mason 
+  --- Mason
   {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
