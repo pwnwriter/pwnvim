@@ -58,6 +58,6 @@ M.completion = {
   },
 }
 
-M.animate = {}
+M.ai = {}
 
 return M
