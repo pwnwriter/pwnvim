@@ -79,7 +79,7 @@ function M.toggle_inlay_hint()
     vim.lsp.inlay_hint(0, inlay_hint_enabled)
     -- vim.api.nvim_set_hl(0,'LspInlayHint', {fg = '#f5bde6'})
   else
-    require("notify")("My super important message")
+    require "notify" "Inlay hint not supported"
   end
 end
 
