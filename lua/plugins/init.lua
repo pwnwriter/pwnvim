@@ -25,8 +25,19 @@ local plugins = {
     keys = { "<leader>e", "<leader>ff", "<leader>b", "<leader>fr", "<leader>fw", "<leader>q", "<leader>ti", "<C-q>" },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
-      local mini_modules =
-        { "pairs", "ai", "surround", "comment", "files", "hipatterns", "bufremove", "pick", "move", "indentscope", "extra" }
+      local mini_modules = {
+        "pairs",
+        "ai",
+        "surround",
+        "comment",
+        "files",
+        "hipatterns",
+        "bufremove",
+        "pick",
+        "move",
+        "indentscope",
+        "extra",
+      }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
