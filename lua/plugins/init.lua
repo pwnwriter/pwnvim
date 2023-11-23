@@ -178,7 +178,6 @@ local plugins = {
     config = function()
       require("core.opts").final()
       require("core.mappings").general()
-      pcall(vim.cmd.rshada, { bang = true })
     end,
   },
 }
