@@ -35,6 +35,7 @@ cmp.setup {
       name = "nvim_lsp",
       max_item_count = 80,
     },
+    { name = "path" },
     {
       name = "buffer",
       max_item_count = 20,
