@@ -31,11 +31,11 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "path", max_item_count = 20 },
     {
       name = "nvim_lsp",
       max_item_count = 80,
     },
-    { name = "path" },
     {
       name = "buffer",
       max_item_count = 20,

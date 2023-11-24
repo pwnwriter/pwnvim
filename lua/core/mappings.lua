@@ -1,10 +1,8 @@
 local opts = { noremap = true, silent = true }
 local utils = require "core.utils"
-local M = {}
+local map = vim.keymap.set
 
-local map = function(mode, lhs, rhs, options)
-  vim.keymap.set(mode, lhs, rhs, options)
-end
+local M = {}
 
 M.general = function()
   map("i", "<C-h>", "<Left>", opts)

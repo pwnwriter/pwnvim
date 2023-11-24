@@ -42,8 +42,8 @@ M.final = function()
   opt.splitright = true
   opt.scrolloff = 2
   opt.laststatus = 0
-  local statusline_ascii = ""
   opt.sidescrolloff = 2
+  local statusline_ascii = ""
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
