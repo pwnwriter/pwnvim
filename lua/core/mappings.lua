@@ -99,7 +99,9 @@ M.lsp = function()
       map("n", "<leader>ii", vim.lsp.buf.implementation, opts)
       map("n", "<leader>ir", vim.lsp.buf.references, opts)
       map({ "n", "v" }, "<leader>ia", vim.lsp.buf.code_action, opts)
-      map("n", "<leader>if", vim.lsp.buf.format, opts)
+      map("n", "<leader>if", function()
+        vim.lsp.buf.format { async = true }
+      end, opts)
       map("n", "<leader>ic", vim.lsp.buf.rename, opts)
       map({ "i", "s" }, "<c-space>", vim.lsp.buf.signature_help, opts)
     end,
