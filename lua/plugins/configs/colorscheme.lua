@@ -28,6 +28,10 @@ local options = {
     cmp = true,
     treesitter = true,
     mason = true,
+    dropbar = {
+      enabled = true,
+      color_mode = false,
+    },
     noice = true,
     notify = true,
     native_lsp = {
