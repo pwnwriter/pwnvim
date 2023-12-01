@@ -46,6 +46,8 @@ end
 
 M.mini = function()
   local MiniPick = require "mini.pick"
+  local MiniExtra = require "mini.extra"
+  local MiniVisits = require "mini.visits"
   local builtin = MiniPick.builtin
   map({ "n" }, "<leader>ff", function()
     builtin.files()
@@ -75,6 +77,18 @@ M.mini = function()
 
   map({ "n" }, "<C-q>", function()
     require("mini.bufremove").delete()
+  end, opts)
+
+  map("n", "<A-s>", function()
+    MiniExtra.pickers.visit_paths { filter = "todo" }
+  end, opts)
+
+  map("n", "<A-a>", function()
+    MiniVisits.add_label "todo"
+  end, opts)
+
+  map("n", "<A-A>", function()
+    MiniVisits.remove_label()
   end, opts)
 end
 

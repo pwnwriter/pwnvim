@@ -37,6 +37,7 @@ local plugins = {
         "move",
         "indentscope",
         "extra",
+        "visits",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do

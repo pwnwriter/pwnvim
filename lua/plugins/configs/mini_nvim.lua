@@ -62,4 +62,10 @@ M.completion = {
 
 M.ai = {}
 
+M.visits = {
+  store = {
+    path = vim.fn.stdpath "cache" .. "mini-visits-index",
+  },
+}
+
 return M
