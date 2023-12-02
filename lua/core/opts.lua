@@ -6,7 +6,6 @@ local g = vim.g
 local M = {}
 
 M.initial = function()
-  vim.loader.enable()
   g.mapleader = " "
   opt.clipboard = "unnamedplus"
   opt.wildmenu = true

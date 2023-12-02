@@ -1,8 +1,8 @@
--- ╔═╗┬ ┬┌┐┌╦  ╦╦╔╦╗
--- ╠═╝││││││╚╗╔╝║║║║
--- ╩  └┴┘┘└┘ ╚╝ ╩╩ ╩
+-- ┏┓     ┓┏•   
+-- ┃┃┓┏┏┏┓┃┃┓┏┳┓
+-- ┣┛┗┻┛┛┗┗┛┗┛┗┗
 -- Neo(vim) the K1ss way
---    @pwnwriter/pwnvim
+--               @pwnwriter/pwnvim
 
 vim.loader.enable()
 
