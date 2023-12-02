@@ -140,24 +140,20 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     },
-    config = function()
-      local opts = require("plugins.configs.fancy").noice
-      require("noice").setup(opts)
+    opts = function()
+      return require("plugins.configs.fancy").noice
     end,
   },
 
   {
     "Bekaboo/dropbar.nvim",
     name = "dropbar",
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
+    event = "BufReadPre",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      require("dropbar").setup()
+    opts = function()
+      return require("plugins.configs.fancy").drop
     end,
   },
 
