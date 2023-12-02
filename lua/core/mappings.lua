@@ -122,4 +122,14 @@ M.lsp = function()
   })
 end
 
+M.dropbar = function()
+  map("n", "<leader>p", function()
+    require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
+  end, opts)
+
+  map("n", "<leader>td", function()
+    require("core.utils").toggle_dropbar()
+  end, opts)
+end
+
 return M

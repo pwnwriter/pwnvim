@@ -153,6 +153,7 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     },
     opts = function()
+      require("core.mappings").dropbar()
       return require("plugins.configs.fancy").drop
     end,
   },
