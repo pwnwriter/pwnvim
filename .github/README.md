@@ -20,3 +20,5 @@
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 <p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a>🍀</a> 
+
+[lazy.nvim]: https://github.com/folke/lazy.nvim
