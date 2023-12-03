@@ -83,14 +83,11 @@ function M.toggle_inlay_hint()
   end
 end
 
-local winbar_state = 0
 function M.toggle_dropbar()
-  if winbar_state == 0 then
-    vim.cmd "set winbar=%{%v:lua.dropbar.get_dropbar_str()%}"
-    winbar_state = 1
+  if vim.o.winbar == "" then
+    vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
   else
-    vim.cmd "set winbar="
-    winbar_state = 0
+    vim.o.winbar = ""
   end
 end
 
