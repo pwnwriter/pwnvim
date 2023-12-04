@@ -1,3 +1,7 @@
+
+![screenshot_2023-12-04_08-19-22](https://github.com/pwnwriter/pwnvim/assets/90331517/f3851d49-d4d0-4fde-946b-df94f0aff753)
+
+
 ## ☕ Tips
 
 -   You can Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
