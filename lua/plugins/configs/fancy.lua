@@ -95,6 +95,7 @@ M.drop = {
     quick_navigation = false,
     keymaps = {
       ["<C-c>"] = "<C-w>q",
+      ["<ESC>"] = "<C-w>q",
       ["h"] = "<C-w>c",
       ["l"] = function()
         local menu = require("dropbar.api").get_current_dropbar_menu()
