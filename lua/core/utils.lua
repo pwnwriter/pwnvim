@@ -91,4 +91,10 @@ function M.toggle_dropbar()
   end
 end
 
+function M.toggle_flow()
+  vim.o.relativenumber = false
+  vim.o.number = false
+  vim.opt.signcolumn = "yes:4"
+end
+
 return M

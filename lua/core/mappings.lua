@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = true }
 local utils = require "core.utils"
+
 local map = vim.keymap.set
 
 local M = {}
@@ -17,6 +18,9 @@ M.general = function()
   map("n", "<C-l>", "<C-w>l", opts)
   map("n", "<leader>n", function()
     utils.toggle_numbering() -- toggle line numbers
+  end, opts)
+  map("n", "<leader>g", function()
+    utils.toggle_flow()
   end, opts)
   map("n", "<C-s>", "<cmd>w<CR>", opts)
   map("n", "<Tab>", "<cmd>bnext<CR>", opts)
