@@ -1,5 +1,5 @@
 
-![screenshot_2023-12-04_08-19-22](https://github.com/pwnwriter/pwnvim/assets/90331517/f3851d49-d4d0-4fde-946b-df94f0aff753)
+![screenshot_2023-12-06_20-02-46](https://github.com/pwnwriter/pwnvim/assets/90331517/3da8df14-b6c4-4f80-8a61-46334712db43)
 
 
 ## ☕ Tips
