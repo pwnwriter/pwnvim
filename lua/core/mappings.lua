@@ -39,9 +39,8 @@ M.terminal = function()
     require("nvterm.terminal").toggle "horizontal"
   end, opts)
 
-  map({ "n", "t" }, "<A-H>", function()
-    require("nvterm.terminal").toggle "vertical"
-  end, opts)
+  require("nvterm.terminal").toggle "vertical"
+  map({ "n", "t" }, "<A-H>", function() end, opts)
 
   map({ "n", "t" }, "<A-R>", function()
     utils.run_command()
@@ -111,16 +110,17 @@ M.lsp = function()
         utils.toggle_inlay_hint() -- toggle inlay hint
       end, opts)
 
-      map("n", "<leader>ih", vim.lsp.buf.hover, opts)
-      map("n", "<leader>id", vim.lsp.buf.definition, opts)
-      map("n", "<leader>it", vim.lsp.buf.type_definition, opts)
-      map("n", "<leader>ii", vim.lsp.buf.implementation, opts)
-      map("n", "<leader>ir", vim.lsp.buf.references, opts)
-      map({ "n", "v" }, "<leader>ia", vim.lsp.buf.code_action, opts)
+      map("n", "<leader>k", vim.lsp.buf.hover, opts)
+      map("n", "<leader>ld", vim.lsp.buf.definition, opts)
+      map("n", "<leader>lh", vim.lsp.buf.declaration, opts)
+      map("n", "<leader>lt", vim.lsp.buf.type_definition, opts)
+      map("n", "<leader>li", vim.lsp.buf.implementation, opts)
+      map("n", "<leader>lr", vim.lsp.buf.references, opts)
+      map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
       map("n", "<leader>if", function()
         vim.lsp.buf.format { async = true }
       end, opts)
-      map("n", "<leader>ic", vim.lsp.buf.rename, opts)
+      map("n", "<leader>lc", vim.lsp.buf.rename, opts)
       map({ "i", "s" }, "<c-space>", vim.lsp.buf.signature_help, opts)
     end,
   })

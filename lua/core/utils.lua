@@ -93,18 +93,24 @@ end
 
 local state = 0
 function M.toggle_flow()
-    if state == 0 then
-        vim.o.relativenumber = false
-        vim.o.number = false
-        vim.opt.signcolumn = 'yes:4'
-        vim.o.winbar = ""
-        state = 1
-    else
-        vim.o.relativenumber = true
-        vim.opt.signcolumn = 'auto'
-        vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
-        state = 0
-    end
+  if state == 0 then
+    vim.o.relativenumber = false
+    vim.o.number = false
+    vim.opt.signcolumn = "yes:4"
+    vim.o.winbar = ""
+    state = 1
+  else
+    vim.o.relativenumber = true
+    vim.opt.signcolumn = "auto"
+    vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
+    state = 0
+  end
+end
+
+local signs = { Error = "", Warn = " ", Hint = " ", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 return M
