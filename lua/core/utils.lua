@@ -77,7 +77,7 @@ function M.toggle_inlay_hint()
   if vim.lsp.inlay_hint then
     inlay_hint_enabled = not inlay_hint_enabled
     vim.lsp.inlay_hint(0, inlay_hint_enabled)
-    -- vim.api.nvim_set_hl(0,'LspInlayHint', {fg = '#f5bde6'})
+    vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#f0c6c6" })
   else
     require "notify" "Inlay hint not supported"
   end
