@@ -118,7 +118,7 @@ M.lsp = function()
       map("n", "<leader>li", vim.lsp.buf.implementation, opts)
       map("n", "<leader>lr", vim.lsp.buf.references, opts)
       map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
-      map("n", "<leader>if", function()
+      map("n", "<leader>lf", function()
         vim.lsp.buf.format { async = true }
       end, opts)
       map("n", "<leader>lc", vim.lsp.buf.rename, opts)
