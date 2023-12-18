@@ -9,6 +9,13 @@ icons.layout = {
   uninstalled = "✗",
 }
 
+icons.diagnostics = {
+  hint = "󱐮",
+  error = "✘",
+  info = "◉",
+  warn = "",
+}
+
 icons.widget = {
   active = "",
   command = "",

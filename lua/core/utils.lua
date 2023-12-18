@@ -1,4 +1,5 @@
 local M = {}
+
 local icons = require "core.icons"
 
 M.lazy = function(lazy_path)
@@ -92,10 +93,10 @@ vim.diagnostic.config {
   },
   signs = {
     text = {
-      [vim.diagnostic.severity.HINT] = "󱐮",
-      [vim.diagnostic.severity.ERROR] = "✘",
-      [vim.diagnostic.severity.INFO] = "◉",
-      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.HINT] = "" .. icons.diagnostics.hint,
+      [vim.diagnostic.severity.ERROR] = "" .. icons.diagnostics.error,
+      [vim.diagnostic.severity.INFO] = "" .. icons.diagnostics.info,
+      [vim.diagnostic.severity.WARN] = "" .. icons.diagnostics.warn,
     },
   },
 }
