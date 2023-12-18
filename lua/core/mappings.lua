@@ -103,14 +103,22 @@ M.lsp = function()
     callback = function(ev)
       vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
-      map("n", "<space>d", vim.diagnostic.open_float, opts)
-      map("n", "[d", vim.diagnostic.goto_prev, opts)
-      map("n", "]d", vim.diagnostic.goto_next, opts)
-      map("n", "<space>sd", vim.diagnostic.setloclist, opts)
+      -- Diagnostics mappings
+      map("n", "<leader>d", function()
+        vim.diagnostic.goto_prev { float = true }
+      end)
+
+      map("n", "[d", function()
+        vim.diagnostic.goto_prev { float = false }
+      end)
+      map("n", "]d", function()
+        vim.diagnostic.goto_next { float = false }
+      end)
+      map("n", "<leader>sd", vim.diagnostic.setloclist)
+
       map("n", "<leader>hi", function()
         utils.toggle_inlay_hint() -- toggle inlay hint
       end, opts)
-
       map("n", "<leader>k", vim.lsp.buf.hover, opts)
       map("n", "<leader>ld", vim.lsp.buf.definition, opts)
       map("n", "<leader>lh", vim.lsp.buf.declaration, opts)

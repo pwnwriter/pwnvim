@@ -1,4 +1,5 @@
 local M = {}
+local icons = require "core.icons"
 
 M.lazy = function(lazy_path)
   vim.fn.system {
@@ -71,16 +72,9 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
-local inlay_hint_enabled = false
-
 function M.toggle_inlay_hint()
-  if vim.lsp.inlay_hint then
-    inlay_hint_enabled = not inlay_hint_enabled
-    vim.lsp.inlay_hint(0, inlay_hint_enabled)
-    vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#f0c6c6" })
-  else
-    require "notify" "Inlay hint not supported"
-  end
+  local is_enabled = vim.lsp.inlay_hint.is_enabled()
+  vim.lsp.inlay_hint.enable(0, not is_enabled)
 end
 
 function M.toggle_dropbar()
@@ -90,6 +84,21 @@ function M.toggle_dropbar()
     vim.o.winbar = ""
   end
 end
+
+vim.diagnostic.config {
+  virtual_text = true,
+  underline = {
+    severity = { min = vim.diagnostic.severity.WARN },
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.HINT] = "󱐮",
+      [vim.diagnostic.severity.ERROR] = "✘",
+      [vim.diagnostic.severity.INFO] = "◉",
+      [vim.diagnostic.severity.WARN] = "",
+    },
+  },
+}
 
 local state = 0
 function M.toggle_flow()
@@ -105,12 +114,6 @@ function M.toggle_flow()
     vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
     state = 0
   end
-end
-
-local signs = { Error = "", Warn = " ", Hint = " ", Info = "" }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 return M
