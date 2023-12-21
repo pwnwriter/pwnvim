@@ -1,7 +1,7 @@
 -- ┏┓     ┓┏•
 -- ┃┃┓┏┏┏┓┃┃┓┏┳┓
 -- ┣┛┗┻┛┛┗┗┛┗┛┗┗
--- Neo(vim) the K1ss way
+-- Neo(vim) the less is more
 --               @pwnwriter/pwnvim
 
 vim.loader.enable()
