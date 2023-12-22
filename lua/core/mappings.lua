@@ -49,10 +49,10 @@ M.terminal = function()
 end
 
 M.mini = function()
-  local MiniPick = require "mini.pick"
-  local MiniExtra = require "mini.extra"
-  local MiniVisits = require "mini.visits"
-  local builtin = MiniPick.builtin
+  local minipick = require "mini.pick"
+  local miniextra = require "mini.extra"
+  local minivisits = require "mini.visits"
+  local builtin = minipick.builtin
   map({ "n" }, "<leader>ff", function()
     builtin.files()
   end, opts)
@@ -84,15 +84,15 @@ M.mini = function()
   end, opts)
 
   map("n", "<A-s>", function()
-    MiniExtra.pickers.visit_paths { filter = "todo" }
+    miniextra.pickers.visit_paths { filter = "todo" }
   end, opts)
 
   map("n", "<A-a>", function()
-    MiniVisits.add_label "todo"
+    minivisits.add_label "todo"
   end, opts)
 
   map("n", "<A-A>", function()
-    MiniVisits.remove_label()
+    minivisits.remove_label()
   end, opts)
 end
 

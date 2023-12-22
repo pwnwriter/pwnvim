@@ -86,21 +86,6 @@ function M.toggle_dropbar()
   end
 end
 
-vim.diagnostic.config {
-  virtual_text = true,
-  underline = {
-    severity = { min = vim.diagnostic.severity.WARN },
-  },
-  signs = {
-    text = {
-      [vim.diagnostic.severity.HINT] = "" .. icons.diagnostics.hint,
-      [vim.diagnostic.severity.ERROR] = "" .. icons.diagnostics.error,
-      [vim.diagnostic.severity.INFO] = "" .. icons.diagnostics.info,
-      [vim.diagnostic.severity.WARN] = "" .. icons.diagnostics.warn,
-    },
-  },
-}
-
 -- Toggle flow state mode, Disable most of the unnecessary plugins :oOc
 local state = 0
 function M.toggle_flow()
