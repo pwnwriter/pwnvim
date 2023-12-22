@@ -22,7 +22,17 @@ local plugins = {
     name = "mini",
     version = false,
     event = { "InsertEnter" },
-    keys = { "<leader>e", "<leader>ff", "<leader>b", "<leader>fr", "<leader>fw", "<leader>q", "<leader>ti", "<C-q>" },
+    keys = {
+      "<leader>e",
+      "<leader>ff",
+      "<leader>b",
+      "<leader>fr",
+      "<leader>fw",
+      "<leader>q",
+      "<leader>ti",
+      "<C-q>",
+      "gcc",
+    },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
       local mini_modules = {
@@ -38,6 +48,7 @@ local plugins = {
         "indentscope",
         "extra",
         "visits",
+        "clue",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
@@ -155,6 +166,37 @@ local plugins = {
     opts = function()
       require("core.mappings").dropbar()
       return require("plugins.configs.fancy").drop
+    end,
+  },
+
+  -- git stuff
+  {
+    "lewis6991/gitsigns.nvim",
+    name = "gitsigns",
+    ft = { "gitcommit", "diff" },
+    init = function()
+      -- load gitsigns only when a git file is opened
+      vim.api.nvim_create_autocmd({ "BufRead" }, {
+        group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
+        callback = function()
+          vim.fn.jobstart({ "git", "-C", vim.loop.cwd(), "rev-parse" }, {
+            on_exit = function(_, return_code)
+              if return_code == 0 then
+                vim.api.nvim_del_augroup_by_name "GitSignsLazyLoad"
+                vim.schedule(function()
+                  require("lazy").load { plugins = { "gitsigns" } }
+                end)
+              end
+            end,
+          })
+        end,
+      })
+    end,
+    opts = function()
+      return require("plugins.configs.fancy").gitsigns
+    end,
+    config = function(_, opts)
+      require("gitsigns").setup(opts)
     end,
   },
 

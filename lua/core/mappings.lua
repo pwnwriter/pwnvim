@@ -19,7 +19,7 @@ M.general = function()
   map("n", "<leader>n", function()
     utils.toggle_numbering() -- toggle line numbers
   end, opts)
-  map("n", "<leader>g", function()
+  map("n", "<leader>tf", function()
     utils.toggle_flow()
   end, opts)
   map("n", "<C-s>", "<cmd>w<CR>", opts)
@@ -142,6 +142,24 @@ M.dropbar = function()
 
   map("n", "<leader>td", function()
     require("core.utils").toggle_dropbar()
+  end, opts)
+end
+
+M.gitsigns = function()
+  map("n", "<leader>gp", function()
+    require("gitsigns").preview_hunk()
+  end, opts)
+
+  map("n", "<leader>gr", function()
+    require("gitsigns").reset_hunk()
+  end, opts)
+
+  map("n", "<leader>gb", function()
+    package.loaded.gitsigns.blame_line()
+  end, opts)
+
+  map("n", "<leader>gd", function()
+    require("gitsigns").toggle_deleted()
   end, opts)
 end
 
