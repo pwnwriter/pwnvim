@@ -31,7 +31,9 @@ local plugins = {
       "<leader>q",
       "<leader>ti",
       "<C-q>",
-      "gcc",
+      { "gcc", mode = "n"},
+      { "gc", mode = "n"},
+      { "gc", mode = "x"},
     },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
