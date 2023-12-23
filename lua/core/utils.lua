@@ -1,7 +1,5 @@
 local M = {}
 
-local icons = require "core.icons"
-
 M.lazy = function(lazy_path)
   vim.fn.system {
     "git",

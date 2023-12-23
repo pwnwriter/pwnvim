@@ -72,4 +72,13 @@ icons.kind = {
   Variable = "",
 }
 
+icons.gitsigns =  {
+add = "│",
+change = "│",
+delete = "󰛌",
+topdelete = "‾",
+changedelete = "󰗩",
+untracked = "│",
+}
+
 return icons
