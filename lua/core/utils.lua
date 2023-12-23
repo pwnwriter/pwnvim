@@ -38,14 +38,6 @@ M.lazy_load = function(plugin)
   })
 end
 
-local cmds = { "nu!", "rnu!", "nonu!" }
-local current_index = 1
-
-function M.toggle_numbering()
-  current_index = current_index % #cmds + 1
-  vim.cmd("set " .. cmds[current_index])
-end
-
 function M.run_command()
   local terminal = require "nvterm.terminal"
   local ft_cmds = {
@@ -71,11 +63,21 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
+--- Toggle line numbers
+local cmds = { "nu!", "rnu!", "nonu!" }
+local current_index = 1
+function M.toggle_numbering()
+  current_index = current_index % #cmds + 1
+  vim.cmd("set " .. cmds[current_index])
+end
+
+--- Toggle inlay hints
 function M.toggle_inlay_hint()
   local is_enabled = vim.lsp.inlay_hint.is_enabled()
   vim.lsp.inlay_hint.enable(0, not is_enabled)
 end
 
+--- Toggle dropbar
 function M.toggle_dropbar()
   if vim.o.winbar == "" then
     vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
