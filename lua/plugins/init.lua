@@ -1,7 +1,7 @@
 local conf_path = vim.fn.stdpath "config" --[[@as string]]
 
 local plugins = {
-  --- colorschemes
+  -- colorschemes
   {
     "catppuccin/nvim",
     lazy = true,
@@ -31,9 +31,9 @@ local plugins = {
       "<leader>q",
       "<leader>ti",
       "<C-q>",
-      { "gcc", mode = "n"},
-      { "gc", mode = "n"},
-      { "gc", mode = "x"},
+      { "gcc", mode = "n" },
+      { "gc", mode = "n" },
+      { "gc", mode = "x" },
     },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
@@ -207,9 +207,6 @@ local plugins = {
     name = "sentiment",
     event = { "InsertCharPre", "InsertEnter" },
     opts = {},
-    init = function()
-      vim.g.loaded_matchparen = 1
-    end,
   },
 
   {

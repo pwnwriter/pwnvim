@@ -49,7 +49,6 @@ M.mason = {
 
 M.treesitter = {
   ensure_installed = { "lua", "rust", "ocaml" },
-
   highlight = {
     enable = true,
     use_languagetree = true,

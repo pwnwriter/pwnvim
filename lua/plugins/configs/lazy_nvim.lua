@@ -17,7 +17,9 @@ return {
     },
     rtp = {
       disabled_plugins = {
+        "parser",
         "gzip",
+        "matchparen",
         "netrwPlugin",
         "health",
         "man",
