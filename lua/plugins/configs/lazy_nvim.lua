@@ -22,7 +22,6 @@ return {
         "health",
         "man",
         "matchit",
-        "matchparen",
         "rplugin",
         "tarPlugin",
         "tohtml",
