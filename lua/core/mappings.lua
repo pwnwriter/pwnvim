@@ -158,6 +158,10 @@ M.gitsigns = function()
     package.loaded.gitsigns.blame_line()
   end, opts)
 
+  map("n", "<leader>gt", function()
+    package.loaded.gitsigns.diffthis()
+  end, opts)
+
   map("n", "<leader>gd", function()
     require("gitsigns").toggle_deleted()
   end, opts)
