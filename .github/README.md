@@ -5,16 +5,15 @@
 
    
 > [!IMPORTANT]
-> ***This config requires Latest [Neovim][Neovim] build !***
+> ***This config requires latest [Neovim][Neovim] build !***
 
--   You can Set `NVIM_DEV` environment variable to modify where [**`lazy.nvim`**][lazy.nvim]
+-   You can Set `NVIM_DEV` environment variable to modify where [**`lazy.nvim`**][Lazy.nvim]
     should look for `dev = true` plugins.
 
--   To install tresitter of `x` language Run `:TSInstall [x]`.
-
--   See [**`:help lspconfig-all`**][lspconfig] to get an understanding of how
+-   To install [**`treesitter`**][Treesitter] of `x` language Run `:TSInstall [x]` !
+-   Install lsp server with [**`Mason`**][Mason]  ; `:MasonInstall [x]` and configure inside [**`servers.lua`**][Server].
+-   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
-
     ```lua
     -- plugins/configs/servers.lua
     local lspconfig = require("lspconfig")
@@ -29,5 +28,8 @@
 <p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a> 🍃</a> 
 
 [Neovim]: https://github.com/neovim/neovim
-[lazy.nvim]: https://github.com/folke/lazy.nvim
-[lspconfig]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+[Lazy.nvim]: https://github.com/folke/lazy.nvim
+[Lspconfig]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+[Treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
+[Mason]: https://github.com/williamboman/mason.nvim
+[Server]: /lua/plugins/configs/servers.lua
