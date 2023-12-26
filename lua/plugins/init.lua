@@ -32,6 +32,7 @@ local plugins = {
       "<leader>ti",
       "<C-q>",
       { "gcc", mode = "n" },
+      { "<leader>", mode = "n" },
       { "gc", mode = "n" },
       { "gc", mode = "x" },
     },
@@ -50,6 +51,7 @@ local plugins = {
         "indentscope",
         "extra",
         "visits",
+        "clue",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
@@ -160,7 +162,7 @@ local plugins = {
   {
     "Bekaboo/dropbar.nvim",
     name = "dropbar",
-    event = "BufReadPre",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
