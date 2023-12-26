@@ -1,5 +1,12 @@
 ![screenshot_2023-12-23_19-00-07](https://github.com/pwnwriter/pwnvim/assets/90331517/10fb5d7f-8be5-477b-9e37-a20fb36d6ebb)
 
+<p align="center">
+    Some of us don't give a shit how lean our <code>vimrc</code> is. What an arbitrary yardstick.<br />
+     I prioritize minimizing bloat.<br />
+</p>
+<p align="center">
+    <sup> Requires version: v0.10.{..}</sup> <!-- Current-Neovim-version -->
+</p>
 
 ## 🍦 Tips
 
