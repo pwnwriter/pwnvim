@@ -31,24 +31,6 @@ M.general = function()
   map("v", "//", 'y/<C-R>"<cr>', "Search selected text")
 end
 
-M.terminal = function()
-  map({ "n", "t" }, "<A-t>", function()
-    require("nvterm.terminal").toggle "float"
-  end, "Toggle float terminal")
-
-  map({ "n", "t" }, "<A-h>", function()
-    require("nvterm.terminal").toggle "horizontal"
-  end, "toggle horizontal terminal")
-
-  map({ "n", "t" }, "<A-H>", function()
-    require("nvterm.terminal").toggle "vertical"
-  end, "Toggle vertical terminal")
-
-  map({ "n", "t" }, "<A-R>", function()
-    utils.run_command()
-  end, "Run terminal command")
-end
-
 M.mini = function()
   local minipick = require "mini.pick"
   local miniextra = require "mini.extra"

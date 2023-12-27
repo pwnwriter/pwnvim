@@ -38,31 +38,6 @@ M.lazy_load = function(plugin)
   })
 end
 
-function M.run_command()
-  local terminal = require "nvterm.terminal"
-  local ft_cmds = {
-    rust = "cargo run",
-    sh = "bash " .. vim.fn.expand "%",
-    python = "python3 " .. vim.fn.expand "%",
-    lua = "lua " .. vim.fn.expand "%",
-    markdown = "glow " .. vim.fn.expand "%",
-  }
-  local command = ft_cmds[vim.bo.filetype]
-
-  if command then
-    terminal.send("clear && " .. command, "vertical")
-  else
-    print("No command defined for filetype: " .. vim.bo.filetype)
-  end
-end
-
-vim.api.nvim_create_autocmd("TermOpen", {
-  desc = "Disable 'mini.indentscope', enable beam in terminal buffer",
-  callback = function(data)
-    vim.b[data.buf].miniindentscope_disable = true
-  end,
-})
-
 --- Toggle line numbers
 local cmds = { "nu!", "rnu!", "nonu!" }
 local current_index = 1

@@ -53,6 +53,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.b[data.buf].miniindentscope_disable = true
   end,
 })
+
 M.completion = {
   window = {
     info = { border = "rounded" },

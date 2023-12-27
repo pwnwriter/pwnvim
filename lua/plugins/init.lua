@@ -125,16 +125,6 @@ local plugins = {
     end,
   },
 
-  --- Terminal
-  {
-    "NvChad/nvterm",
-    keys = { "<A-R>", "<A-h>", "<A-H>", "<A-t>" },
-    config = function()
-      require("core.mappings").terminal()
-      require("nvterm").setup()
-    end,
-  },
-
   --- Fancy stuffs
 
   {
