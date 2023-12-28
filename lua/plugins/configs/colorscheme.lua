@@ -40,10 +40,6 @@ local options = {
         background = true,
       },
     },
-    barbecue = {
-      bold_basename = false,
-      dim_context = true,
-    },
     mini = {
       enabled = true,
       indentscope_color = "lavender",
