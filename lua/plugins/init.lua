@@ -208,6 +208,7 @@ local plugins = {
     config = function()
       require("core.opts").final()
       require("core.mappings").general()
+      require("core.utils").mousepad()
     end,
   },
 }

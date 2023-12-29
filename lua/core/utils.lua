@@ -17,7 +17,7 @@ M.lazy_load = function(plugin)
     group = vim.api.nvim_create_augroup("BeLazyOnFileOpen" .. plugin, {}),
     callback = function()
       local file = vim.fn.expand "%"
-      local condition = file ~= "NvimTree_1" and file ~= "[lazy]" and file ~= ""
+      local condition = file ~= "[lazy]" and file ~= ""
 
       if condition then
         vim.api.nvim_del_augroup_by_name("BeLazyOnFileOpen" .. plugin)
@@ -79,6 +79,12 @@ function M.toggle_flow()
     require("gitsigns").attach()
     state = 0
   end
+end
+
+function M.mousepad()
+  vim.cmd [[amenu 10.100 mousemenu.Toggle\ flow\ state <cmd> lua require("core.utils").toggle_flow()<CR>]]
+  vim.cmd [[amenu 10.110 mousemenu.Goto\ defination <cmd> lua vim.lsp.buf.definition()<CR>]]
+  vim.cmd [[amenu 10.120 mousemenu.Code\ action <cmd> lua vim.lsp.buf.code_action()<CR>]]
 end
 
 return M

@@ -29,6 +29,7 @@ M.general = function()
   map("n", "<C-d>", "<C-d>zz", "Scroll half page down")
   map("n", "<C-u>", "<C-u>zz", "Scroll half page up")
   map("v", "//", 'y/<C-R>"<cr>', "Search selected text")
+  map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 end
 
 M.mini = function()
