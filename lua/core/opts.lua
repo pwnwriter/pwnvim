@@ -46,6 +46,17 @@ M.final = function()
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
+--- load shada after ui-enter
+local shada = vim.o.shada
+vim.o.shada = ""
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    vim.o.shada = shada
+    pcall(vim.cmd.rshada, { bang = true })
+  end,
+})
+
 local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"
 
