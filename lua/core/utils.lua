@@ -87,4 +87,19 @@ function M.mousepad()
   vim.cmd [[amenu 10.120 mousemenu.Code\ action <cmd> lua vim.lsp.buf.code_action()<CR>]]
 end
 
+function M.run_vert_command()
+  local command = vim.fn.input "Enter a command: "
+  local shell = vim.o.shell
+  vim.cmd("vsplit term://" .. shell)
+  vim.fn.termopen(shell)
+
+  local terminal_win = vim.api.nvim_get_current_win()
+  vim.api.nvim_win_set_option(terminal_win, "number", false) -- Remove line numbers
+  vim.api.nvim_win_set_option(terminal_win, "relativenumber", false) -- Remove line numbers
+  vim.api.nvim_win_set_option(terminal_win, "winbar", "") -- Remove dropbar
+
+  vim.api.nvim_chan_send(vim.b.terminal_job_id, command .. "\n")
+  vim.api.nvim_feedkeys("i", "n", true)
+end
+
 return M

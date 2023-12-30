@@ -29,7 +29,6 @@ M.general = function()
   map("n", "<C-d>", "<C-d>zz", "Scroll half page down")
   map("n", "<C-u>", "<C-u>zz", "Scroll half page up")
   map("v", "//", 'y/<C-R>"<cr>', "Search selected text")
-  map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 end
 
 M.mini = function()
@@ -79,6 +78,13 @@ M.mini = function()
   map("n", "<A-A>", function()
     minivisits.remove_label()
   end, "Remove label from file")
+end
+
+M.misc = function()
+  map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
+  map("n", "<A-R>", function()
+    utils.run_vert_command()
+  end, "Run command")
 end
 
 M.lsp = function()
