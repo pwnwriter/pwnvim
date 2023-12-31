@@ -102,4 +102,35 @@ function M.run_vert_command()
   vim.api.nvim_feedkeys("i", "n", true)
 end
 
+-- Autocommands
+function M.autocmds()
+  local autocmd = vim.api.nvim_create_autocmd
+
+  autocmd("RecordingEnter", {
+    callback = function()
+      local msg = string.format("Key:  %s", vim.fn.reg_recording())
+      vim.notify(msg, vim.log.levels.INFO, {
+        title = "Recording started",
+      })
+    end,
+  })
+
+  autocmd("RecordingLeave", {
+    callback = function()
+      local msg = string.format("Key:  %s", vim.fn.reg_recording())
+      vim.notify(msg, vim.log.levels.INFO, {
+        title = "Recording started",
+      })
+    end,
+  })
+
+  vim.b.miniindentscope_disable = true
+  autocmd("TermOpen", {
+    desc = "Disable 'mini.indentscope' in terminal buffer",
+    callback = function(data)
+      vim.b[data.buf].miniindentscope_disable = true
+    end,
+  })
+end
+
 return M

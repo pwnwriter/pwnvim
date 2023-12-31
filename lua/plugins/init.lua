@@ -210,6 +210,7 @@ local plugins = {
       require("core.mappings").general()
       require("core.mappings").misc()
       require("core.utils").mousepad()
+      require("core.utils").autocmds()
     end,
   },
 }

@@ -45,15 +45,6 @@ M.indentscope = {
   symbol = "┋",
 }
 
-vim.b.miniindentscope_disable = true
-
-vim.api.nvim_create_autocmd("TermOpen", {
-  desc = "Disable 'mini.indentscope' in terminal buffer",
-  callback = function(data)
-    vim.b[data.buf].miniindentscope_disable = true
-  end,
-})
-
 M.completion = {
   window = {
     info = { border = "rounded" },
