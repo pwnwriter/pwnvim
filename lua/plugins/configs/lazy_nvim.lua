@@ -35,6 +35,7 @@ return {
   ui = {
     border = "solid",
     title = "lazy.nvim",
+    size = { width = 0.9, height = 0.9 },
     icons = {
       lazy = icons.widget.lazy .. "  ",
       not_loaded = icons.widget.inactive,
