@@ -6,6 +6,7 @@ local g = vim.g
 local M = {}
 
 M.initial = function()
+  g.mapleader = " "
   opt.laststatus = 0
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
@@ -29,7 +30,6 @@ M.final = function()
   opt.complete = {}
   opt.list = true
   opt.wildmenu = true
-  g.mapleader = " "
   opt.pumheight = 20
   opt.ignorecase = true
   opt.smartcase = true
