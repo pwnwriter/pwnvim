@@ -119,7 +119,7 @@ function M.autocmds()
     callback = function()
       local msg = string.format("Key:  %s", vim.fn.reg_recording())
       vim.notify(msg, vim.log.levels.INFO, {
-        title = "Recording started",
+        title = "Recording stopped",
       })
     end,
   })
