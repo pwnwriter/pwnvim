@@ -6,12 +6,9 @@ local g = vim.g
 local M = {}
 
 M.initial = function()
-  g.mapleader = " "
-  opt.clipboard = "unnamedplus"
-  opt.wildmenu = true
-  opt.termguicolors = true
   opt.laststatus = 0
-  opt.list = true
+  opt.clipboard = "unnamedplus"
+  opt.termguicolors = true
   opt.listchars = { tab = icons.layout.tab .. "  " }
   opt.fillchars:append { eob = " " }
   opt.shortmess:append "aIF"
@@ -23,13 +20,16 @@ M.initial = function()
   opt.breakindent = true
   opt.linebreak = true
   opt.showbreak = icons.layout.wrap .. " "
-  opt.complete = {}
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
 end
 
 M.final = function()
+  opt.complete = {}
+  opt.list = true
+  opt.wildmenu = true
+  g.mapleader = " "
   opt.pumheight = 20
   opt.ignorecase = true
   opt.smartcase = true
