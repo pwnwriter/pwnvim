@@ -90,10 +90,10 @@ end
 function M.run_vert_command()
   local shell = vim.o.shell
   local command = vim.fn.input "Enter a command: "
-  local terminal_win = vim.api.nvim_get_current_win()
 
   vim.cmd("vsplit term://" .. shell)
 
+  local terminal_win = vim.api.nvim_get_current_win() -- Get the terminal win
   vim.api.nvim_win_set_option(terminal_win, "number", false) -- Remove line numbers
   vim.api.nvim_win_set_option(terminal_win, "relativenumber", false) -- Remove line numbers
   vim.api.nvim_win_set_option(terminal_win, "winbar", "") -- Remove dropbar
