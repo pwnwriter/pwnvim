@@ -129,7 +129,7 @@ local plugins = {
 
   {
     "rcarriga/nvim-notify",
-    event = "UiEnter",
+    event = "VeryLazy",
     config = function()
       local opts = require("plugins.configs.fancy").notify
       require("notify").setup(opts)
