@@ -19,19 +19,13 @@ M.general = function()
   map("n", "<C-j>", "<C-w>j")
   map("n", "<C-k>", "<C-w>k")
   map("n", "<C-l>", "<C-w>l")
-
-  map("n", "<leader>n", function()
-    utils.toggle_numbering()
-  end, "Toggle line numbering")
-  map("n", "<leader>tf", function()
-    utils.toggle_flow()
-  end, "Toggle flow")
-  map("n", "<C-s>", "<cmd>w<CR>", "Save file")
-  map("n", "<Tab>", "<cmd>bnext<CR>", "Next buffer")
-  map("n", "<s-Tab>", "<cmd>bprev<CR>", "Previout buffer")
-  map("n", "<C-d>", "<C-d>zz", "Scroll half page down")
-  map("n", "<C-u>", "<C-u>zz", "Scroll half page up")
-  map("v", "//", 'y/<C-R>"<cr>', "Search selected text")
+  map("n", "<C-s>", "<cmd>w<CR>")
+  map("n", "<Tab>", "<cmd>bnext<CR>")
+  map("n", "<s-Tab>", "<cmd>bprev<CR>")
+  map("n", "<C-d>", "<C-d>zz")
+  map("n", "<C-u>", "<C-u>zz")
+  map("v", "//", 'y/<C-R>"<cr>') -- search text
+  map("v", "??", 'y:h <C-R>"<cr>"') -- Show vim help
 end
 
 M.mini = function()
@@ -88,6 +82,13 @@ M.misc = function()
   map("n", "<A-R>", function()
     utils.run_vert_command()
   end, "Run command")
+
+  map("n", "<leader>n", function()
+    utils.toggle_numbering()
+  end, "Toggle line numbering")
+  map("n", "<leader>tf", function()
+    utils.toggle_flow()
+  end, "Toggle flow")
 end
 
 M.lsp = function()
