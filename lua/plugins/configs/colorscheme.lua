@@ -4,6 +4,13 @@ local options = {
   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
   compile = true,
   flavour = "macchiato",
+  custom_highlights = function(palette)
+    return {
+      ["CmpItemMenu"] = {
+        fg = palette.overlay0,
+      },
+    }
+  end,
   integrations = {
     cmp = true,
     treesitter = true,
