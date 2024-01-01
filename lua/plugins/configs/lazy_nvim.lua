@@ -17,6 +17,7 @@ return {
     },
     rtp = {
       disabled_plugins = {
+        "osc52",
         "parser",
         "gzip",
         "matchparen",
