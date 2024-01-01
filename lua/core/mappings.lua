@@ -1,22 +1,25 @@
 local utils = require "core.utils"
 
 local function map(mode, keys, action, desc)
-  vim.keymap.set(mode, keys, action, { noremap = true, silent = true, desc = desc })
+  desc = desc or ""
+  local opts = { noremap = true, silent = true, desc = desc }
+  vim.keymap.set(mode, keys, action, opts)
 end
 
 local M = {}
 
 M.general = function()
-  map("i", "<C-h>", "<Left>", "Navigate left in insert mode")
-  map("i", "<C-j>", "<Down>", "Navigate down in insert mode")
-  map("i", "<C-k>", "<Up>", "Navigate up in insert mode")
-  map("i", "<C-l>", "<Right>", "Navigate right in insert mode")
-  map("i", "jj", "<esc>", "Exit insert mode")
-  map("n", "<C-c>", "<cmd>noh<CR>", "Clear search highlighting")
-  map("n", "<C-h>", "<C-w>h", "Move to the left split")
-  map("n", "<C-j>", "<C-w>j", "Move to the below split")
-  map("n", "<C-k>", "<C-w>k", "Move to the upper split")
-  map("n", "<C-l>", "<C-w>l", "Move to the right split")
+  map("i", "<C-h>", "<Left>")
+  map("i", "<C-j>", "<Down>")
+  map("i", "<C-k>", "<Up>")
+  map("i", "<C-l>", "<Right>")
+  map("i", "jj", "<esc>")
+  map("n", "<C-c>", "<cmd>noh<CR>")
+  map("n", "<C-h>", "<C-w>h")
+  map("n", "<C-j>", "<C-w>j")
+  map("n", "<C-k>", "<C-w>k")
+  map("n", "<C-l>", "<C-w>l")
+
   map("n", "<leader>n", function()
     utils.toggle_numbering()
   end, "Toggle line numbering")
@@ -140,23 +143,23 @@ end
 M.gitsigns = function()
   map("n", "<leader>gp", function()
     require("gitsigns").preview_hunk()
-  end, "Gitsigns preview hunk")
+  end, "Git preview hunk")
 
   map("n", "<leader>gr", function()
     require("gitsigns").reset_hunk()
-  end, "Gitsigns reset hunk")
+  end, "Git reset hunk")
 
   map("n", "<leader>gb", function()
     package.loaded.gitsigns.blame_line()
-  end, "Gitsigns blame line")
+  end, "Git blame line")
 
   map("n", "<leader>gt", function()
     package.loaded.gitsigns.diffthis()
-  end, "gitsigns diff this")
+  end, "git diff this")
 
   map("n", "<leader>gd", function()
     require("gitsigns").toggle_deleted()
-  end, "Gitsigns toggle deleted")
+  end, "Git toggle deleted")
 end
 
 return M
