@@ -34,6 +34,10 @@ local plugins = {
       { "<leader>", mode = "n" },
       { "gc", mode = "n" },
       { "gc", mode = "x" },
+      { "H", mode = "x" },
+      { "J", mode = "x" },
+      { "K", mode = "x" },
+      { "L", mode = "x" },
     },
     event = { "InsertEnter" },
     config = function()
