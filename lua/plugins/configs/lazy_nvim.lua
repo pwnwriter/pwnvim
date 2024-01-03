@@ -20,7 +20,6 @@ return {
         "osc52",
         "parser",
         "gzip",
-        "matchparen",
         "netrwPlugin",
         "health",
         "man",

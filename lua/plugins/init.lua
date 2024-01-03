@@ -198,14 +198,6 @@ local plugins = {
   },
 
   {
-    "utilyre/sentiment.nvim",
-    version = "*",
-    name = "sentiment",
-    event = { "InsertCharPre", "InsertEnter" },
-    opts = {},
-  },
-
-  {
     name = "options",
     event = "VeryLazy",
     dir = conf_path,
