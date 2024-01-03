@@ -172,14 +172,14 @@ local plugins = {
         callback = function()
           vim.fn.jobstart({ "git", "-C", vim.loop.cwd(), "rev-parse" }, {
             on_exit = function(_, return_code)
-         if return_code == 0 then
-           vim.api.nvim_del_augroup_by_name "GitSignsLazyLoad"
-           vim.schedule(function()
-             require("lazy").load { plugins = { "gitsigns" } }
-           end)
-         end
-       end,
-     })
+              if return_code == 0 then
+                vim.api.nvim_del_augroup_by_name "GitSignsLazyLoad"
+                vim.schedule(function()
+                  require("lazy").load { plugins = { "gitsigns" } }
+                end)
+              end
+            end,
+          })
         end,
       })
     end,
@@ -196,11 +196,11 @@ local plugins = {
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-vim.schedule(function()
- require("core.opts").final()
- require("core.mappings").general()
- require("core.mappings").misc()
- require("core.utils").mousepad()
+      vim.schedule(function()
+        require("core.opts").final()
+        require("core.mappings").general()
+        require("core.mappings").misc()
+        require("core.utils").mousepad()
         require("core.utils").autocmds()
       end)
     end,
