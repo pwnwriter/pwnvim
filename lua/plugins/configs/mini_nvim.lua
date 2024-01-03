@@ -9,14 +9,20 @@ M.pairs = {
 M.surround = {}
 
 M.files = {
-  windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, border = "solid" },
+  windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20,  max_number = math.huge,},
   use_as_default_explorer = true,
-  mappings = {
-    close = "<leader>e",
-  },
 }
 
-M.hipatterns = {}
+local hipatterns = require "mini.hipatterns"
+M.hipatterns = {
+  highlighters = {
+    fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+    hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+    todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+    note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+    hex_color = hipatterns.gen_highlighter.hex_color(),
+  },
+}
 
 M.bufremove = {
   silent = true,
@@ -63,33 +69,26 @@ M.visits = {
 local miniclue = require "mini.clue"
 M.clue = {
   triggers = {
-    -- Leader triggers
     { mode = "n", keys = "<Leader>" },
     { mode = "x", keys = "<Leader>" },
 
-    -- Built-in completion
     { mode = "i", keys = "<C-x>" },
 
-    -- `g` key
     { mode = "n", keys = "g" },
     { mode = "x", keys = "g" },
 
-    -- Marks
     { mode = "n", keys = "'" },
     { mode = "n", keys = "`" },
     { mode = "x", keys = "'" },
     { mode = "x", keys = "`" },
 
-    -- Registers
     { mode = "n", keys = '"' },
     { mode = "x", keys = '"' },
     { mode = "i", keys = "<C-r>" },
     { mode = "c", keys = "<C-r>" },
 
-    -- Window commands
     { mode = "n", keys = "<C-w>" },
 
-    -- `z` key
     { mode = "n", keys = "z" },
     { mode = "x", keys = "z" },
   },
