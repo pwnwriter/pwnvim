@@ -111,6 +111,7 @@ local plugins = {
     event = { "BufReadPost", "BufNewFile" },
     config = function()
       require "plugins.configs.lsp"
+      require("core.mappings").lsp()
     end,
   },
 
