@@ -108,13 +108,7 @@ local plugins = {
     "neovim/nvim-lspconfig",
     name = "lspconfig",
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
-    event = {
-      "LspAttach",
-    },
-    init = function()
-      require("core.mappings").lsp()
-      require("core.utils").lazy_load "lspconfig"
-    end,
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require "plugins.configs.lsp"
     end,
@@ -202,11 +196,13 @@ local plugins = {
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-      require("core.opts").final()
-      require("core.mappings").general()
-      require("core.mappings").misc()
-      require("core.utils").mousepad()
-      require("core.utils").autocmds()
+      vim.schedule(function()
+ require("core.opts").final()
+ require("core.mappings").general()
+ require("core.mappings").misc()
+ require("core.utils").mousepad()
+        require("core.utils").autocmds()
+      end)
     end,
   },
 }

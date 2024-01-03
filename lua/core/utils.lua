@@ -12,32 +12,6 @@ M.lazy = function(lazy_path)
   vim.opt.rtp:prepend(lazy_path)
 end
 
-M.lazy_load = function(plugin)
-  vim.api.nvim_create_autocmd({ "BufRead", "BufWinEnter", "BufNewFile" }, {
-    group = vim.api.nvim_create_augroup("BeLazyOnFileOpen" .. plugin, {}),
-    callback = function()
-      local file = vim.fn.expand "%"
-      local condition = file ~= "[lazy]" and file ~= ""
-
-      if condition then
-        vim.api.nvim_del_augroup_by_name("BeLazyOnFileOpen" .. plugin)
-
-        if plugin ~= "treesitter" then
-          vim.schedule(function()
-            require("lazy").load { plugins = plugin }
-
-            if plugin == "lspconfig" then
-              vim.cmd "silent! do FileType"
-            end
-          end, 0)
-        else
-          require("lazy").load { plugins = plugin }
-        end
-      end
-    end,
-  })
-end
-
 --- Toggle line numbers
 local cmds = { "nu!", "rnu!", "nonu!" }
 local current_index = 1
