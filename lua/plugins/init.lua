@@ -112,6 +112,7 @@ local plugins = {
       "LspAttach",
     },
     init = function()
+      require("core.mappings").lsp()
       require("core.utils").lazy_load "lspconfig"
     end,
     config = function()
@@ -161,7 +162,6 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     },
     opts = function()
-      require("core.mappings").dropbar()
       return require("plugins.configs.fancy").drop
     end,
   },

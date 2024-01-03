@@ -79,6 +79,7 @@ end
 
 M.misc = function()
   map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
+
   map("n", "<A-R>", function()
     utils.run_vert_command()
   end, "Run command")
@@ -86,9 +87,18 @@ M.misc = function()
   map("n", "<leader>n", function()
     utils.toggle_numbering()
   end, "Toggle line numbering")
+
   map("n", "<leader>tf", function()
     utils.toggle_flow()
   end, "Toggle flow")
+
+  map("n", "<leader>p", function()
+    require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
+  end, "Open dropbar menu")
+
+  map("n", "<leader>td", function()
+    require("core.utils").toggle_dropbar()
+  end, "Toggle dropbar")
 end
 
 M.lsp = function()
@@ -129,16 +139,6 @@ M.lsp = function()
       map({ "i", "s" }, "<c-space>", vim.lsp.buf.signature_help, "Lsp signature help")
     end,
   })
-end
-
-M.dropbar = function()
-  map("n", "<leader>p", function()
-    require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
-  end, "Open dropbar menu")
-
-  map("n", "<leader>td", function()
-    require("core.utils").toggle_dropbar()
-  end, "Toggle dropbar")
 end
 
 M.gitsigns = function()
