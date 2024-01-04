@@ -54,7 +54,7 @@ M.mini = function()
 
   map({ "n" }, "<leader>ti", function()
     vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable -- Toggle blankline animations
-  end, "Toggle blankline animations")
+  end, "Toggle animations")
 
   map({ "n" }, "<leader>e", function()
     local _ = require("mini.files").close() or require("mini.files").open()
@@ -86,7 +86,7 @@ M.misc = function()
 
   map("n", "<leader>n", function()
     utils.toggle_numbering()
-  end, "Toggle line numbering")
+  end, "Toggle numbers")
 
   map("n", "<leader>tf", function()
     utils.toggle_flow()
