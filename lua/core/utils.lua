@@ -41,7 +41,7 @@ function M.toggle_flow()
   if state == 0 then
     vim.o.relativenumber = false
     vim.o.number = false
-    vim.opt.signcolumn = "yes:9"
+    vim.opt.signcolumn = "yes:4"
     vim.o.winbar = ""
     require("gitsigns").detach()
     state = 1

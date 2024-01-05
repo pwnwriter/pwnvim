@@ -39,7 +39,7 @@ local plugins = {
       { "K", mode = "x" },
       { "L", mode = "x" },
     },
-    event = { "InsertEnter" },
+    event = { "VeryLazy" },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
       local mini_modules = {
@@ -130,6 +130,7 @@ local plugins = {
   {
     "rcarriga/nvim-notify",
     event = "VeryLazy",
+    name = "notify",
     config = function()
       local opts = require("plugins.configs.fancy").notify
       require("notify").setup(opts)
@@ -142,7 +143,7 @@ local plugins = {
     event = "UiEnter",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      "notify",
     },
     opts = function()
       return require("plugins.configs.fancy").noice
