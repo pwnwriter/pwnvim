@@ -70,7 +70,7 @@ local plugins = {
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     event = {
-      "BufReadPre",
+      "BufReadPost",
       "BufNewFile",
     },
     config = function()
@@ -153,7 +153,7 @@ local plugins = {
   {
     "Bekaboo/dropbar.nvim",
     name = "dropbar",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
