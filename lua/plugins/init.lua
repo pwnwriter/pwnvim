@@ -39,7 +39,7 @@ local plugins = {
       { "K", mode = "x" },
       { "L", mode = "x" },
     },
-    event = { "VeryLazy" },
+    event = { "InsertEnter" },
     config = function()
       local mini_config = require "plugins.configs.mini_nvim"
       local mini_modules = {

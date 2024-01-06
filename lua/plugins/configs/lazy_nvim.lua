@@ -15,6 +15,7 @@ return {
     cache = {
       enabled = true,
     },
+    reset_packpath = true,
     rtp = {
       disabled_plugins = {
         "osc52",
