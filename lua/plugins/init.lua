@@ -140,6 +140,7 @@ local plugins = {
   {
     "folke/noice.nvim",
     name = "noice",
+    commit = "1f087c2495bbc824b556329eb389dfff8964e5a3",
     event = "UiEnter",
     dependencies = {
       "MunifTanjim/nui.nvim",

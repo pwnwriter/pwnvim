@@ -1,3 +1,5 @@
+alias f := format
+
 formatter := "stylua"
 
 format:
