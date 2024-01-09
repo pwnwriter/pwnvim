@@ -1,5 +1,8 @@
 alias f := format
 
+_default:
+	@just -l
+
 formatter := "stylua"
 
 format:

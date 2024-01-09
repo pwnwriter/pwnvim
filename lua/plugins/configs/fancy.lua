@@ -126,7 +126,13 @@ M.gitsigns = {
 }
 
 vim.diagnostic.config {
-  virtual_text = true,
+  virtual_text = {
+    prefix = "",
+    suffix = "",
+    format = function(diagnostic)
+      return "" .. icons.diagnostics.message .. diagnostic.message .. " "
+    end,
+  },
   underline = {
     severity = { min = vim.diagnostic.severity.WARN },
   },

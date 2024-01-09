@@ -10,7 +10,8 @@ icons.layout = {
 }
 
 icons.diagnostics = {
-  hint = "󱐮",
+  message = "󱏚 ",
+  hint = "󱐮 ",
   error = "✘",
   info = "◉",
   warn = "",
