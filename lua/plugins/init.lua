@@ -115,16 +115,6 @@ local plugins = {
     end,
   },
 
-  --- Mason
-  {
-    "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-    config = function()
-      local opts = require("plugins.configs.fancy").mason
-      require("mason").setup(opts)
-    end,
-  },
-
   --- Fancy stuffs
 
   {
