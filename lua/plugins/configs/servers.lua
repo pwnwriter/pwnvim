@@ -57,3 +57,10 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.ocamllsp.setup {}
+
+lspconfig.nil_ls.setup {
+  cmd = { "nil" },
+  filetypes = { "nix" },
+  root_pattern = { "flake.nix", ".git" },
+  single_file_support = true,
+}
