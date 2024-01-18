@@ -18,7 +18,7 @@
     should look for `dev = true` plugins.
 
 -   To install [**`treesitter`**][Treesitter] of `x` language Run `:TSInstall [x]` !
--   Install lsp server with [**`Mason`**][Mason]  ; `:MasonInstall [x]` and configure inside [**`servers.lua`**][Server].
+-   Install `lsp servers` and configure inside [**`servers.lua`**][Server].
 -   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
     ```lua
