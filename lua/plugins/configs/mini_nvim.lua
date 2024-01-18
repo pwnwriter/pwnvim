@@ -66,6 +66,12 @@ M.visits = {
   },
 }
 
+M.basics = {
+  mappings = {
+    basic = true,
+  },
+}
+
 local miniclue = require "mini.clue"
 M.clue = {
   triggers = {

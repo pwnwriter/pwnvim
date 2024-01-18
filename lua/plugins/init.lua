@@ -33,6 +33,7 @@ local plugins = {
       { "gcc", mode = "n" },
       { "<leader>", mode = "n" },
       { "gc", mode = "n" },
+      { "jj", mode = "n" },
       { "gc", mode = "x" },
       { "H", mode = "x" },
       { "J", mode = "x" },
@@ -56,6 +57,7 @@ local plugins = {
         "extra",
         "visits",
         "clue",
+        "basics",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
