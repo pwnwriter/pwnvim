@@ -57,7 +57,6 @@ local plugins = {
         "extra",
         "visits",
         "clue",
-        "basics",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
