@@ -6,7 +6,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "dropbar": { "branch": "master", "commit": "9a8e498374276dd0281736c75b42098ef9fb5622" },
-  "gitsigns": { "branch": "main", "commit": "0a2a93f687ec051292943a4d139366332ac93688" },
+  "gitsigns": { "branch": "main", "commit": "fb9fd5312476b51a42a98122616e1c448d823d5c" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "lspconfig": { "branch": "master", "commit": "8917d2c830e04bf944a699b8c41f097621283828" },
   "mini": { "branch": "main", "commit": "1cd8d7e8318071eddc536815f5cafe50b012ac29" },
@@ -15,5 +15,5 @@
   "nui.nvim": { "branch": "main", "commit": "35da9ca1de0fc4dda96c2e214d93d363c145f418" },
   "nvim-web-devicons": { "branch": "master", "commit": "b427ac5f9dff494f839e81441fb3f04a58cbcfbc" },
   "plenary.nvim": { "branch": "master", "commit": "663246936325062427597964d81d30eaa42ab1e4" },
-  "treesitter": { "branch": "master", "commit": "efda19a54a157da8635aa6cb84f56a10593b1a23" }
+  "treesitter": { "branch": "master", "commit": "b4138891b3454beeb14eef171c91c92377fcd715" }
 }
