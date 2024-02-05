@@ -4,31 +4,27 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { nixpkgs, neovim-nightly-overlay, ... }:
-    let
-      overlay = import neovim-nightly-overlay;
+  outputs = { nixpkgs, neovim-nightly-overlay, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem
+    (system: let
+      overlays = [ neovim-nightly-overlay.overlay ];
       pkgs = import nixpkgs {
-        overlays = [ overlay.overlay ];
+        overlays = overlays;
+        system = system;
       };
-
-      forAllSystems = function:
-        nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ] (system: function system);
     in
     {
-      devShells = forAllSystems (system: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            neovim-nightly
-          ];
+      devShell = with pkgs; pkgs.mkShell {
+        buildInputs = [ neovim-nightly ];
 
-          shellHook = ''
-            mv ~/.config/nvim ~/.config/nvim.backup
+        shellHook = ''
+	    mv ~/.config/nvim ~/.config/nvim.backup
             ln -s $(pwd) ~/.config/nvim
             mv ~/.local/share/nvim ~/.local/share/nvim.backup
-          '';
-        };
-      });
-    };
+        '';
+      };
+    });
 }

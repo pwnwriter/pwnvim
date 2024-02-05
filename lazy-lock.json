@@ -7,7 +7,7 @@
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "dropbar": { "branch": "master", "commit": "9a8e498374276dd0281736c75b42098ef9fb5622" },
   "gitsigns": { "branch": "main", "commit": "fb9fd5312476b51a42a98122616e1c448d823d5c" },
-  "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
+  "lazy.nvim": { "branch": "main", "commit": "28126922c9b54e35a192ac415788f202c3944c9f" },
   "lspconfig": { "branch": "master", "commit": "8917d2c830e04bf944a699b8c41f097621283828" },
   "mini": { "branch": "main", "commit": "1cd8d7e8318071eddc536815f5cafe50b012ac29" },
   "noice": { "branch": "main", "commit": "1f087c2495bbc824b556329eb389dfff8964e5a3" },
