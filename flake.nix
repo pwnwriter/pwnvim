@@ -21,9 +21,8 @@
         buildInputs = [ neovim-nightly ];
 
         shellHook = ''
-	    mv ~/.config/nvim ~/.config/nvim.backup
-            ln -s $(pwd) ~/.config/nvim
-            mv ~/.local/share/nvim ~/.local/share/nvim.backup
+            ln -s $(pwd) ~/.config/pwnvim
+            export NVIM_APPNAME=pwnvim
         '';
       };
     });
