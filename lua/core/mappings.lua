@@ -80,7 +80,7 @@ end
 M.misc = function()
   map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 
-  map("n", "<A-R>", function()
+  map("n", "<A-r>", function()
     utils.run_vert_command()
   end, "Run command")
 
