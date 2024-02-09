@@ -9,21 +9,22 @@
 
   outputs = { nixpkgs, neovim-nightly-overlay, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem
-    (system: let
-      overlays = [ neovim-nightly-overlay.overlay ];
-      pkgs = import nixpkgs {
-        overlays = overlays;
-        system = system;
-      };
-    in
-    {
-      devShell = with pkgs; pkgs.mkShell {
-        buildInputs = [ neovim-nightly ];
+      (system:
+        let
+          overlays = [ neovim-nightly-overlay.overlay ];
+          pkgs = import nixpkgs {
+            overlays = overlays;
+            system = system;
+          };
+        in
+        {
+          devShell = with pkgs; pkgs.mkShell {
+            buildInputs = [ neovim-nightly ];
 
-        shellHook = ''
-            ln -s $(pwd) ~/.config/pwnvim
-            export NVIM_APPNAME=pwnvim
-        '';
-      };
-    });
+            shellHook = ''
+              ln -s $(pwd) ~/.config/pwnvim
+              export NVIM_APPNAME=pwnvim
+            '';
+          };
+        });
 }
