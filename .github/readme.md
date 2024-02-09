@@ -18,6 +18,7 @@
     should look for `dev = true` plugins.
 
 -   To install [**`treesitter`**][Treesitter] of `x` language Run `:TSInstall [x]` !
+-   On [`NIX`][Nix] , run `nix develop` to enter a shell with `pwnvim` .
 -   Install `lsp servers` and configure inside [**`servers.lua`**][Server].
 -   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
@@ -32,7 +33,7 @@
     ```
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2023<a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a> 🍃</a> 
+<p align="center">Copyright &copy; 2022 - present <a href="https://pwnwriter.xyz" target="_blank"> pwnwriter xyz<a> 🍃</a> 
 
 [Neovim]: https://github.com/neovim/neovim
 [Lazy.nvim]: https://github.com/folke/lazy.nvim
@@ -40,3 +41,4 @@
 [Treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [Mason]: https://github.com/williamboman/mason.nvim
 [Server]: /lua/plugins/configs/servers.lua
+[Nix]: https://github.com/NixOS/nix
