@@ -2,7 +2,7 @@ local lspconfig = require "lspconfig"
 
 lspconfig.rust_analyzer.setup {
   filetypes = { "rust" },
-  cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  cmd = { "rustup", "run", "nightly", "rust-analyzer" },
 }
 
 lspconfig.clangd.setup {

@@ -36,60 +36,6 @@ M.treesitter = {
   indent = { enable = true },
 }
 
-M.drop = {
-  bar = {
-    sources = function(buf, _)
-      local sources = require "dropbar.sources"
-      local utils = require "dropbar.utils"
-
-      local filename = {
-        get_symbols = function(buff, win, cursor)
-          local path = sources.path.get_symbols(buff, win, cursor)
-          return { path[#path] }
-        end,
-      }
-
-      if vim.bo[buf].ft == "markdown" then
-        return {
-          filename,
-          utils.source.fallback {
-            sources.treesitter,
-            sources.markdown,
-            sources.lsp,
-          },
-        }
-      else
-        return {
-          filename,
-          utils.source.fallback {
-            sources.lsp,
-            sources.treesitter,
-          },
-        }
-      end
-    end,
-  },
-  menu = {
-    quick_navigation = false,
-    keymaps = {
-      ["<C-c>"] = "<C-w>q",
-      ["<ESC>"] = "<C-w>q",
-      ["h"] = "<C-w>c",
-      ["l"] = function()
-        local menu = require("dropbar.api").get_current_dropbar_menu()
-        if not menu then
-          return
-        end
-        local cursor = vim.api.nvim_win_get_cursor(menu.win)
-        local component = menu.entries[cursor[1]]:first_clickable(cursor[2])
-        if component then
-          menu:click_on(component, nil, 1, "l")
-        end
-      end,
-    },
-  },
-}
-
 M.gitsigns = {
   signs = {
     add = { text = "" .. icons.gitsigns.add },

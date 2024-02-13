@@ -62,6 +62,9 @@ local plugins = {
         require("mini." .. module).setup(mini_config[module])
       end
     end,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
   },
 
   {
@@ -138,18 +141,6 @@ local plugins = {
     },
     opts = function()
       return require("plugins.configs.fancy").noice
-    end,
-  },
-
-  {
-    "Bekaboo/dropbar.nvim",
-    name = "dropbar",
-    event = { "BufReadPost", "BufNewFile" },
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = function()
-      return require("plugins.configs.fancy").drop
     end,
   },
 
