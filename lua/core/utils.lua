@@ -31,15 +31,6 @@ function M.toggle_inlay_hint()
   vim.lsp.inlay_hint.enable(0, not is_enabled)
 end
 
---- Toggle dropbar
-function M.toggle_dropbar()
-  if vim.o.winbar == "" then
-    vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
-  else
-    vim.o.winbar = ""
-  end
-end
-
 -- Toggle flow state mode, Disable most of the unnecessary plugins :oOc
 local state = 0
 function M.toggle_flow()
@@ -47,14 +38,12 @@ function M.toggle_flow()
     vim.o.relativenumber = false
     vim.o.number = false
     vim.opt.signcolumn = "yes:4"
-    vim.o.winbar = ""
     require("gitsigns").detach()
     state = 1
   else
     vim.o.relativenumber = true
     vim.o.number = true
     vim.opt.signcolumn = "auto"
-    vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
     require("gitsigns").attach()
     state = 0
   end
