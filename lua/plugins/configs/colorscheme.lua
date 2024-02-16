@@ -3,7 +3,7 @@ local utils = require "catppuccin.utils.colors"
 local options = {
   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
   compile = true,
-  flavour = "macchiato",
+  flavour = "mocha",
   custom_highlights = function(palette)
     return {
       ["CmpItemMenu"] = {
