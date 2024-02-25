@@ -10,7 +10,7 @@ lspconfig.util.on_setup = lspconfig.util.add_hook_after(lspconfig.util.on_setup,
   config.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 end)
 
-local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/plugins/configs/servers.lua")
+local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/plugins/servers.lua")
 if vim.loop.fs_access(servers_path, "R") then
   dofile(servers_path)
 end

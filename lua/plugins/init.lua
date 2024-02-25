@@ -11,7 +11,7 @@ local plugins = {
       vim.cmd.colorscheme "catppuccin"
     end,
     config = function()
-      local opts = require "plugins.configs.colorscheme"
+      local opts = require "plugins.colorscheme"
       require("catppuccin").setup(opts)
     end,
   },
@@ -41,7 +41,7 @@ local plugins = {
     },
     event = { "InsertEnter" },
     config = function()
-      local mini_config = require "plugins.configs.mini_nvim"
+      local mini_config = require "plugins.mini_nvim"
       local mini_modules = {
         "pairs",
         "ai",
@@ -77,7 +77,7 @@ local plugins = {
       "BufNewFile",
     },
     config = function()
-      local opts = require("plugins.configs.fancy").treesitter
+      local opts = require("plugins.fancy").treesitter
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
@@ -95,7 +95,7 @@ local plugins = {
     },
     event = { "LspAttach", "InsertCharPre" },
     config = function()
-      require "plugins.configs.cmp"
+      require "plugins.cmp"
     end,
   },
 
@@ -113,7 +113,7 @@ local plugins = {
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require "plugins.configs.lsp"
+      require "plugins.lsp"
       require("core.mappings").lsp()
     end,
   },
@@ -125,7 +125,7 @@ local plugins = {
     event = "VeryLazy",
     name = "notify",
     config = function()
-      local opts = require("plugins.configs.fancy").notify
+      local opts = require("plugins.fancy").notify
       require("notify").setup(opts)
     end,
   },
@@ -140,7 +140,7 @@ local plugins = {
       "notify",
     },
     opts = function()
-      return require("plugins.configs.fancy").noice
+      return require("plugins.fancy").noice
     end,
   },
 
@@ -168,7 +168,7 @@ local plugins = {
       })
     end,
     opts = function()
-      return require("plugins.configs.fancy").gitsigns
+      return require("plugins.fancy").gitsigns
     end,
     config = function(_, opts)
       require("gitsigns").setup(opts)
@@ -191,4 +191,4 @@ local plugins = {
   },
 }
 
-require("lazy").setup(plugins, require "plugins.configs.lazy_nvim")
+require("lazy").setup(plugins, require "plugins.lazy_nvim")

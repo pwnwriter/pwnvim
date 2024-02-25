@@ -23,7 +23,7 @@
 -   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
     ```lua
-    -- plugins/configs/servers.lua
+    -- plugins/servers.lua
     local lspconfig = require("lspconfig")
 
     -- $ rustup component add rust-analyzer
@@ -40,5 +40,5 @@
 [Lspconfig]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [Treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [Mason]: https://github.com/williamboman/mason.nvim
-[Server]: /lua/plugins/configs/servers.lua
+[Server]: /lua/plugins/servers.lua
 [Nix]: https://github.com/NixOS/nix
