@@ -1,4 +1,4 @@
-![screenshot_2023-12-23_19-00-07](https://github.com/pwnwriter/pwnvim/assets/90331517/10fb5d7f-8be5-477b-9e37-a20fb36d6ebb)
+<img width="1440" alt="Screenshot 2024-02-26 at 9 29 20 PM" src="https://github.com/pwnwriter/pwnvim/assets/90331517/e0701963-ba54-4951-98cb-44e1fca10a94">
 
 <p align="center">
     Some of us don't give a shit how lean our <code>vimrc</code> is. What an arbitrary yardstick.<br />
