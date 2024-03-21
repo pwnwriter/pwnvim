@@ -8,6 +8,12 @@
     <sup> Requires version: v0.10.{..}</sup> <!-- Current-Neovim-version -->
 </p>
 
+## Install 💧
+```sh
+git clone https://github.com/pwnwriter/pwnvim ~/.config/nvim
+nvim --headless +"Lazy! sync" +qa
+```
+
 ## 🍦 Tips
 
    
