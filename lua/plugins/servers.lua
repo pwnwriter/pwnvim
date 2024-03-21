@@ -64,3 +64,9 @@ lspconfig.nil_ls.setup {
   root_pattern = { "flake.nix", ".git" },
   single_file_support = true,
 }
+
+require("lspconfig").zls.setup {
+  cmd = { "zls" },
+  filetypes = { "zig", "zir" },
+  single_file_support = true,
+}

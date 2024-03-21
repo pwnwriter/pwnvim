@@ -78,11 +78,15 @@ M.mini = function()
 end
 
 M.misc = function()
-  map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
+  local git_command = "git add . || git init && git add . && git commit"
 
   map("n", "<A-r>", function()
     utils.run_vert_command()
   end, "Run command")
+
+  map("n", "<A-g>", function()
+    utils.run_vert_command(git_command)
+  end, "git commit")
 
   map("n", "<leader>n", function()
     utils.toggle_numbering()
