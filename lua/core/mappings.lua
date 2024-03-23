@@ -78,7 +78,7 @@ M.mini = function()
 end
 
 M.misc = function()
-  local git_command = "git add . || git init && git add . && git commit"
+  local git_command = "git add . || git init && git add . && git commit || exit 0"
 
   map("n", "<A-r>", function()
     utils.run_vert_command()
