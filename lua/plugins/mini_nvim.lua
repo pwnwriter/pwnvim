@@ -8,8 +8,6 @@ M.pairs = {
 
 M.starter = {}
 
-M.dashboard = {}
-
 M.files = {
   windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, max_number = math.huge },
   use_as_default_explorer = true,
