@@ -6,7 +6,9 @@ M.pairs = {
   },
 }
 
-M.surround = {}
+M.starter = {}
+
+M.dashboard = {}
 
 M.files = {
   windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, max_number = math.huge },

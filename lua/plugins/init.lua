@@ -39,10 +39,18 @@ local plugins = {
       { "K", mode = "x" },
       { "L", mode = "x" },
     },
-    event = { "InsertEnter" },
+    event = function()
+      if vim.fn.argc() == 0 then
+        return "VimEnter"
+      else
+        return "InsertEnter"
+      end
+    end,
+
     config = function()
       local mini_config = require "plugins.mini_nvim"
       local mini_modules = {
+        "starter",
         "pairs",
         "ai",
         "surround",
@@ -154,7 +162,7 @@ local plugins = {
       vim.api.nvim_create_autocmd({ "BufRead" }, {
         group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
         callback = function()
-          vim.fn.jobstart({ "git", "-C", vim.loop.cwd(), "rev-parse" }, {
+          vim.fn.jobstart({ "git", "-C", vim.uv.cwd(), "rev-parse" }, {
             on_exit = function(_, return_code)
               if return_code == 0 then
                 vim.api.nvim_del_augroup_by_name "GitSignsLazyLoad"

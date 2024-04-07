@@ -11,7 +11,7 @@ lspconfig.util.on_setup = lspconfig.util.add_hook_after(lspconfig.util.on_setup,
 end)
 
 local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/plugins/servers.lua")
-if vim.loop.fs_access(servers_path, "R") then
+if vim.uv.fs_access(servers_path, "R") then
   dofile(servers_path)
 end
 
