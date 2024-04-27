@@ -24,7 +24,6 @@ M.general = function()
   map("n", "<s-Tab>", "<cmd>bprev<CR>")
   map("n", "<C-d>", "<C-d>zz")
   map("n", "<C-u>", "<C-u>zz")
-  map("v", "//", 'y/<C-R>"<cr>') -- search text
   map("v", "??", 'y:h <C-R>"<cr>"') -- Show vim help
 end
 
