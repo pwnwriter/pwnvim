@@ -43,7 +43,7 @@ local plugins = {
       if vim.fn.argc() == 0 then
         return "VimEnter"
       else
-        return "InsertEnter"
+        return { "InsertEnter", "LspAttach" }
       end
     end,
 
@@ -64,6 +64,7 @@ local plugins = {
         "extra",
         "visits",
         "clue",
+        "notify",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
@@ -123,32 +124,6 @@ local plugins = {
     config = function()
       require "plugins.lsp"
       require("core.mappings").lsp()
-    end,
-  },
-
-  --- Fancy stuffs
-
-  {
-    "rcarriga/nvim-notify",
-    event = "VeryLazy",
-    name = "notify",
-    config = function()
-      local opts = require("plugins.fancy").notify
-      require("notify").setup(opts)
-    end,
-  },
-
-  {
-    "folke/noice.nvim",
-    name = "noice",
-    commit = "1f087c2495bbc824b556329eb389dfff8964e5a3",
-    event = "UiEnter",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "notify",
-    },
-    opts = function()
-      return require("plugins.fancy").noice
     end,
   },
 

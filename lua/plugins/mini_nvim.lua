@@ -103,4 +103,6 @@ M.clue = {
   },
 }
 
+M.notify = {}
+
 return M
