@@ -1,5 +1,3 @@
-local utils = require "catppuccin.utils.colors"
-
 local options = {
   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
   compile = true,
