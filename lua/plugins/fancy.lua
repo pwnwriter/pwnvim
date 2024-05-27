@@ -2,32 +2,8 @@ local icons = require "core.icons"
 
 local M = {}
 
-M.noice = {
-  lsp = {
-    override = {
-      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-      ["vim.lsp.util.stylize_markdown"] = true,
-      ["cmp.entry.get_documentation"] = true,
-    },
-  },
-  presets = {
-    bottom_search = false,
-    command_palette = false,
-    long_message_to_split = false,
-    inc_rename = false,
-    lsp_doc_border = true,
-  },
-}
-
-M.notify = {
-  fps = 60,
-  render = "compact",
-  timeout = 5,
-  fade_in_slide_out = "fade",
-}
-
 M.treesitter = {
-  ensure_installed = { "lua", "vimdoc", "rust", "ocaml" },
+  ensure_installed = { "lua", "vimdoc", "rust", "go" },
   highlight = {
     enable = true,
     use_languagetree = true,
