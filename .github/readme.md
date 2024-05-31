@@ -1,15 +1,7 @@
+<img width="1440" alt="Screenshot 2024-05-31 at 14 06 58" src="https://github.com/pwnwriter/pwnvim/assets/90331517/a318a757-bfc8-48fb-9ec1-259726b83f74">
 
-<img width="1440" alt="Screenshot 2024-03-28 at 12 25 57 PM" src="https://github.com/pwnwriter/pwnvim/assets/90331517/7a57d9f9-8255-48dd-a3e6-a2c07b59eb35">
+----
 
-<p align="center">
-    Some of us don't give a shit how lean our <code>vimrc</code> is. What an arbitrary yardstick.<br />
-     I prioritize minimizing the bloat.<br />
-</p>
-<p align="center">
-    <sup> Requires version: v0.10.{..}</sup> <!-- Current-Neovim-version -->
-</p>
-
-## Install 💧
 ```sh
 git clone https://github.com/pwnwriter/pwnvim ~/.config/nvim
 nvim --headless +"Lazy! sync" +qa
