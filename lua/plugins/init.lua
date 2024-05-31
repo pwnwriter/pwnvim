@@ -54,7 +54,6 @@ local plugins = {
         "pairs",
         "ai",
         "surround",
-        "comment",
         "files",
         "hipatterns",
         "bufremove",
