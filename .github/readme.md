@@ -27,7 +27,7 @@ nvim --headless +"Lazy! sync" +qa
 
     -- $ rustup component add rust-analyzer
     lspconfig.rust_analyzer.setup({
-      cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+      cmd = { "rust-analyzer" },
     })
     ```
   
