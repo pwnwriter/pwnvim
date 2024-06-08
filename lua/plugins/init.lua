@@ -65,6 +65,7 @@ local plugins = {
         "clue",
         "notify",
         "git",
+        "diff",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
@@ -133,37 +134,6 @@ local plugins = {
     config = function()
       require "plugins.lsp"
       require("core.mappings").lsp()
-    end,
-  },
-
-  -- git stuff
-  {
-    "lewis6991/gitsigns.nvim",
-    name = "gitsigns",
-    ft = { "gitcommit", "diff" },
-    init = function()
-      -- load gitsigns only when a git file is opened
-      vim.api.nvim_create_autocmd({ "BufRead" }, {
-        group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
-        callback = function()
-          vim.fn.jobstart({ "git", "-C", vim.uv.cwd(), "rev-parse" }, {
-            on_exit = function(_, return_code)
-              if return_code == 0 then
-                vim.api.nvim_del_augroup_by_name "GitSignsLazyLoad"
-                vim.schedule(function()
-                  require("lazy").load { plugins = { "gitsigns" } }
-                end)
-              end
-            end,
-          })
-        end,
-      })
-    end,
-    opts = function()
-      return require("plugins.fancy").gitsigns
-    end,
-    config = function(_, opts)
-      require("gitsigns").setup(opts)
     end,
   },
 

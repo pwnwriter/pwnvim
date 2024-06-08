@@ -107,4 +107,11 @@ M.notify = {}
 
 M.git = {}
 
+M.diff = {
+  view = {
+    style = "sign",
+    signs = { add = "│", change = "󰗩 ", delete = "󰛌" },
+  },
+}
+
 return M

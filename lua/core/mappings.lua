@@ -136,26 +136,4 @@ M.lsp = function()
   })
 end
 
-M.gitsigns = function()
-  map("n", "<leader>gp", function()
-    require("gitsigns").preview_hunk()
-  end, "Git preview hunk")
-
-  map("n", "<leader>gr", function()
-    require("gitsigns").reset_hunk()
-  end, "Git reset hunk")
-
-  map("n", "<leader>gb", function()
-    package.loaded.gitsigns.blame_line()
-  end, "Git blame line")
-
-  map("n", "<leader>gt", function()
-    package.loaded.gitsigns.diffthis()
-  end, "git diff this")
-
-  map("n", "<leader>gd", function()
-    require("gitsigns").toggle_deleted()
-  end, "Git toggle deleted")
-end
-
 return M
