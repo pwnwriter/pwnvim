@@ -87,8 +87,15 @@ local plugins = {
       "BufNewFile",
     },
     config = function()
-      local opts = require("plugins.fancy").treesitter
-      require("nvim-treesitter.configs").setup(opts)
+      require("nvim-treesitter.configs").setup {
+        ensure_installed = { "lua", "vimdoc", "rust", "go" },
+        highlight = {
+          enable = true,
+          use_languagetree = true,
+        },
+
+        indent = { enable = true },
+      }
     end,
   },
 
