@@ -105,4 +105,6 @@ M.clue = {
 
 M.notify = {}
 
+M.git = {}
+
 return M

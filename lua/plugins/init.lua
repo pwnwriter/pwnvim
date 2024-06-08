@@ -64,6 +64,7 @@ local plugins = {
         "visits",
         "clue",
         "notify",
+        "git",
       }
       require("core.mappings").mini()
       for _, module in ipairs(mini_modules) do
