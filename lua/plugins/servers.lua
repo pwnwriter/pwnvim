@@ -7,6 +7,7 @@ lspconfig.rust_analyzer.setup {
 
 lspconfig.clangd.setup {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  cmd = { "clangd" },
   single_file_support = true,
 }
 

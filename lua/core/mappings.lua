@@ -25,6 +25,7 @@ M.general = function()
   map("n", "<C-d>", "<C-d>zz")
   map("n", "<C-u>", "<C-u>zz")
   map("v", "??", 'y:h <C-R>"<cr>"') -- Show vim help
+  map("v", "?/", 'y:/ <C-R>"<cr>"') -- Search across the buffer
 end
 
 M.mini = function()
