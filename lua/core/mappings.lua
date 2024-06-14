@@ -75,6 +75,15 @@ M.mini = function()
   map("n", "<A-A>", function()
     minivisits.remove_label()
   end, "Remove label from file")
+
+  map("n", "<leader>gc", function()
+    miniextra.pickers.git_commits()
+  end, "Show git commits")
+
+  map("n", "<leader>gh", function()
+    miniextra.pickers.git_commits()
+  end, "Show git hunks")
+
 end
 
 M.misc = function()

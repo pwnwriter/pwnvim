@@ -38,13 +38,11 @@ function M.toggle_flow()
     vim.o.relativenumber = false
     vim.o.number = false
     vim.opt.signcolumn = "yes:4"
-    require("gitsigns").detach()
     state = 1
   else
     vim.o.relativenumber = true
     vim.o.number = true
     vim.opt.signcolumn = "auto"
-    require("gitsigns").attach()
     state = 0
   end
 end
