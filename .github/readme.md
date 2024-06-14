@@ -1,4 +1,5 @@
 <img width="1440" alt="Screenshot 2024-05-31 at 14 06 58" src="https://github.com/pwnwriter/pwnvim/assets/90331517/a318a757-bfc8-48fb-9ec1-259726b83f74">
+<img width="1385" alt="Screenshot 2024-06-14 at 09 55 23" src="https://github.com/pwnwriter/pwnvim/assets/90331517/95f97d88-c78f-481a-a03c-23fa6e4eebfc">
 
 ----
 
