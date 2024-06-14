@@ -6,8 +6,6 @@ M.pairs = {
   },
 }
 
-M.starter = {}
-
 M.files = {
   windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, max_number = math.huge },
   use_as_default_explorer = true,
@@ -111,6 +109,39 @@ M.diff = {
   view = {
     style = "sign",
     signs = { add = "│", change = "󰗩 ", delete = "󰛌" },
+  },
+}
+
+local starter = require "mini.starter"
+
+M.starter = {
+  evaluate_single = false,
+  header = table.concat({
+    "⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿",
+    "⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿",
+    "⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿",
+    "⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿",
+    "⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿",
+    "⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿",
+    "⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿",
+    "⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿",
+    "⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿",
+    "⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿",
+    "⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿",
+  }, "\n"),
+  footer = os.date(),
+  items = {
+    {
+      name = "Bookmarked files",
+      action = "lua MiniExtra.pickers.visit_paths { filter = 'todo' }",
+      section = "Actions",
+    },
+    { name = "Find files", action = "lua MiniPick.builtin.files()", section = "Actions" },
+    { name = "Recent files", action = "lua MiniExtra.pickers.oldfiles()", section = "Actions" },
+    { name = "Quit", action = ":q!", section = "Actions" },
+  },
+  content_hooks = {
+    starter.gen_hook.aligning("center", "center"),
   },
 }
 
