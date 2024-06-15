@@ -7,7 +7,7 @@ local M = {}
 
 M.initial = function()
   g.mapleader = " "
-  opt.laststatus = 3
+  opt.laststatus = 0
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
   opt.listchars = { tab = icons.layout.tab .. "  " }
