@@ -22,6 +22,12 @@ M.general = function()
   map("n", "<C-s>", "<cmd>update<CR>")
   map("n", "<Tab>", "<cmd>bnext<CR>")
   map("n", "<s-Tab>", "<cmd>bprev<CR>")
+
+  map("n", "<A-k>", ":resize +2<CR>")
+  map("n", "<A-j>", ":resize -2<CR>")
+  map("n", "<A-h>", ":vertical resize +2<CR>")
+  map("n", "<A-l>", ":vertical resize -2<CR>")
+
   map("n", "<C-d>", "<C-d>zz")
   map("n", "<C-u>", "<C-u>zz")
   map("v", "??", 'y:h <C-R>"<cr>"') -- Show vim help
