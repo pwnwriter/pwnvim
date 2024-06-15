@@ -21,11 +21,12 @@
           ];
 
           shellHook = ''
-            ln -s $(pwd) ~/.config/pwnvim
-            export NVIM_APPNAME=pwnvim
+            ln -s $(pwd) /home/$(whoami)/.config/pwnvim
 	    echo "Syncing Neovim plugins ..."
             nvim --headless +"Lazy! sync" +qa
           '';
+
+          NVIM_APPNAME = "pwnvim";
 
         };
       });
