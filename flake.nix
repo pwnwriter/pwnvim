@@ -14,13 +14,20 @@
       {
         devShells.default = pkgs.mkShell {
 
-          packages = [ pkgs.neovim ];
+          packages = with pkgs;[ 
+          neovim 
+          fd
+          ripgrep
+          ];
 
           shellHook = ''
             ln -s $(pwd) ~/.config/pwnvim
             export NVIM_APPNAME=pwnvim
+	    echo "Syncing Neovim plugins ..."
+            nvim --headless +"Lazy! sync" +qa
           '';
 
         };
       });
 }
+
