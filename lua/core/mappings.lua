@@ -89,6 +89,10 @@ M.mini = function()
   map("n", "<leader>gh", function()
     miniextra.pickers.git_commits()
   end, "Show git hunks")
+
+  map("n", "<leader>dp", function()
+    miniextra.pickers.diagnostic()
+  end, "Diagnostic in picker")
 end
 
 M.misc = function()
@@ -133,9 +137,9 @@ M.lsp = function()
       end, "Toggle inlay hint")
 
       map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")
-      map("n", "<leader>d", function()
+      map("n", "<leader>df", function()
         vim.diagnostic.open_float()
-      end, "Open diagnostics")
+      end, "Open diagnostics float ")
       map("n", "<leader>ld", vim.lsp.buf.definition, "Goto lsp definition")
       map("n", "<leader>lh", vim.lsp.buf.declaration, "Goto lsp declaration")
       map("n", "<leader>lt", vim.lsp.buf.type_definition, "Goto lsp definition")
