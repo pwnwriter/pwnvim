@@ -3,9 +3,9 @@ local icons = require "core.icons"
 local opt = vim.opt
 local g = vim.g
 
-local M = {}
+local opts = {}
 
-M.initial = function()
+opts.initial = function()
   g.mapleader = " "
   opt.laststatus = 0
   opt.clipboard = "unnamedplus"
@@ -26,7 +26,7 @@ M.initial = function()
   opt.undofile = true
 end
 
-M.final = function()
+opts.final = function()
   opt.complete = {}
   opt.list = true
   opt.wildmenu = true
@@ -77,4 +77,4 @@ vim.diagnostic.config {
   },
 }
 
-return M
+return opts

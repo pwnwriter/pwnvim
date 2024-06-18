@@ -89,7 +89,6 @@ M.mini = function()
   map("n", "<leader>gh", function()
     miniextra.pickers.git_commits()
   end, "Show git hunks")
-
 end
 
 M.misc = function()
