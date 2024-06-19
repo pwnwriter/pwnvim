@@ -50,6 +50,7 @@ local plugins = {
     config = function()
       local mini_config = require "plugins.mini_nvim"
       local mini_modules = {
+        "comment",
         "starter",
         "pairs",
         "ai",

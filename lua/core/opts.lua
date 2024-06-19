@@ -24,6 +24,7 @@ opts.initial = function()
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
+  opt.cmdheight = 0
 end
 
 opts.final = function()
@@ -53,6 +54,17 @@ vim.api.nvim_create_autocmd("User", {
   callback = function()
     vim.o.shada = shada
     pcall(vim.cmd.rshada, { bang = true })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  callback = function(args)
+    local path = vim.api.nvim_buf_get_name(args.buf)
+    if path ~= "" then
+      path = vim.fn.fnamemodify(path, ":~:.")
+    end
+    vim.notify = MiniNotify.make_notify()
+    vim.notify("Saved " .. vim.inspect(path))
   end,
 })
 

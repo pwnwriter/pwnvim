@@ -26,6 +26,8 @@ M.bufremove = {
   silent = true,
 }
 
+M.comment = {}
+
 M.pick = {
   options = {
     use_cache = true,
