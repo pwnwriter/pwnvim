@@ -58,7 +58,7 @@ M.mini = function()
 
   vim.b[0].miniindentscope_disable = true
 
-  map({ "n" }, "<leader>ti", function()
+  map({ "n" }, "<leader>tb", function()
     vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable -- Toggle blankline animations
   end, "Toggle blankline animations")
 
@@ -96,16 +96,6 @@ M.mini = function()
 end
 
 M.misc = function()
-  local git_command = "git add . || git init && git add . && git commit || exit 0"
-
-  map("n", "<A-r>", function()
-    utils.run_vert_command()
-  end, "Run command")
-
-  map("n", "<A-g>", function()
-    utils.run_vert_command(git_command)
-  end, "git commit")
-
   map("n", "<leader>n", function()
     utils.toggle_numbering()
   end, "Toggle line numbering")

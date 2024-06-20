@@ -47,24 +47,6 @@ function M.toggle_flow()
   end
 end
 
-function M.run_vert_command(command)
-  if not command then
-    command = vim.fn.input "Enter a command: "
-  end
-
-  vim.cmd("vsplit term://" .. vim.o.shell)
-
-  local terminal_win = vim.api.nvim_get_current_win() -- Get the terminal win
-
-  -- Remove line numbers and dropbar
-  vim.api.nvim_win_set_option(terminal_win, "number", false)
-  vim.api.nvim_win_set_option(terminal_win, "relativenumber", false)
-  vim.api.nvim_win_set_option(terminal_win, "winbar", "")
-
-  vim.api.nvim_chan_send(vim.b.terminal_job_id, command .. "\n")
-  vim.api.nvim_feedkeys("i", "n", true)
-end
-
 -- Autocommands
 function M.autocmds()
   local autocmd = vim.api.nvim_create_autocmd
