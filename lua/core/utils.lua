@@ -58,7 +58,6 @@ function M.autocmds()
       vim.b[data.buf].miniindentscope_disable = true
     end,
   })
-
 end
 
 return M

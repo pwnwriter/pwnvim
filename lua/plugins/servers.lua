@@ -5,12 +5,6 @@ lspconfig.rust_analyzer.setup {
   cmd = { "rust-analyzer" },
 }
 
-lspconfig.clangd.setup {
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-  cmd = { "clangd" },
-  single_file_support = true,
-}
-
 lspconfig.lua_ls.setup {
   filetypes = { "lua" },
   settings = {
@@ -57,7 +51,11 @@ lspconfig.tsserver.setup {
   single_file_support = true,
 }
 
-lspconfig.ocamllsp.setup {}
+lspconfig.gleam.setup {
+  cmd = { "gleam", "lsp" },
+  filetypes = { "gleam" },
+  root_dir = lspconfig.util.root_pattern("gleam.toml", ".git"),
+}
 
 lspconfig.nil_ls.setup {
   cmd = { "nil" },
@@ -66,7 +64,7 @@ lspconfig.nil_ls.setup {
   single_file_support = true,
 }
 
-require("lspconfig").zls.setup {
+lspconfig.zls.setup {
   cmd = { "zls" },
   filetypes = { "zig", "zir" },
   single_file_support = true,
