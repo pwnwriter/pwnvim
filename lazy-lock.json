@@ -6,10 +6,9 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "dropbar": { "branch": "master", "commit": "79847a78ec0c58f5e5c0360192b03d0cee803e95" },
-  "lazy.nvim": { "branch": "main", "commit": "d0921f5b9b3d2c5e09618da55a018228edcc4d16" },
-  "lspconfig": { "branch": "master", "commit": "53a3c6444ec5006b567071614c83edc8ad651f6d" },
-  "mini": { "branch": "main", "commit": "b8c1d3b2f4cd637760babb8a33ad12fd5afe2ee2" },
-  "nvim-web-devicons": { "branch": "master", "commit": "c0cfc1738361b5da1cd0a962dd6f774cc444f856" },
+  "lazy.nvim": { "branch": "main", "commit": "cea5920abb202753004440f94ec39bcf2927e02e" },
+  "lspconfig": { "branch": "master", "commit": "cf97d2485fc3f6d4df1b79a3ea183e24c272215e" },
+  "mini": { "branch": "main", "commit": "e0cd9ec751328655db4ae22d26876a67f9beaa3b" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
-  "treesitter": { "branch": "master", "commit": "6cd4ce6cab184e8787f164a182954534221f2af2" }
+  "treesitter": { "branch": "master", "commit": "fa611f612a7b04c239d07f61ba80e09cb95c5af4" }
 }

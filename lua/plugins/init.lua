@@ -50,6 +50,7 @@ local plugins = {
     config = function()
       local mini_config = require "plugins.mini_nvim"
       local mini_modules = {
+        "icons",
         "comment",
         "starter",
         "pairs",
@@ -73,9 +74,6 @@ local plugins = {
         require("mini." .. module).setup(mini_config[module])
       end
     end,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
   },
 
   {

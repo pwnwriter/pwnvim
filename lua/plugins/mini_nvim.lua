@@ -148,4 +148,6 @@ M.starter = {
   },
 }
 
+M.icons = {}
+
 return M
