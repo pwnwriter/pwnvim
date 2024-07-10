@@ -39,6 +39,13 @@ local plugins = {
       { "K", mode = "x" },
       { "L", mode = "x" },
     },
+    init = function()
+      package.preload["nvim-web-devicons"] = function()
+        package.loaded["nvim-web-devicons"] = {}
+        require("mini.icons").mock_nvim_web_devicons()
+        return package.loaded["nvim-web-devicons"]
+      end
+    end,
     event = function()
       if vim.fn.argc() == 0 then
         return "VimEnter"
