@@ -1,6 +1,6 @@
 local cmp = require "cmp"
 local luasnip = require "luasnip"
-local MiniIcons = require("mini.icons")
+local icons = require "mini.icons"
 
 cmp.setup {
   snippet = {
@@ -24,7 +24,7 @@ cmp.setup {
     fields = { "kind", "abbr", "menu" },
     format = function(_, item)
       local kind = item.kind
-      item.kind = MiniIcons.get('lsp', kind)
+      item.kind = icons.get("lsp", kind)
       item.menu = kind:gsub("(%l)(%u)", "%1 %2"):lower()
       return item
     end,

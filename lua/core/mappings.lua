@@ -66,7 +66,7 @@ M.mini = function()
     local _ = require("mini.files").close() or require("mini.files").open()
   end, "Toggle minifiles")
 
-  map({ "n" }, "<C-q>", function()
+  map({ "n" }, "<leader>q", function()
     require("mini.bufremove").delete()
   end, "Remove current buffer")
 

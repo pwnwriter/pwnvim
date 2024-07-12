@@ -148,6 +148,10 @@ M.starter = {
   },
 }
 
-M.icons = {}
+M.icons = {
+  lsp = {
+    ["function"] = { glyph = "󰡱", hl = "MiniIconsAzure" },
+  },
+}
 
 return M

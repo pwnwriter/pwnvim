@@ -1,8 +1,5 @@
-local icons = require "core.icons"
-
 local opt = vim.opt
 local g = vim.g
-
 local opts = {}
 
 opts.initial = function()
@@ -10,7 +7,6 @@ opts.initial = function()
   opt.laststatus = 0
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
-  opt.listchars = { tab = icons.layout.tab .. "  " }
   opt.fillchars:append { eob = " " }
   opt.shortmess:append "aIF"
   opt.cursorline = true
@@ -20,7 +16,6 @@ opts.initial = function()
   opt.relativenumber = true
   opt.breakindent = true
   opt.linebreak = true
-  opt.showbreak = icons.layout.wrap .. " "
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
@@ -61,7 +56,7 @@ vim.diagnostic.config {
     prefix = "",
     suffix = "",
     format = function(diagnostic)
-      return "" .. icons.diagnostics.message .. diagnostic.message .. " "
+      return "󰍡 " .. diagnostic.message .. " "
     end,
   },
   underline = {
@@ -69,10 +64,10 @@ vim.diagnostic.config {
   },
   signs = {
     text = {
-      [vim.diagnostic.severity.HINT] = icons.diagnostics.hint,
-      [vim.diagnostic.severity.ERROR] = icons.diagnostics.error,
-      [vim.diagnostic.severity.INFO] = icons.diagnostics.info,
-      [vim.diagnostic.severity.WARN] = icons.diagnostics.warn,
+      [vim.diagnostic.severity.HINT] = "󱐮",
+      [vim.diagnostic.severity.ERROR] = "✘",
+      [vim.diagnostic.severity.INFO] = "◉",
+      [vim.diagnostic.severity.WARN] = "",
     },
   },
 }
