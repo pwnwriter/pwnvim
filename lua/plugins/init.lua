@@ -111,7 +111,6 @@ local plugins = {
     name = "cmp",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "L3MON4D3/LuaSnip",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
@@ -122,12 +121,6 @@ local plugins = {
     end,
   },
 
-  {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end,
-  },
 
   {
     "Bekaboo/dropbar.nvim",

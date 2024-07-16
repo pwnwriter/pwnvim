@@ -1,11 +1,10 @@
 local cmp = require "cmp"
-local luasnip = require "luasnip"
 local icons = require "mini.icons"
 
 cmp.setup {
   snippet = {
     expand = function(opts)
-      luasnip.lsp_expand(opts.body)
+        vim.snippet.expand(opts.body)
     end,
   },
   experimental = {
@@ -83,18 +82,6 @@ cmp.setup {
         fallback()
       end
       cmp.confirm()
-    end, { "i", "s" }),
-    ["<s-tab>"] = cmp.mapping(function(fallback)
-      if not luasnip.jumpable(-1) then
-        fallback()
-      end
-      luasnip.jump(-1)
-    end, { "i", "s" }),
-    ["<tab>"] = cmp.mapping(function(fallback)
-      if not luasnip.jumpable(1) then
-        fallback()
-      end
-      luasnip.jump(1)
     end, { "i", "s" }),
   },
 }
