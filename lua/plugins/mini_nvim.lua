@@ -134,14 +134,15 @@ M.starter = {
   footer = os.date(),
   items = {
     {
-      name = "Bookmarked files",
+      name = "Bookmarked files 󰃀",
       action = "lua MiniExtra.pickers.visit_paths { filter = 'todo' }",
       section = "Actions",
     },
-    { name = "Open blank file", action = ":enew", section = "Actions" },
-    { name = "Find files", action = "lua MiniPick.builtin.files()", section = "Actions" },
-    { name = "Recent files", action = "lua MiniExtra.pickers.oldfiles()", section = "Actions" },
-    { name = "Quit", action = ":q!", section = "Actions" },
+    { name = "Lazy update 󰒲", action = ":Lazy update", section = "Actions" },
+    { name = "Open blank file 󱞁", action = ":enew", section = "Actions" },
+    { name = "Find files ", action = "lua MiniPick.builtin.files()", section = "Actions" },
+    { name = "Recent files ", action = "lua MiniExtra.pickers.oldfiles()", section = "Actions" },
+    { name = "Quit 󱢸", action = ":q!", section = "Actions" },
   },
   content_hooks = {
     starter.gen_hook.aligning("center", "center"),
