@@ -148,12 +148,10 @@ local plugins = {
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-      vim.schedule(function()
         require("core.opts").final()
         require("core.mappings").general()
         require("core.mappings").misc()
         require("core.utils").autocmds()
-      end)
     end,
   },
 }
