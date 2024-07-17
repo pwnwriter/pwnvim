@@ -121,7 +121,6 @@ local plugins = {
     end,
   },
 
-
   {
     "Bekaboo/dropbar.nvim",
     name = "dropbar",
@@ -144,14 +143,24 @@ local plugins = {
   },
 
   {
+    "MeanderingProgrammer/markdown.nvim",
+    name = "markdown",
+    ft = "markdown",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+    config = function()
+      require("render-markdown").setup {}
+    end,
+  },
+
+  {
     name = "options",
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-        require("core.opts").final()
-        require("core.mappings").general()
-        require("core.mappings").misc()
-        require("core.utils").autocmds()
+      require("core.opts").final()
+      require("core.mappings").general()
+      require("core.mappings").misc()
+      require("core.utils").autocmds()
     end,
   },
 }

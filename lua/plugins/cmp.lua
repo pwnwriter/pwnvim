@@ -4,7 +4,7 @@ local icons = require "mini.icons"
 cmp.setup {
   snippet = {
     expand = function(opts)
-        vim.snippet.expand(opts.body)
+      vim.snippet.expand(opts.body)
     end,
   },
   experimental = {
