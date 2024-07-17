@@ -113,7 +113,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
+      "https://codeberg.org/FelipeLema/cmp-async-path",
     },
     event = { "LspAttach", "InsertCharPre" },
     config = function()
