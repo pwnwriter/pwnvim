@@ -9,5 +9,5 @@
   "lspconfig": { "branch": "master", "commit": "01e08d4bf1c35e5126b2ad5209725e4c552289ab" },
   "mini": { "branch": "main", "commit": "f20d8cd3a116ef65f022797de064a044b217ff53" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
-  "treesitter": { "branch": "master", "commit": "4836c1df6516cc2f895e362f3d00a15a236407b3" }
+  "treesitter": { "branch": "master", "commit": "0d5e1214a5c386a168dc8e19d7da0ceb0e0bd6f2" }
 }
