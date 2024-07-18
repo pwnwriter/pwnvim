@@ -23,7 +23,7 @@
                   ripgrep
                 ];
                 shellHook = ''
-                  ln -s $(pwd) /home/$(whoami)/.config/pwnvim
+                  ln -s "$(pwd)" "$HOME/.config/pwnvim"
                   echo "Syncing Neovim plugins ..."
                   nvim --headless +"Lazy! sync" +qa
                 '';
