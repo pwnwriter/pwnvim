@@ -38,6 +38,7 @@ opts.final = function()
   opt.sidescrolloff = 2
   local statusline_ascii = ""
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+  opt.cmdheight = 0
 end
 
 --- load shada after ui-enter
