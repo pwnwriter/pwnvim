@@ -7,8 +7,14 @@ M.pairs = {
 }
 
 M.files = {
-  windows = { preview = false, width_focus = 25, width_preview = 40, height_focus = 20, max_number = math.huge },
   use_as_default_explorer = true,
+  windows = {
+    max_number = math.huge,
+    preview = false,
+    width_focus = 30,
+    width_nofocus = 20,
+    width_preview = 25,
+  },
 }
 
 local hipatterns = require "mini.hipatterns"
