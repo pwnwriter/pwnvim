@@ -148,7 +148,7 @@ local plugins = {
     ft = "markdown",
     dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
     config = function()
-      require("markdown").setup {}
+      require("render-markdown").setup {}
     end,
   },
 
