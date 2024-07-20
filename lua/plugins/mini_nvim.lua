@@ -116,7 +116,7 @@ M.git = {}
 M.diff = {
   view = {
     style = "sign",
-    signs = { add = "│", change = "󰗩 ", delete = "󰛌" },
+    signs = { add = " ", change = " ", delete = "" },
   },
 }
 
