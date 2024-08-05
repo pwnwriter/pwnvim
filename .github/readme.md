@@ -4,7 +4,7 @@
 
 ----
 
-```sh
+```bash
 git clone https://github.com/pwnwriter/pwnvim ~/.config/nvim
 nvim --headless +"Lazy! sync" +qa
 ```
