@@ -143,7 +143,7 @@ local plugins = {
   },
 
   {
-    "MeanderingProgrammer/markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     name = "markdown",
     ft = "markdown",
     dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
