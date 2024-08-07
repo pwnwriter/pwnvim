@@ -3,36 +3,39 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { nixpkgs, ... }:
+  outputs =
+    { nixpkgs, ... }:
     let
-      systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems =
+        function: nixpkgs.lib.genAttrs systems (system: function (import nixpkgs { inherit system; }));
     in
     {
-      devShells = builtins.listToAttrs (map
-        (system: {
-          name = system;
-          value =
-            let
-              pkgs = import nixpkgs { inherit system; };
-            in
-            {
-              default = pkgs.mkShell {
-                packages = with pkgs; [
-                  neovim
-                  fd
-                  ripgrep
-                ];
-                shellHook = ''
-                  ln -s "$(pwd)" "$HOME/.config/pwnvim"
-                  echo "Syncing Neovim plugins ..."
-                  nvim --headless +"Lazy! sync" +qa
-                '';
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.mkShell {
+          packages = with pkgs; [
+            neovim
+            fd
+            ripgrep
+          ];
+          shellHook = ''
+            ln -s "$(pwd)" "$HOME/.config/pwnvim"
+            echo "Syncing Neovim plugins ..."
+            nvim --headless +"Lazy! sync" +qa
+          '';
 
-                NVIM_APPNAME = "pwnvim";
+          env = {
 
-              };
-            };
-        })
-        systems);
+            NVIM_APPNAME = "pwnvim";
+
+          };
+
+        };
+      });
     };
 }
