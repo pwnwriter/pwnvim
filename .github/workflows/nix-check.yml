@@ -19,7 +19,7 @@ jobs:
       - name: Setup Nix cache
         uses: DeterminateSystems/magic-nix-cache-action@main
 
-      - name: Build the website
+      - name: Install neovim config
         run: |
           nix develop --command nvim +q
 
