@@ -23,7 +23,7 @@ jobs:
         run: |
           nix develop --command nvim +q
 
-      - name: Show startuptime time
-        run: |
-          nix develop --command nvim --startuptime tmp.txt
-          tail -n 1 tmp.txt
+      # - name: Show startuptime time
+      #   run: |
+      #     nix develop --command nvim --startuptime tmp.txt
+      #     tail -n 1 tmp.txt
