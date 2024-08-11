@@ -23,8 +23,7 @@ opts.initial = function()
 end
 
 opts.final = function()
-  opt.complete = {}
-  opt.list = true
+  opt.completeopt = { "menuone", "noselect", "noinsert" }
   opt.wildmenu = true
   opt.pumheight = 20
   opt.ignorecase = true
