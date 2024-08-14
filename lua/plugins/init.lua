@@ -76,7 +76,7 @@ local plugins = {
         "git",
         "diff",
       }
-      require("core.mappings").mini()
+      require("mappings").mini()
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
       end
@@ -138,7 +138,7 @@ local plugins = {
     event = { "BufReadPost", "BufNewFile" },
     config = function()
       require "plugins.lsp"
-      require("core.mappings").lsp()
+      require("mappings").lsp()
     end,
   },
 
@@ -157,10 +157,10 @@ local plugins = {
     event = "VeryLazy",
     dir = conf_path,
     config = function()
-      require("core.opts").final()
-      require("core.mappings").general()
-      require("core.mappings").misc()
-      require("core.utils").autocmds()
+      require("opts").final()
+      require("mappings").general()
+      require("mappings").misc()
+      require("modules").autocmds()
     end,
   },
 }

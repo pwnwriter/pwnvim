@@ -6,7 +6,7 @@
 
 vim.loader.enable()
 
-require("core.opts").initial()
+require("opts").initial()
 
 local lazy_path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 local lazy_url = "https://github.com/folke/lazy.nvim"

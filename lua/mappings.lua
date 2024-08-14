@@ -1,4 +1,4 @@
-local utils = require "core.utils"
+local modules = require "modules"
 
 local function map(mode, keys, action, desc)
   desc = desc or ""
@@ -97,11 +97,11 @@ end
 
 M.misc = function()
   map("n", "<leader>n", function()
-    utils.toggle_numbering()
+    modules.toggle_numbering()
   end, "Toggle line numbering")
 
   map("n", "<leader>tf", function()
-    utils.toggle_flow()
+    modules.toggle_flow()
   end, "Toggle flow")
 end
 
@@ -123,7 +123,7 @@ M.lsp = function()
       map("n", "<leader>sd", vim.diagnostic.setloclist)
 
       map("n", "<leader>hi", function()
-        utils.toggle_inlay_hint() -- toggle inlay hint
+        modules.toggle_inlay_hint() -- toggle inlay hint
       end, "Toggle inlay hint")
 
       map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")
