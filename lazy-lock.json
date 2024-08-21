@@ -1,14 +1,14 @@
 {
-  "catppuccin": { "branch": "main", "commit": "18bab5ec4c782cdf7d7525dbe89c60bfa02fc195" },
+  "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
   "cmp": { "branch": "main", "commit": "ae644feb7b67bf1ce4260c231d1d4300b19c6f30" },
-  "cmp-async-path": { "branch": "main", "commit": "7df7f3721c45aac26b6e0474087538f4681c9c7a" },
+  "cmp-async-path": { "branch": "main", "commit": "bfea8926862ae95219694df5d19ab45c430fe1f4" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
-  "dropbar": { "branch": "master", "commit": "c53d1d312407927903f0ce4bb504e25113641989" },
+  "dropbar": { "branch": "master", "commit": "d26bf92161cd70e049dc138b44ffa0246dbf7178" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
-  "lspconfig": { "branch": "master", "commit": "037ea0901ce9a28cfcaa36302618f06d2e164fbf" },
-  "markdown": { "branch": "main", "commit": "7986be47531d652e950776536987e01dd5b55b94" },
-  "mini": { "branch": "main", "commit": "49e2699dc0d585b445eda24ed4bb45952ac20508" },
-  "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
-  "treesitter": { "branch": "master", "commit": "bfb50de9cb0673a3bff620d881f690fb7e0d1328" }
+  "lspconfig": { "branch": "master", "commit": "b21c166bbf337734f2a39734a905c1c3e298205c" },
+  "markdown": { "branch": "main", "commit": "952b1c077a5967f91228f57a6a4979f86386f3c4" },
+  "mini": { "branch": "main", "commit": "71b5694a2df4f7e3661855eb8e2814980d2e0ac9" },
+  "plenary.nvim": { "branch": "master", "commit": "ec289423a1693aeae6cd0d503bac2856af74edaa" },
+  "treesitter": { "branch": "master", "commit": "0b8b78f9d08dc338a146eb4cd4bcbed8dd36a783" }
 }
