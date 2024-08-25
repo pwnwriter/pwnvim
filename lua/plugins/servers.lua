@@ -27,7 +27,7 @@ lspconfig.bashls.setup {}
 
 lspconfig.gopls.setup {}
 
-lspconfig.pylsp.setup {}
+lspconfig.pyright.setup {}
 
 lspconfig.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
