@@ -107,8 +107,9 @@ local plugins = {
 
   --- Completion menu stuffs
   {
-    "hrsh7th/nvim-cmp",
+    "yioneko/nvim-cmp",
     name = "cmp",
+    branch = "perf",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
