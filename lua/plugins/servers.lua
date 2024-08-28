@@ -27,7 +27,17 @@ lspconfig.bashls.setup {}
 
 lspconfig.gopls.setup {}
 
-lspconfig.pyright.setup {}
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        jedi_completion = {
+          include_params = true,
+        },
+      },
+    },
+  },
+}
 
 lspconfig.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
