@@ -4,7 +4,7 @@ local opts = {}
 
 opts.initial = function()
   g.mapleader = " "
-  -- opt.laststatus = 0
+  opt.laststatus = 3
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
   opt.fillchars:append { eob = " " }
