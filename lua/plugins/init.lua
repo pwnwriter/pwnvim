@@ -164,6 +164,17 @@ local plugins = {
       require("modules").autocmds()
     end,
   },
+
+{
+    "OXY2DEV/bars-N-lines.nvim",
+    lazy = false,
+    name = "bars",
+    config = function()
+        require("bars").setup({
+            statuscolumn = false,
+        })
+    end,
+},
 }
 
 require("lazy").setup(plugins, require "plugins.lazy_nvim")

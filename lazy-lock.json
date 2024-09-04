@@ -1,4 +1,5 @@
 {
+  "bars": { "branch": "main", "commit": "8c87b17c19e970e95fec19b560d70b62a34c7b96" },
   "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
   "cmp": { "branch": "perf", "commit": "6c3d595f3223c1ae7392d4fde1626355439af6c1" },
   "cmp-async-path": { "branch": "main", "commit": "838a12586642940fde05f0b4bae0d38d8fbc5702" },

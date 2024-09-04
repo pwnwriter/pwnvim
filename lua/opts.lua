@@ -4,7 +4,7 @@ local opts = {}
 
 opts.initial = function()
   g.mapleader = " "
-  opt.laststatus = 0
+  -- opt.laststatus = 0
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
   opt.fillchars:append { eob = " " }
@@ -36,8 +36,8 @@ opts.final = function()
   opt.splitright = true
   opt.scrolloff = 2
   opt.sidescrolloff = 2
-  local statusline_ascii = ""
-  opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+  -- local statusline_ascii = ""
+  -- opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
 --- load shada after ui-enter
