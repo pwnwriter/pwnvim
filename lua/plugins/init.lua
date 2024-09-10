@@ -144,12 +144,21 @@ local plugins = {
   },
 
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    name = "markdown",
+    "OXY2DEV/markview.nvim",
     ft = "markdown",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
+
+  {
+    "OXY2DEV/bars-N-lines.nvim",
+    lazy = false,
+    name = "bars",
     config = function()
-      require("render-markdown").setup {}
+      require("bars").setup {
+        statuscolumn = false,
+      }
     end,
   },
 
@@ -164,17 +173,6 @@ local plugins = {
       require("modules").autocmds()
     end,
   },
-
-{
-    "OXY2DEV/bars-N-lines.nvim",
-    lazy = false,
-    name = "bars",
-    config = function()
-        require("bars").setup({
-            statuscolumn = false,
-        })
-    end,
-},
 }
 
 require("lazy").setup(plugins, require "plugins.lazy_nvim")
