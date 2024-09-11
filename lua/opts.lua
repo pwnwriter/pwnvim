@@ -19,7 +19,7 @@ opts.initial = function()
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
-  opt.cmdheight = 0
+  opt.cmdheight = 1
 end
 
 opts.final = function()
