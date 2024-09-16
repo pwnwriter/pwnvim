@@ -112,6 +112,10 @@ M.lsp = function()
     callback = function(ev)
       vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
+      --- Set minipick as default picker
+      local minipick = require "mini.pick"
+      vim.ui.select = minipick.ui_select
+
       -- Diagnostics mappings
       map("n", "[d", function()
         vim.diagnostic.goto_prev { float = false }

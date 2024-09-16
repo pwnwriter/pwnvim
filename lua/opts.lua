@@ -19,7 +19,7 @@ opts.initial = function()
   opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
-  opt.cmdheight = 1
+  opt.cmdheight = 0
 end
 
 opts.final = function()
@@ -36,8 +36,8 @@ opts.final = function()
   opt.splitright = true
   opt.scrolloff = 2
   opt.sidescrolloff = 2
-  -- local statusline_ascii = ""
-  -- opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+  local statusline_ascii = ""
+  opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
 --- load shada after ui-enter

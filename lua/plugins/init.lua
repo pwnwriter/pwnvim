@@ -152,17 +152,6 @@ local plugins = {
   },
 
   {
-    "OXY2DEV/bars-N-lines.nvim",
-    lazy = false,
-    name = "bars",
-    config = function()
-      require("bars").setup {
-        statuscolumn = false,
-      }
-    end,
-  },
-
-  {
     name = "options",
     event = "VeryLazy",
     dir = conf_path,
