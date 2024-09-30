@@ -145,8 +145,7 @@ local plugins = {
 
   {
     "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
-    opts = {},
+    event = "LspAttach",
     config = function()
       require("lsp_signature").setup {
         hint_prefix = "✨ ",
