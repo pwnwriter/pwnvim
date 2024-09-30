@@ -6,6 +6,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "dropbar": { "branch": "master", "commit": "669e325489202ae4da5a951314bbf8dbb20e7cff" },
   "lazy.nvim": { "branch": "main", "commit": "460e1cd8f24e364d54543a4b0e83f6f4ec1f65fb" },
+  "lsp_signature.nvim": { "branch": "master", "commit": "fc38521ea4d9ec8dbd4c2819ba8126cea743943b" },
   "lspconfig": { "branch": "master", "commit": "a9bc587e9ae0cbcb3e90a2e9342f86b3b78c4408" },
   "markview.nvim": { "branch": "main", "commit": "f16486e49561740f33b6773df43c9bc2c3c34c7b" },
   "mini": { "branch": "main", "commit": "73af55e44865f2ede67a772b0972a5d34dcedd0e" },

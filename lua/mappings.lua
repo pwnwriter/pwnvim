@@ -117,14 +117,15 @@ M.lsp = function()
       vim.ui.select = minipick.ui_select
 
       -- Diagnostics mappings
-      map("n", "[d", function()
+      map("n", "dp", function()
         vim.diagnostic.goto_prev { float = false }
       end, "Diagnostics goto_prev")
 
-      map("n", "]d", function()
+      map("n", "dn", function()
         vim.diagnostic.goto_next { float = false }
       end, "Diagnostics goto_next")
-      map("n", "<leader>sd", vim.diagnostic.setloclist)
+
+      map("n", "<leader>ds", vim.diagnostic.setloclist, "Add buffer diagnostics to the location list.")
 
       map("n", "<leader>hi", function()
         modules.toggle_inlay_hint() -- toggle inlay hint
