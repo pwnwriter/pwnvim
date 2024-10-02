@@ -154,7 +154,7 @@ local plugins = {
   },
 
   {
-    "OXY2DEV/markview.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     ft = "markdown",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
