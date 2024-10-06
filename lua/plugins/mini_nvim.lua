@@ -109,7 +109,13 @@ M.clue = {
   },
 }
 
-M.notify = {}
+M.notify = {
+        window  = {
+winblend = 0,
+
+        },
+        
+        }
 
 M.git = {}
 

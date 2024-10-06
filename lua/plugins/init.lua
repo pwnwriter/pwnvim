@@ -107,9 +107,8 @@ local plugins = {
 
   --- Completion menu stuffs
   {
-    "yioneko/nvim-cmp",
+    "iguanacucumber/magazine.nvim",
     name = "cmp",
-    branch = "perf",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
@@ -140,16 +139,6 @@ local plugins = {
     config = function()
       require "plugins.lsp"
       require("mappings").lsp()
-    end,
-  },
-
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "LspAttach",
-    config = function()
-      require("lsp_signature").setup {
-        hint_prefix = "✨ ",
-      }
     end,
   },
 

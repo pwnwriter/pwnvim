@@ -1,4 +1,5 @@
 local options = {
+  transparent_background = true,
   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
   compile = true,
   flavour = "mocha",
