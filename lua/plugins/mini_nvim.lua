@@ -157,7 +157,7 @@ M.starter = {
 
 M.icons = {
   lsp = {
-    ["function"] = { glyph = "󰡱", hl = "MiniIconsAzure" },
+    ["function"] = { glyph = "󰡱", hl = "MiniIconsCyan" },
   },
 }
 

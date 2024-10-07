@@ -107,18 +107,40 @@ local plugins = {
 
   --- Completion menu stuffs
   {
-    "iguanacucumber/magazine.nvim",
-    name = "cmp",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "https://codeberg.org/FelipeLema/cmp-async-path",
-    },
+    "saghen/blink.cmp",
     event = { "LspAttach", "InsertCharPre" },
-    config = function()
-      require "plugins.cmp"
-    end,
+    version = "v0.*",
+    opts = {
+      highlight = {
+        use_nvim_cmp_as_default = true,
+      },
+      nerd_font_variant = "normal",
+      accept = { auto_brackets = { enabled = true } },
+
+      trigger = { signature_help = { enabled = true } },
+
+      keymap = {
+        show = "<C-space>",
+        hide = { "<C-d>" },
+        accept = "<CR>",
+        select_prev = { "<Up>", "<C-p>" },
+        select_next = { "<Down>", "<C-n>" },
+
+        show_documentation = {},
+        hide_documentation = {},
+        scroll_documentation_up = "<C-y>",
+        scroll_documentation_down = "<C-e>",
+      },
+
+      windows = {
+        autocomplete = {
+          border = "single",
+        },
+        documentation = {
+          border = "single",
+        },
+      },
+    },
   },
 
   {
