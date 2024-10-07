@@ -110,12 +110,10 @@ M.clue = {
 }
 
 M.notify = {
-        window  = {
-winblend = 0,
-
-        },
-        
-        }
+  window = {
+    winblend = 0,
+  },
+}
 
 M.git = {}
 

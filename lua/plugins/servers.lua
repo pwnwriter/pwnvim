@@ -46,6 +46,11 @@ lspconfig.ts_ls.setup {
     hostInfo = "neovim",
   },
   single_file_support = true,
+  settings = {
+    completions = {
+      completeFunctionCalls = true,
+    },
+  },
 }
 
 lspconfig.gleam.setup {}
