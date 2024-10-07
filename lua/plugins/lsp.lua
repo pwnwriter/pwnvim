@@ -1,20 +1,3 @@
-local lspconfig = require "lspconfig"
-local windows = require "lspconfig.ui.windows"
-local cmp = require "cmp_nvim_lsp"
-
-windows.default_options.border = "rounded"
-lspconfig.util.on_setup = lspconfig.util.add_hook_after(lspconfig.util.on_setup, function(config)
-  config.capabilities = vim.tbl_deep_extend("force", config.capabilities, cmp.default_capabilities())
-
-  config.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-  config.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-end)
-
-local servers_path = vim.fs.normalize(vim.fn.stdpath "config" .. "/lua/plugins/servers.lua")
-if vim.uv.fs_access(servers_path, "R") then
-  dofile(servers_path)
-end
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 capabilities.textDocument.completion.completionItem = {
@@ -34,3 +17,64 @@ capabilities.textDocument.completion.completionItem = {
     },
   },
 }
+
+local lspconfig = require "lspconfig"
+
+lspconfig.rust_analyzer.setup {}
+
+lspconfig.lua_ls.setup {
+  filetypes = { "lua" },
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      completion = {
+        callSnippet = "Replace",
+      },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      -- format = { enable = false },
+      hint = {
+        enable = true,
+      },
+    },
+  },
+}
+
+lspconfig.bashls.setup {}
+
+lspconfig.gopls.setup {}
+
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        jedi_completion = {
+          include_params = true,
+        },
+      },
+    },
+  },
+}
+
+lspconfig.ts_ls.setup {
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+  init_options = {
+    hostInfo = "neovim",
+  },
+  single_file_support = true,
+  settings = {
+    completions = {
+      completeFunctionCalls = true,
+    },
+  },
+}
+
+lspconfig.gleam.setup {}
+
+lspconfig.nil_ls.setup {}
+
+lspconfig.zls.setup {}
