@@ -94,7 +94,7 @@ local plugins = {
     },
     config = function()
       require("nvim-treesitter.configs").setup {
-        ensure_installed = { "lua", "vimdoc", "rust", "go" },
+        ensure_installed = { "lua", "vimdoc", "rust", "go", "astro", "json", "toml", "markdown" },
         highlight = {
           enable = true,
           use_languagetree = true,
@@ -117,7 +117,7 @@ local plugins = {
       nerd_font_variant = "normal",
       accept = { auto_brackets = { enabled = true } },
 
-      trigger = { signature_help = { enabled = true } },
+      -- trigger = { signature_help = { enabled = true } },
 
       keymap = {
         show = "<C-space>",
