@@ -8,6 +8,9 @@ end
 
 local M = {}
 
+-- Expose the map function
+M.map = map
+
 M.general = function()
   map("i", "<C-h>", "<Left>")
   map("i", "<C-j>", "<Down>")

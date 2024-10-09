@@ -146,6 +146,11 @@ local plugins = {
   {
     "Bekaboo/dropbar.nvim",
     name = "dropbar",
+    keys = {
+      require("mappings").map({ "n" }, "<leader>p", function()
+        require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
+      end, "Toggle dropbar menu"),
+    },
     event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("dropbar").setup()
