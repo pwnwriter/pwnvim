@@ -35,7 +35,10 @@ lspconfig.lua_ls.setup {
       diagnostics = {
         globals = { "vim" },
       },
-      -- format = { enable = false },
+      format = {
+        defaultConfig = {
+        },
+      },
       hint = {
         enable = true,
       },

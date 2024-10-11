@@ -16,7 +16,6 @@ opts.initial = function()
   opt.relativenumber = true
   opt.breakindent = true
   opt.linebreak = true
-  opt.expandtab = true
   opt.swapfile = false
   opt.undofile = true
   opt.cmdheight = 0
@@ -35,12 +34,27 @@ opts.final = function()
   opt.splitbelow = true
   opt.splitright = true
   opt.scrolloff = 2
+
+  -- Indenting
+  opt.shiftwidth = 2
+  opt.smartindent = true
+  opt.tabstop = 2
+  opt.expandtab = true
+  opt.softtabstop = 2
   opt.sidescrolloff = 2
+
+  -- Statusline
   local statusline_ascii = ""
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+
+  -- Disable providers
+  g.loaded_node_provider = 0
+  g.loaded_python3_provider = 0
+  g.loaded_perl_provider = 0
+  g.loaded_ruby_provider = 0
 end
 
---- load shada after ui-enter
+--- Load shada after ui-enter
 local shada = vim.o.shada
 vim.o.shada = ""
 vim.api.nvim_create_autocmd("User", {
