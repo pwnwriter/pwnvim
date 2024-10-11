@@ -20,7 +20,7 @@ nvim --headless +"Lazy! sync" +qa
 
 -   To install [**`treesitter`**][Treesitter] of `x` language Run `:TSInstall [x]` !
 -   On [`NIX`][Nix] , run `nix develop` to enter a shell with `pwnvim` .
--   Install `lsp servers` and configure inside [**`servers.lua`**][Server].
+-   Install `lsp servers` and configure inside [**`lsp.lua`**][LSP].
 -   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
     ```lua
@@ -41,5 +41,5 @@ nvim --headless +"Lazy! sync" +qa
 [Lspconfig]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [Treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [Mason]: https://github.com/williamboman/mason.nvim
-[Server]: /lua/plugins/servers.lua
+[LSP]: /lua/plugins/lsp.lua
 [Nix]: https://github.com/NixOS/nix
