@@ -10,10 +10,28 @@ local plugins = {
     init = function()
       vim.cmd.colorscheme "catppuccin"
     end,
-    config = function()
-      local opts = require "plugins.colorscheme"
-      require("catppuccin").setup(opts)
-    end,
+    opts = {
+      transparent_background = true,
+      compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
+      compile = true,
+      flavour = "mocha",
+      integrations = {
+        cmp = true,
+        treesitter = true,
+        mason = true,
+        native_lsp = {
+          enabled = true,
+          inlay_hints = {
+            background = true,
+          },
+        },
+        mini = {
+          enabled = true,
+          indentscope_color = "lavender",
+        },
+      },
+
+    },
   },
 
   --- Mini stuffs

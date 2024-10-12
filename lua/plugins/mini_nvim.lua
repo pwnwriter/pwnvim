@@ -57,13 +57,6 @@ M.indentscope = {
   symbol = "┋",
 }
 
-M.completion = {
-  window = {
-    info = { border = "rounded" },
-    signature = { border = "rounded" },
-  },
-}
-
 M.ai = {}
 
 M.visits = {
