@@ -39,24 +39,9 @@ local plugins = {
     "echasnovski/mini.nvim",
     name = "mini",
     version = false,
-    keys = {
-      { "<leader>e",  mode = "n" },
-      { "<leader>ff", mode = "n" },
-      { "<leader>b",  mode = "n" },
-      { "<leader>fr", mode = "n" },
-      { "<leader>fw", mode = "n" },
-      { "<leader>q",  mode = "n" },
-      { "<leader>ti", mode = "n" },
-      { "<C-q>",      mode = "n" },
-      { "gcc",        mode = "n" },
-      { "<leader>",   mode = "n" },
-      { "gc",         mode = "n" },
-      { "gc",         mode = "x" },
-      { "H",          mode = "x" },
-      { "J",          mode = "x" },
-      { "K",          mode = "x" },
-      { "L",          mode = "x" },
-    },
+    keys = function()
+      require("mappings").mini()
+    end,
     init = function()
       package.preload["nvim-web-devicons"] = function()
         package.loaded["nvim-web-devicons"] = {}
@@ -94,7 +79,6 @@ local plugins = {
         "git",
         "diff",
       }
-      require("mappings").mini()
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
       end
@@ -181,9 +165,11 @@ local plugins = {
     name = "lspconfig",
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     event = { "BufReadPost", "BufNewFile" },
+    keys = function ()
+      require("mappings").lsp()
+    end,
     config = function()
       require "plugins.lsp"
-      require("mappings").lsp()
     end,
   },
 
@@ -208,4 +194,45 @@ local plugins = {
   },
 }
 
-require("lazy").setup(plugins, require "plugins.lazy_nvim")
+require("lazy").setup(plugins, {
+  concurrency = 4,
+  defaults = {
+    lazy = true,
+  },
+  install = {
+    colorscheme = { "catppuccin" },
+  },
+  dev = {
+    path = vim.env.NVIM_DEV,
+  },
+  performance = {
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true,
+    rtp = {
+      disabled_plugins = {
+        "osc52",
+        "parser",
+        "gzip",
+        "netrwPlugin",
+        "health",
+        "man",
+        "matchit",
+        "rplugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+        "shadafile",
+        "spellfile",
+        "editorconfig",
+      },
+    },
+  },
+  ui = {
+    border = "solid",
+    title = "lazy.nvim",
+    size = { width = 0.9, height = 0.9 },
+  },
+})
