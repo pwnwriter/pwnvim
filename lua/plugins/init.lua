@@ -165,7 +165,7 @@ local plugins = {
     name = "lspconfig",
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     event = { "BufReadPost", "BufNewFile" },
-    keys = function ()
+    keys = function()
       require("mappings").lsp()
     end,
     config = function()
@@ -174,10 +174,29 @@ local plugins = {
   },
 
   {
+    "nvchad/showkeys",
+    cmd = "ShowkeysToggle",
+    opts = {
+      timeout = 1,
+      maxkeys = 5,
+      position = "top-center",
+    }
+  },
+
+  {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = "markdown",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
+    },
+  },
+
+
+  {
+    "pwnwriter/Code2prompt.nvim",
+    cmd = "Code2prompt",
+    opts = {
+      template = "/Users/pwnwriter/code/gh/code2prompt.nvim/templates",
     },
   },
 

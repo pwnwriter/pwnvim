@@ -76,8 +76,29 @@ lspconfig.ts_ls.setup {
   },
 }
 
-lspconfig.gleam.setup {}
+lspconfig.nixd.setup({
+  cmd = { "nixd" },
+  settings = {
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> { }",
+      },
+      formatting = {
+        command = { "nixfmt" },
+      },
+      options = {
+        home_manager = {
+          expr = '(builtins.getFlake \"/Users/pwnwriter/.local/nix\").homeConfigurations.earlymoon.options',
+        },
+        nix_darwin = {
+          expr = '(builtins.getFlake \"/Users/pwnwriter/.local/nix\").darwinConfigurations.earlymoon.options',
+        },
+      },
+    },
+  },
+})
 
-lspconfig.nil_ls.setup {}
+
+lspconfig.gleam.setup {}
 
 lspconfig.zls.setup {}
