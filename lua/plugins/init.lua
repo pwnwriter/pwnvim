@@ -21,8 +21,17 @@ local plugins = {
         mason = true,
         native_lsp = {
           enabled = true,
-          inlay_hints = {
-            background = true,
+          virtual_text = {
+            errors = { "italic" },
+            hints = { "italic" },
+            warnings = { "italic" },
+            information = { "italic" },
+          },
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
           },
         },
         mini = {
