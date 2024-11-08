@@ -142,7 +142,9 @@ local plugins = {
           border = "single",
         },
         documentation = {
+          auto_show = true,
           border = "single",
+          auto_show_delay_ms = 100,
         },
       },
     },
