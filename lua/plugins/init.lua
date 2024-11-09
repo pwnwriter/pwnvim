@@ -179,16 +179,6 @@ local plugins = {
   },
 
   {
-    "nvchad/showkeys",
-    cmd = "ShowkeysToggle",
-    opts = {
-      timeout = 1,
-      maxkeys = 5,
-      position = "top-center",
-    }
-  },
-
-  {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = "markdown",
     dependencies = {
@@ -196,13 +186,17 @@ local plugins = {
     },
   },
 
-
   {
-    "pwnwriter/Code2prompt.nvim",
-    cmd = "Code2prompt",
-    opts = {
-      template = "/Users/pwnwriter/code/gh/code2prompt.nvim/templates",
+    "oskarrrrrrr/symbols.nvim",
+    keys = {
+      {
+        ",s", ":SymbolsToggle<CR>"
+      },
     },
+    config = function()
+      local r = require("symbols.recipes")
+      require("symbols").setup(r.DefaultFilters, r.AsciiSymbols, {})
+    end,
   },
 
   {
