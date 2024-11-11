@@ -40,13 +40,13 @@ end
 -- Autocommands
 function M.autocmds()
   local autocmd = vim.api.nvim_create_autocmd
-
   vim.b.miniindentscope_disable = true
-  autocmd("TermOpen", {
-    desc = "Disable 'mini.indentscope' in terminal buffer",
+  autocmd("FileType", {
+    pattern = "help",
+    desc = "Disable 'mini.indentscope' help page",
     callback = function(data)
       vim.b[data.buf].miniindentscope_disable = true
-    end,
+    end
   })
 end
 
