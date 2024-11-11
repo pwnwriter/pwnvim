@@ -12,27 +12,38 @@ local M = {}
 M.map = map
 
 M.general = function()
+  -- insert movement
   map("i", "<C-h>", "<Left>")
   map("i", "<C-j>", "<Down>")
   map("i", "<C-k>", "<Up>")
+  map("i", "<C-l>", "<Right>")
 
+  -- Copy and paste in the same cursor position
   map("n", "p", function()
     local row, col = unpack(vim.api.nvim_win_get_cursor(0))
     vim.cmd('put')
     vim.api.nvim_win_set_cursor(0, { row + 1, col })
   end)
 
-  map("i", "<C-l>", "<Right>")
   map("i", "jj", "<esc>")
+  map("i", "<C-c>", "<esc>")
+
   map("n", "<C-c>", "<cmd>noh<CR>")
+
+  -- Save only on new changes
+  map("n", "<C-s>", "<cmd>update<CR>")
+
+  -- Switching splits
   map("n", "<C-h>", "<C-w>h")
   map("n", "<C-j>", "<C-w>j")
   map("n", "<C-k>", "<C-w>k")
   map("n", "<C-l>", "<C-w>l")
-  map("n", "<C-s>", "<cmd>update<CR>")
+
+
   map("n", "<Tab>", "<cmd>bnext<CR>")
   map("n", "<s-Tab>", "<cmd>bprev<CR>")
 
+  -- Resize splits
   map("n", "<A-k>", ":resize +2<CR>")
   map("n", "<A-j>", ":resize -2<CR>")
   map("n", "<A-h>", ":vertical resize +2<CR>")
@@ -40,6 +51,7 @@ M.general = function()
 
   map("n", "<C-d>", "<C-d>zz")
   map("n", "<C-u>", "<C-u>zz")
+
   map("v", "??", 'y:h <C-R>"<cr>"') -- Show vim help
   map("v", "?/", 'y:/ <C-R>"<cr>"') -- Search across the buffer
 end
