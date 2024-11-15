@@ -25,7 +25,7 @@ nvim --headless +"Lazy! sync" +qa
 -   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
     you would setup a language server protocol.
     ```lua
-    -- plugins/servers.lua
+    -- plugins/lsp.lua
     local lspconfig = require("lspconfig")
 
     -- $ rustup component add rust-analyzer
