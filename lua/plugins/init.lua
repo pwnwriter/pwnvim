@@ -187,19 +187,6 @@ local plugins = {
   },
 
   {
-    "oskarrrrrrr/symbols.nvim",
-    keys = {
-      {
-        ",s", ":SymbolsToggle<CR>"
-      },
-    },
-    config = function()
-      local r = require("symbols.recipes")
-      require("symbols").setup(r.DefaultFilters, r.AsciiSymbols, {})
-    end,
-  },
-
-  {
     name = "options",
     event = "VeryLazy",
     dir = conf_path,
