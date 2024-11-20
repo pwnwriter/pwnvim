@@ -154,4 +154,6 @@ M.icons = {
   },
 }
 
+M.operators = {}
+
 return M

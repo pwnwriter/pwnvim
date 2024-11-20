@@ -87,6 +87,7 @@ local plugins = {
         "notify",
         "git",
         "diff",
+        "operators"
       }
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
