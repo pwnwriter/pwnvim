@@ -28,12 +28,14 @@ function M.toggle_flow()
     vim.opt.signcolumn = "yes:4"
     vim.o.winbar = ""
     state = 1
+    vim.cmd "redraw"
   else
     vim.o.relativenumber = true
     vim.o.number = true
     vim.opt.signcolumn = "auto"
     vim.o.winbar = "%{%v:lua.dropbar.get_dropbar_str()%}"
     state = 0
+    vim.cmd "redraw"
   end
 end
 
