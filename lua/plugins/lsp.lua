@@ -1,22 +1,13 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-capabilities.textDocument.completion.completionItem = {
-  documentationFormat = { "markdown", "plaintext" },
-  snippetSupport = true,
-  preselectSupport = true,
-  insertReplaceSupport = true,
-  labelDetailsSupport = true,
-  deprecatedSupport = true,
-  commitCharactersSupport = true,
-  tagSupport = { valueSet = { 1 } },
-  resolveSupport = {
-    properties = {
-      "documentation",
-      "detail",
-      "additionalTextEdits",
+capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+capabilities = vim.tbl_deep_extend("force", capabilities, {
+  workspace = {
+    didChangeWatchedFiles = {
+      relativePatternSupport = true,
     },
   },
-}
+})
 
 local lspconfig = require "lspconfig"
 
