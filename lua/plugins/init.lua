@@ -87,7 +87,7 @@ local plugins = {
         "notify",
         "git",
         "diff",
-        "operators"
+        "operators",
       }
       for _, module in ipairs(mini_modules) do
         require("mini." .. module).setup(mini_config[module])
@@ -128,6 +128,14 @@ local plugins = {
       },
       nerd_font_variant = "mono",
 
+      accept = {
+        auto_brackets = {
+          enabled = true,
+          force_allow_filetypes = { 'rust' },
+        }
+      },
+
+
       trigger = { signature_help = { enabled = true } },
 
       keymap = {
@@ -165,6 +173,15 @@ local plugins = {
     end,
   },
 
+  {
+    "folke/snacks.nvim",
+    name = "snacks",
+    event = {"BufReadPost"},
+    opts = {
+      words = { enabled = true },
+    },
+  },
+
   --- lsp stuffs
   {
     "neovim/nvim-lspconfig",
@@ -187,17 +204,18 @@ local plugins = {
     },
   },
 
-  {
-    name = "options",
-    event = "VeryLazy",
-    dir = conf_path,
-    config = function()
-      require("opts").final()
-      require("mappings").general()
-      require("mappings").misc()
-      require("modules").autocmds()
-    end,
-  },
+
+{
+  name = "options",
+  event = "VeryLazy",
+  dir = conf_path,
+  config = function()
+    require("opts").final()
+    require("mappings").general()
+    require("mappings").misc()
+    require("modules").autocmds()
+  end,
+},
 }
 
 require("lazy").setup(plugins, {

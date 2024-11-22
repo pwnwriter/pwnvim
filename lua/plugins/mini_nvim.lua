@@ -175,5 +175,6 @@ M.icons = {
 }
 
 M.operators = {}
+M.animate = {}
 
 return M

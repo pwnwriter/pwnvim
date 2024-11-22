@@ -66,7 +66,7 @@ M.mini = function()
     builtin.files()
   end, "find files")
 
-  map({ "n" }, "<leader>b", function()
+  map({ "n" }, "<leader>bs", function()
     builtin.buffers()
   end, "Find buffers")
 
@@ -88,7 +88,7 @@ M.mini = function()
     local _ = require("mini.files").close() or require("mini.files").open()
   end, "Toggle minifiles")
 
-  map({ "n" }, "<leader>q", function()
+  map({ "n" }, "<leader>bq", function()
     require("mini.bufremove").delete()
   end, "Remove current buffer")
 
