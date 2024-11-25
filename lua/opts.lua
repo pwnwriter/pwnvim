@@ -70,7 +70,7 @@ vim.diagnostic.config {
     prefix = "",
     suffix = "",
     format = function(diagnostic)
-      return "󰍡 " .. diagnostic.message .. " "
+      return " " .. diagnostic.message .. " "
     end,
   },
   underline = {

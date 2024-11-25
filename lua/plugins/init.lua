@@ -176,7 +176,7 @@ local plugins = {
   {
     "folke/snacks.nvim",
     name = "snacks",
-    event = {"BufReadPost"},
+    event = { "BufReadPost" },
     opts = {
       words = { enabled = true },
     },
@@ -205,17 +205,18 @@ local plugins = {
   },
 
 
-{
-  name = "options",
-  event = "VeryLazy",
-  dir = conf_path,
-  config = function()
-    require("opts").final()
-    require("mappings").general()
-    require("mappings").misc()
-    require("modules").autocmds()
-  end,
-},
+  {
+    name = "options",
+    event = "VeryLazy",
+    dir = conf_path,
+    config = function()
+      require("opts").final()
+      require("mappings").general()
+      require("mappings").misc()
+      require("modules").autocmds()
+    end,
+  },
+
 }
 
 require("lazy").setup(plugins, {

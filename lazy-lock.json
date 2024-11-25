@@ -1,11 +1,11 @@
 {
-  "blink.cmp": { "branch": "main", "commit": "75cadbcd2657ed01326ca2b0e5e4d78a77127ca3" },
-  "catppuccin": { "branch": "main", "commit": "637d99e638bc6f1efedac582f6ccab08badac0c6" },
-  "dropbar": { "branch": "master", "commit": "22382f44f8ce0320d38023c6a68f3ef4087c8c10" },
-  "lazy.nvim": { "branch": "main", "commit": "7967abe55752aa90532e6bb4bd4663fe27a264cb" },
-  "lspconfig": { "branch": "master", "commit": "d01864641c6e43c681c3e9f6cf4745c75fdd9dcc" },
-  "mini": { "branch": "main", "commit": "998cfcf1fdd0a6830d0fc35f1c054a6f55de1e7f" },
-  "render-markdown.nvim": { "branch": "main", "commit": "d6a82d70765aa238b7ea48d257a1d57a92501423" },
-  "snacks": { "branch": "main", "commit": "aac03be3775a0bf3b7ba39c16f1d23c1162a6dcd" },
-  "treesitter": { "branch": "master", "commit": "0603b3e3d21ebe2fa82dc5361a3d500e0d3ad3a8" }
+  "blink.cmp": { "branch": "main", "commit": "81069e3955a8b4d5063287a2a6a47a844e9ca2cb" },
+  "catppuccin": { "branch": "main", "commit": "faf15ab0201b564b6368ffa47b56feefc92ce3f4" },
+  "dropbar": { "branch": "master", "commit": "595c4e7eb5ba9e7d90bc64a50e46afe7e68015d2" },
+  "lazy.nvim": { "branch": "main", "commit": "56ead98e05bb37a4ec28930a54d836d033cf00f2" },
+  "lspconfig": { "branch": "master", "commit": "27008519562f16453813c19dcc6ee97f505e0b1c" },
+  "mini": { "branch": "main", "commit": "ccfc6300a5c17387f2899f979ecc04f942bee2a0" },
+  "render-markdown.nvim": { "branch": "main", "commit": "6096cf3608b576a38fd1396227dbc0473091714d" },
+  "snacks": { "branch": "main", "commit": "7564a30cad803c01f8ecc15683a280d2f0e9bdb7" },
+  "treesitter": { "branch": "master", "commit": "d14bc4bd15a7b9b5a9e7977c6a28f2cab6c4ad4a" }
 }
