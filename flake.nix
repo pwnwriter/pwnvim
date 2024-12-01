@@ -16,7 +16,7 @@
         function: nixpkgs.lib.genAttrs systems (system: function (import nixpkgs { inherit system; }));
     in
     {
-      devShells = forAllSystems (pkgs: {
+      Packages = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
             neovim

@@ -175,6 +175,11 @@ local plugins = {
   {
     "folke/snacks.nvim",
     name = "snacks",
+    keys = {
+      require("mappings").map({ "n" }, "<leader>o", function()
+        require("snacks").scratch()
+      end, "Toggle scratch pad"),
+    },
     event = { "BufReadPost" },
     opts = {
       words = { enabled = true },
