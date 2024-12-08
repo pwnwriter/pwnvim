@@ -121,6 +121,16 @@ local plugins = {
   {
     "saghen/blink.cmp",
     event = { "LspAttach", "InsertCharPre" },
+    dependencies = {
+      "folke/lazydev.nvim",
+      ft = "lua",
+      opts = {
+        library = {
+          { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+        },
+      },
+
+    },
     version = "v0.*",
     opts = {
       highlight = {
@@ -155,6 +165,16 @@ local plugins = {
           auto_show_delay_ms = 100,
         },
       },
+
+      sources = {
+        completion = {
+          enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+        },
+        providers = {
+          lsp = { fallback_for = { "lazydev" } },
+          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+        },
+      },
     },
   },
 
@@ -183,6 +203,11 @@ local plugins = {
     event = { "BufReadPost" },
     opts = {
       words = { enabled = true },
+      notifier = {
+        wo = {
+          winblend = 0,
+        },
+      },
     },
   },
 
