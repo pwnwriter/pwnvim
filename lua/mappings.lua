@@ -127,49 +127,42 @@ M.misc = function()
   end, "Toggle flow")
 end
 
+-- map the following keys on lsp attach only
 M.lsp = function()
-  -- map the following keys on lsp attach only
-  vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-    callback = function(ev)
-      vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+  --- Set minipick as default picker
+  local minipick = require "mini.pick"
+  vim.ui.select = minipick.ui_select
 
-      --- Set minipick as default picker
-      local minipick = require "mini.pick"
-      vim.ui.select = minipick.ui_select
+  -- Diagnostics mappings
+  map("n", "dp", function()
+    vim.diagnostic.goto_prev { float = false }
+  end, "Diagnostics goto_prev")
 
-      -- Diagnostics mappings
-      map("n", "dp", function()
-        vim.diagnostic.goto_prev { float = false }
-      end, "Diagnostics goto_prev")
+  map("n", "dn", function()
+    vim.diagnostic.goto_next { float = false }
+  end, "Diagnostics goto_next")
 
-      map("n", "dn", function()
-        vim.diagnostic.goto_next { float = false }
-      end, "Diagnostics goto_next")
+  map("n", "<leader>ds", vim.diagnostic.setloclist, "Add buffer diagnostics to the location list.")
 
-      map("n", "<leader>ds", vim.diagnostic.setloclist, "Add buffer diagnostics to the location list.")
+  map("n", "<leader>hi", function()
+    modules.toggle_inlay_hint()     -- toggle inlay hint
+  end, "Toggle inlay hint")
 
-      map("n", "<leader>hi", function()
-        modules.toggle_inlay_hint() -- toggle inlay hint
-      end, "Toggle inlay hint")
-
-      map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")
-      map("n", "<leader>df", function()
-        vim.diagnostic.open_float()
-      end, "Open diagnostics float ")
-      map("n", "<leader>ld", vim.lsp.buf.definition, "Goto lsp definition")
-      map("n", "<leader>lh", vim.lsp.buf.declaration, "Goto lsp declaration")
-      map("n", "<leader>lt", vim.lsp.buf.type_definition, "Goto lsp definition")
-      map("n", "<leader>li", vim.lsp.buf.implementation, "Goto lsp implementation")
-      map("n", "<leader>lr", vim.lsp.buf.references, "Goto lsp reference")
-      map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, "Open lsp code action")
-      map("n", "<leader>lf", function()
-        vim.lsp.buf.format { async = true }
-      end, "Lsp format")
-      map("n", "<leader>lc", vim.lsp.buf.rename, "Lsp rename")
-      map({ "i", "x" }, "<A-s>", vim.lsp.buf.signature_help, "Lsp signature help")
-    end,
-  })
+  map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")
+  map("n", "<leader>df", function()
+    vim.diagnostic.open_float()
+  end, "Open diagnostics float ")
+  map("n", "<leader>ld", vim.lsp.buf.definition, "Goto lsp definition")
+  map("n", "<leader>lh", vim.lsp.buf.declaration, "Goto lsp declaration")
+  map("n", "<leader>lt", vim.lsp.buf.type_definition, "Goto lsp definition")
+  map("n", "<leader>li", vim.lsp.buf.implementation, "Goto lsp implementation")
+  map("n", "<leader>lr", vim.lsp.buf.references, "Goto lsp reference")
+  map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, "Open lsp code action")
+  map("n", "<leader>lf", function()
+    vim.lsp.buf.format { async = true }
+  end, "Lsp format")
+  map("n", "<leader>lc", vim.lsp.buf.rename, "Lsp rename")
+  map({ "i", "x" }, "<A-s>", vim.lsp.buf.signature_help, "Lsp signature help")
 end
 
 return M
