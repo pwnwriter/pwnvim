@@ -41,18 +41,6 @@ lspconfig.bashls.setup {}
 
 lspconfig.gopls.setup {}
 
-lspconfig.pylsp.setup {
-  settings = {
-    pylsp = {
-      plugins = {
-        jedi_completion = {
-          include_params = true,
-        },
-      },
-    },
-  },
-}
-
 lspconfig.ts_ls.setup {
   cmd = { "typescript-language-server", "--stdio" },
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },

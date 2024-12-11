@@ -123,6 +123,7 @@ local plugins = {
     event = { "LspAttach", "InsertCharPre" },
     dependencies = {
       "folke/lazydev.nvim",
+      { "rafamadriz/friendly-snippets" },
       ft = "lua",
       opts = {
         library = {
