@@ -120,7 +120,7 @@ local plugins = {
   --- Completion menu stuffs
   {
     "saghen/blink.cmp",
-    event = { "LspAttach", "InsertCharPre" },
+    event = { "LspAttach",},
     dependencies = {
       "folke/lazydev.nvim",
       { "rafamadriz/friendly-snippets" },
