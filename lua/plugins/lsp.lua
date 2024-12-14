@@ -32,6 +32,7 @@ lspconfig.lua_ls.setup {
       },
       hint = {
         enable = true,
+        arrayIndex = 'Enable',
       },
     },
   },
