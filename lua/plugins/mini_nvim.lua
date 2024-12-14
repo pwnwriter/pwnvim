@@ -104,7 +104,7 @@ M.clue = {
 
 M.notify = {
   window = {
-    winblend = 0,
+    winblend = vim.g.winblend,
   },
 }
 

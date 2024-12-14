@@ -206,7 +206,7 @@ local plugins = {
       },
       notifier = {
         wo = {
-          winblend = 0,
+          winblend = vim.g.winblend,
         },
       },
       indent = {

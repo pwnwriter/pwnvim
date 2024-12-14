@@ -20,6 +20,7 @@ opts.initial = function()
   opt.cmdheight = 0
 
   g.border_style = "single" ---@type "single"|"double"|"rounded"
+  g.winblend = 0
   g.mapleader = " "
 
   -- Disable providers
