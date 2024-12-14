@@ -3,7 +3,6 @@ local g = vim.g
 local opts = {}
 
 opts.initial = function()
-  g.mapleader = " "
   opt.laststatus = 3
   opt.clipboard = "unnamedplus"
   opt.termguicolors = true
@@ -19,6 +18,15 @@ opts.initial = function()
   opt.swapfile = false
   opt.undofile = true
   opt.cmdheight = 0
+
+  g.border_style = "single" ---@type "single"|"double"|"rounded"
+  g.mapleader = " "
+
+  -- Disable providers
+  g.loaded_node_provider = 0
+  g.loaded_python3_provider = 0
+  g.loaded_perl_provider = 0
+  g.loaded_ruby_provider = 0
 end
 
 opts.final = function()
@@ -46,12 +54,6 @@ opts.final = function()
   -- Statusline
   local statusline_ascii = ""
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
-
-  -- Disable providers
-  g.loaded_node_provider = 0
-  g.loaded_python3_provider = 0
-  g.loaded_perl_provider = 0
-  g.loaded_ruby_provider = 0
 end
 
 --- Load shada after ui-enter

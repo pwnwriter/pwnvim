@@ -147,7 +147,7 @@ local plugins = {
       completion = {
         accept = { auto_brackets = { enabled = true } },
         menu = {
-          border = 'single',
+          border = vim.g.border_style,
           scrolloff = 1,
           scrollbar = false,
           columns = { { 'kind_icon' }, { 'label', 'label_description', gap = 0 } },
@@ -163,7 +163,7 @@ local plugins = {
           auto_show_delay_ms = 0,
           auto_show = true,
           window = {
-            border = "single",
+            border = vim.g.border_style,
           },
         },
       },
@@ -200,7 +200,10 @@ local plugins = {
     },
     event = { "BufReadPost" },
     opts = {
-      words = { enabled = true },
+      words = {
+        enabled = true,
+        debounce = 500,
+      },
       notifier = {
         wo = {
           winblend = 0,
