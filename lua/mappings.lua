@@ -118,7 +118,7 @@ M.mini = function()
 end
 
 M.misc = function()
-  map("n", "<leader>n", function()
+  map("n", "<leader>tn", function()
     modules.toggle_numbering()
   end, "Toggle line numbering")
 
@@ -145,7 +145,7 @@ M.lsp = function()
   map("n", "<leader>ds", vim.diagnostic.setloclist, "Add buffer diagnostics to the location list.")
 
   map("n", "<leader>hi", function()
-    modules.toggle_inlay_hint()     -- toggle inlay hint
+    modules.toggle_inlay_hint() -- toggle inlay hint
   end, "Toggle inlay hint")
 
   map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")

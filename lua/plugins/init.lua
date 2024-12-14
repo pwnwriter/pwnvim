@@ -36,7 +36,6 @@ local plugins = {
         },
         mini = {
           enabled = true,
-          indentscope_color = "lavender",
         },
       },
 
@@ -80,7 +79,6 @@ local plugins = {
         "bufremove",
         "pick",
         "move",
-        "indentscope",
         "extra",
         "visits",
         "clue",
@@ -120,7 +118,7 @@ local plugins = {
   --- Completion menu stuffs
   {
     "saghen/blink.cmp",
-    event = { "LspAttach",},
+    event = { "LspAttach", },
     dependencies = {
       "folke/lazydev.nvim",
       { "rafamadriz/friendly-snippets" },
@@ -207,6 +205,9 @@ local plugins = {
         wo = {
           winblend = 0,
         },
+      },
+      indent = {
+        enabled = true,
       },
     },
   },

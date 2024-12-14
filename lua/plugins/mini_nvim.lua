@@ -53,9 +53,9 @@ M.move = {
   },
 }
 
-M.indentscope = {
-  symbol = "┋",
-}
+-- M.indentscope = {
+--   symbol = "┋",
+-- }
 
 M.ai = {}
 
