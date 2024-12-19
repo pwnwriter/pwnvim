@@ -83,7 +83,6 @@ local plugins = {
         "extra",
         "visits",
         "clue",
-        "notify",
         "git",
         "diff",
         "operators",
@@ -116,20 +115,25 @@ local plugins = {
     end,
   },
 
+
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+      enabled = true,
+    },
+  },
+
   --- Completion menu stuffs
   {
     "saghen/blink.cmp",
     event = { "LspAttach", },
     dependencies = {
-      "folke/lazydev.nvim",
-      { dir = "/Users/pwnwriter/Dev/friendly-snippets" },
+      "rafamadriz/friendly-snippets",
       ft = "lua",
-      opts = {
-        library = {
-          { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-        },
-      },
-
     },
     version = "v0.*",
     opts = {
@@ -143,8 +147,6 @@ local plugins = {
           lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
         }
       },
-
-
       completion = {
         accept = { auto_brackets = { enabled = true } },
         trigger = {
@@ -173,10 +175,9 @@ local plugins = {
       },
 
       signature = {
-        enabled = false,
-        border = "single",
+        enabled = true,
+        border = vim.g.border_style,
       },
-
     },
   },
 

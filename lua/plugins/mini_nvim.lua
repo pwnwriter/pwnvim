@@ -102,12 +102,6 @@ M.clue = {
   },
 }
 
-M.notify = {
-  window = {
-    winblend = vim.g.winblend,
-  },
-}
-
 M.git = {}
 
 M.diff = {
