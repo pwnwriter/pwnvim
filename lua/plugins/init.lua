@@ -251,7 +251,6 @@ local plugins = {
       require("opts").final()
       require("mappings").general()
       require("mappings").misc()
-      require("modules").autocmds()
     end,
   },
 
