@@ -16,6 +16,7 @@ local plugins = {
       compile = true,
       flavour = "mocha",
       integrations = {
+        snacks = true,
         cmp = true,
         treesitter = true,
         mason = true,
@@ -121,7 +122,7 @@ local plugins = {
     event = { "LspAttach", },
     dependencies = {
       "folke/lazydev.nvim",
-      { "rafamadriz/friendly-snippets" },
+      { dir = "/Users/pwnwriter/Dev/friendly-snippets" },
       ft = "lua",
       opts = {
         library = {
