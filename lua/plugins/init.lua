@@ -130,11 +130,10 @@ local plugins = {
   --- Completion menu stuffs
   {
     "saghen/blink.cmp",
-    event = { "LspAttach", },
+    event = { "LspAttach" },
     dependencies = {
       "rafamadriz/friendly-snippets",
     },
-    version = "v0.*",
     opts = {
       keymap = { preset = 'enter' },
       sources = {
@@ -148,23 +147,11 @@ local plugins = {
         },
       },
       completion = {
-        accept = { auto_brackets = { enabled = true } },
-        trigger = {
-          show_on_insert_on_trigger_character = false,
-        },
         menu = {
           border = vim.g.border_style,
           scrolloff = 1,
           scrollbar = false,
-          columns = { { 'kind_icon' }, { 'label', 'label_description', gap = 0 } },
-
-          draw = {
-            padding = 0,
-            gap = 1,
-            treesitter = true,
-          }
         },
-
         documentation = {
           auto_show_delay_ms = 0,
           auto_show = true,
@@ -173,13 +160,9 @@ local plugins = {
           },
         },
       },
-
-      signature = {
-        enabled = true,
-        border = vim.g.border_style,
-      },
     },
-  },
+  }
+  ,
 
   {
     "Bekaboo/dropbar.nvim",
