@@ -24,16 +24,11 @@
             ripgrep
           ];
           shellHook = ''
-            ln -s "$(pwd)" "$HOME/.config/pwnvim"
-            echo "Syncing Neovim plugins ..."
-            nvim --headless +"Lazy! sync" +qa
+            [ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.before-pwnvim || true
+             echo "Cloning, Syncing Neovim plugins ..."
+             git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim
+             nvim --headless +"Lazy! sync" +qa
           '';
-
-          env = {
-
-            NVIM_APPNAME = "pwnvim";
-
-          };
 
         };
       });
