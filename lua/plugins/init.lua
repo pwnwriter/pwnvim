@@ -133,19 +133,19 @@ local plugins = {
     event = { "LspAttach", },
     dependencies = {
       "rafamadriz/friendly-snippets",
-      ft = "lua",
     },
     version = "v0.*",
     opts = {
       keymap = { preset = 'enter' },
       sources = {
-        completion = {
-          enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
-        },
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {
-          lsp = { fallback_for = { "lazydev" } },
-          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
-        }
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
+        },
       },
       completion = {
         accept = { auto_brackets = { enabled = true } },
