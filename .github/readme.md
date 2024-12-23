@@ -10,6 +10,10 @@
 git clone https://github.com/pwnwriter/pwnvim ~/.config/nvim
 nvim --headless +"Lazy! sync" +qa
 ```
+---
+```bash
+nix develop github:pwnwriter/pwnvim
+```
 
 ## 🍦 Tips
 
