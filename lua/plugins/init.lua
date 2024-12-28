@@ -109,7 +109,6 @@ local plugins = {
           enable = true,
           use_languagetree = true,
         },
-
         indent = { enable = true },
       }
     end,
@@ -130,6 +129,7 @@ local plugins = {
   --- Completion menu stuffs
   {
     "saghen/blink.cmp",
+    version = '*',
     event = { "LspAttach" },
     dependencies = {
       "rafamadriz/friendly-snippets",
@@ -137,7 +137,7 @@ local plugins = {
     opts = {
       keymap = { preset = 'enter' },
       sources = {
-        cmdline = { enabled = false},
+        cmdline = { enabled = false },
         default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {
           lazydev = {
