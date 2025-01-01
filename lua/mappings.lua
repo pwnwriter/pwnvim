@@ -10,7 +10,6 @@ local M = {}
 -- Expose the map function
 M.map = map
 
-
 M.general = function()
   -- insert movement
   map("i", "<C-h>", "<Left>")

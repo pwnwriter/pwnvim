@@ -19,7 +19,7 @@ opts.initial = function()
   opt.undofile = true
   opt.cmdheight = 0
 
-  g.border_style = "single" ---@type "single"|"double"|"rounded"
+  g.border_style = "rounded" ---@type "single"|"double"|"rounded"
   g.winblend = 0
   g.mapleader = " "
 
