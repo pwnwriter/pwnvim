@@ -152,6 +152,9 @@ local plugins = {
           border = vim.g.border_style,
           scrolloff = 1,
           scrollbar = false,
+          -- draw = {
+          --   treesitter = { 'lsp' },
+          -- }
         },
         documentation = {
           auto_show_delay_ms = 0,
