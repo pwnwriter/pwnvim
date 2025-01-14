@@ -116,45 +116,41 @@ local starter = require "mini.starter"
 M.starter = {
   evaluate_single = false,
   header = table.concat({
-    " 𝙔𝘼𝙔!ーーーーー",
-    " ☆  *    .      ☆",
-    "     . ∧＿∧    ∩    * ☆",
-    "*  ☆ ( ・∀・)/ .",
-    "  .  ⊂         ノ* ☆",
-    "  ☆ * (つ ノ  .☆",
-    "       (ノ",
-  }, "\n"),
-  footer = os.date(),
+        "        ┏┓",
+        " ┏┓┓┏┏┏┓┃┃",
+        " ┣┛┗┻┛┛┗┗┛",
+        " ┛        ",  }, "\n"),
+  footer = os.date("%B %d, %I:%M %p"),
   items = {
     {
-      name = "   Bookmarked Files",
+      name = "  Bookmarked Files",
       action = "lua MiniExtra.pickers.visit_paths { filter = 'todo' }",
-      section = " Actions ", -- Nerd Font terminal icon for Actions section
+      section = " Actions ",
     },
     {
-      name = "   Lazy Update",
+      name = "  Lazy Update",
       action = ":Lazy update",
-      section = " Actions ",
+      section = " Actions ",
     },
     {
-      name = "   Open Blank File",
+      name = "  Open Blank File",
       action = ":enew",
-      section = " Actions ",
+      section = " Actions ",
     },
     {
-      name = "   Find Files",
+      name = "  Find Files",
       action = "lua MiniPick.builtin.files()",
-      section = " Actions ",
+      section = " Actions ",
     },
     {
-      name = "   Recent Files",
+      name = "  Recent Files",
       action = "lua MiniExtra.pickers.oldfiles()",
-      section = " Actions ",
+      section = " Actions ",
     },
     {
-      name = "   Quit",
+      name = "  Quit",
       action = ":q!",
-      section = " Actions ",
+      section = " Actions ",
     },
   },
   content_hooks = {
