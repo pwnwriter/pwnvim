@@ -11,7 +11,7 @@ local plugins = {
       vim.cmd.colorscheme "catppuccin"
     end,
     opts = {
-      transparent_background = true,
+      transparent_background = not vim.g.neovide,
       compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
       compile = true,
       flavour = "mocha",
@@ -192,6 +192,10 @@ local plugins = {
     },
     event = { "BufReadPost" },
     opts = {
+      statuscolumn = {
+        left = { "fold", "git" },
+        right = { "mark", "sign" },
+      },
       words = {
         enabled = true,
         debounce = 500,
@@ -202,7 +206,11 @@ local plugins = {
         },
       },
       indent = {
-        enabled = true,
+        scope = {
+          treesitter = {
+            enabled = true,
+          },
+        },
       },
     },
   },
@@ -222,7 +230,7 @@ local plugins = {
   },
 
   {
-    "MeanderingProgrammer/render-markdown.nvim",
+    "OXY2DEV/markview.nvim",
     ft = "markdown",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",

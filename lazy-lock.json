@@ -6,8 +6,10 @@
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "lazydev.nvim": { "branch": "main", "commit": "8620f82ee3f59ff2187647167b6b47387a13a018" },
   "lspconfig": { "branch": "master", "commit": "88157521e890fe7fdf18bee22438875edd6300a6" },
+  "markview.nvim": { "branch": "main", "commit": "6e9f1840ba33e5318285ad97c22676f55b753479" },
   "mini": { "branch": "main", "commit": "3a3178419ce9947f55708966dabf030eca40735a" },
-  "render-markdown.nvim": { "branch": "main", "commit": "d7b646f2e6136d963e1bd3abbb9e2ac3fa90837a" },
   "snacks": { "branch": "main", "commit": "d2b2b7bcbf9814d61f2e8049affed750509f44e3" },
-  "treesitter": { "branch": "master", "commit": "097fb77312c731347180e8907424f6c967323f05" }
+  "treesitter": { "branch": "master", "commit": "097fb77312c731347180e8907424f6c967323f05" },
+  "typr": { "branch": "dev", "commit": "ed3e5e2fc11c4696efc1e5b0f0dd058b45a0085a" },
+  "volt": { "branch": "dev", "commit": "19dd8617f30124725a3b7ee9a5d71352e79247cf" }
 }

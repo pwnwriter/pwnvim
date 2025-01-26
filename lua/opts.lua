@@ -57,6 +57,13 @@ opts.final = function()
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
 end
 
+
+vim.g.neovide_padding_top = 25
+vim.g.neovide_padding_bottom = 25
+vim.g.neovide_padding_right = 25
+vim.g.neovide_padding_left = 25
+
+
 --- Load shada after ui-enter
 local shada = vim.o.shada
 vim.o.shada = ""
