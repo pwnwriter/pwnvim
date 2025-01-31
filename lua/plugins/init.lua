@@ -189,6 +189,11 @@ local plugins = {
       require("mappings").map({ "n" }, "<leader>o", function()
         require("snacks").scratch()
       end, "Toggle scratch pad"),
+
+      require("mappings").map({ "n" }, "<leader>E", function()
+        require("snacks").picker.explorer()
+      end, "Toggle snacks explorer"),
+
     },
     event = { "BufReadPost" },
     opts = {
@@ -230,7 +235,7 @@ local plugins = {
   },
 
   {
-    "OXY2DEV/markview.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     ft = "markdown",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
