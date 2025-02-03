@@ -194,7 +194,7 @@ local plugins = {
         require("snacks").picker.explorer()
       end, "Toggle snacks explorer"),
 
-      require("mappings").map({ "n" }, "<leader>F", function()
+      require("mappings").map({ "n" }, "<leader>ff", function()
         require("snacks").picker.pick("files", opts)
       end, "Toggle find files snacks"),
 

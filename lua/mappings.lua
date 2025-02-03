@@ -1,4 +1,4 @@
-local modules = require "modules"
+  local modules = require "modules"
 
 local function map(mode, keys, action, desc)
   desc = desc or ""
@@ -61,7 +61,7 @@ M.mini = function()
   local minivisits = require "mini.visits"
   local builtin = minipick.builtin
 
-  map({ "n" }, "<leader>ff", function()
+  map({ "n" }, "<leader>F", function()
     builtin.files()
   end, "find files")
 
