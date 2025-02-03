@@ -194,6 +194,10 @@ local plugins = {
         require("snacks").picker.explorer()
       end, "Toggle snacks explorer"),
 
+      require("mappings").map({ "n" }, "<leader>F", function()
+        require("snacks").picker.pick("files", opts)
+      end, "Toggle find files snacks"),
+
     },
     event = { "BufReadPost" },
     opts = {
