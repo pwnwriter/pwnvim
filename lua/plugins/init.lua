@@ -177,9 +177,7 @@ local plugins = {
         require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
       end, "Toggle dropbar menu"),
     },
-    config = function()
-      require("dropbar").setup()
-    end,
+    opts = {},
   },
 
   {
