@@ -1,4 +1,4 @@
-  local modules = require "modules"
+local modules = require "modules"
 
 local function map(mode, keys, action, desc)
   desc = desc or ""

@@ -136,8 +136,10 @@ local plugins = {
     },
     opts = {
       keymap = { preset = 'enter' },
+      cmdline = {
+        sources = { enabled = false },
+      },
       sources = {
-        cmdline = { enabled = false },
         default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {
           lazydev = {
