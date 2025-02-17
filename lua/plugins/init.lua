@@ -136,12 +136,12 @@ local plugins = {
     },
     opts = {
       keymap = { preset = 'enter' },
-      cmdline = {
-        sources = { enabled = false },
-      },
       sources = {
         default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {
+          cmdline = {
+            min_keyword_length = 2,
+          },
           lazydev = {
             name = "LazyDev",
             module = "lazydev.integrations.blink",
