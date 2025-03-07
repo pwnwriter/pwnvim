@@ -77,12 +77,6 @@ M.mini = function()
     builtin.grep_live()
   end, "Grep live")
 
-  vim.b[0].miniindentscope_disable = true
-
-  map({ "n" }, "<leader>tb", function()
-    vim.b[0].miniindentscope_disable = not vim.b[0].miniindentscope_disable -- Toggle blankline animations
-  end, "Toggle blankline animations")
-
   map({ "n" }, "<leader>e", function()
     local _ = require("mini.files").close() or require("mini.files").open()
   end, "Toggle minifiles")

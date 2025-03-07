@@ -4,6 +4,10 @@
 -- Neo(vim) the less is more
 --               @pwnwriter/pwnvim
 
+if vim.loader then
+  vim.loader.enable()
+end
+
 require("opts").initial()
 
 local lazy_path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -15,4 +19,4 @@ end
 
 vim.opt.rtp:prepend(lazy_path)
 
-require "plugins"
+require "lazy_spec"
