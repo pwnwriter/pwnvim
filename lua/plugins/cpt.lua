@@ -12,7 +12,10 @@ return {
     compile = true,
     flavour = "mocha",
     integrations = {
-      snacks = true,
+      snacks = {
+        enabled = false,
+        indent_scope_color = "lavender",
+      },
       treesitter = true,
       mason = true,
       blink_cmp = true,
