@@ -1,4 +1,5 @@
 {
+  "auto-cmdheight.nvim": { "branch": "main", "commit": "0ab1652a1f41062c880f81a4c36854bf67a52b03" },
   "blink.cmp": { "branch": "main", "commit": "dcda20d3aa345025699a920c45b0a0603551f41d" },
   "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "dropbar": { "branch": "master", "commit": "473951b086f8de24efe331a20f25d7503cc75f24" },

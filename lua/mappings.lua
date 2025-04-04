@@ -141,7 +141,13 @@ M.lsp = function()
     modules.toggle_inlay_hint() -- toggle inlay hint
   end, "Toggle inlay hint")
 
-  map("n", "<leader>k", vim.lsp.buf.hover, "Open lsp hover")
+  vim.api.nvim_create_autocmd("LspAttach", {
+    --group = lspgroup,
+    callback = function(event)
+      vim.keymap.set("n", "<leader>k", function() vim.lsp.buf.hover({ border = "rounded" }) end, { buffer = event.buf })
+    end
+  })
+
   map("n", "<leader>df", function()
     vim.diagnostic.open_float()
   end, "Open diagnostics float ")
