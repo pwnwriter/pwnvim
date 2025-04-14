@@ -2,7 +2,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     name = "lspconfig",
-    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     event = { "BufReadPost", "BufNewFile" },
     keys = function()
       require("mappings").lsp()
