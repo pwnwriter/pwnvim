@@ -61,7 +61,7 @@ M.mini = function()
   local minivisits = require "mini.visits"
   local builtin = minipick.builtin
 
-  map({ "n" }, "<leader>F", function()
+  map({ "n" }, "<leader>ff", function()
     builtin.files()
   end, "find files")
 

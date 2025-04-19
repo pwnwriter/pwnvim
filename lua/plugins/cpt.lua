@@ -2,6 +2,7 @@ return {
   "catppuccin/nvim",
   lazy = true,
   priority = 1000,
+  enabled = false,
   name = "catppuccin",
   init = function()
     vim.cmd.colorscheme "catppuccin"
@@ -10,7 +11,7 @@ return {
     transparent_background = not vim.g.neovide,
     compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     compile = true,
-    flavour = "mocha",
+    flavour = "latte",
     integrations = {
       snacks = {
         enabled = false,
