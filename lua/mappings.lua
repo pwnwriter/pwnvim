@@ -59,7 +59,10 @@ M.mini = function()
   local minipick = require "mini.pick"
   local miniextra = require "mini.extra"
   local minivisits = require "mini.visits"
+  local minidiff = require "mini.diff"
+
   local builtin = minipick.builtin
+
 
   map({ "n" }, "<leader>ff", function()
     builtin.files()
@@ -108,6 +111,10 @@ M.mini = function()
   map("n", "<leader>dp", function()
     miniextra.pickers.diagnostic()
   end, "Diagnostic in picker")
+
+  map("n", "<leader>td", function()
+    minidiff.toggle_overlay(0)
+  end, "Toggle git diff")
 end
 
 M.misc = function()

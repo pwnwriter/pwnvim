@@ -11,8 +11,12 @@ return {
     end, "Toggle snacks explorer"),
 
     require("mappings").map({ "n" }, "<leader>F", function()
-      require("snacks").picker.pick("files", opts)
+      require("snacks").picker.pick("files")
     end, "Toggle find files snacks"),
+
+    require("mappings").map({ "n", "t" }, "<leader>tt", function()
+      require("snacks").terminal()
+    end, "Toggle terminal buffer")
 
   },
   event = { "BufReadPost" },
