@@ -14,7 +14,7 @@ return {
       require("snacks").picker.pick("files")
     end, "Toggle find files snacks"),
 
-    require("mappings").map({ "n", "t" }, "<leader>tt", function()
+    require("mappings").map({ "n", "t" }, "<A-t>", function()
       require("snacks").terminal()
     end, "Toggle terminal buffer")
 
