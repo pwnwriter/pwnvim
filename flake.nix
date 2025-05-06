@@ -1,10 +1,12 @@
 {
+  description = "";
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
   outputs =
-    { nixpkgs, ... }:
+    { self, nixpkgs, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -12,25 +14,44 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      forAllSystems =
-        function: nixpkgs.lib.genAttrs systems (system: function (import nixpkgs { inherit system; }));
+      forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f (import nixpkgs { inherit system; }));
     in
     {
-      devShells = forAllSystems (pkgs: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            neovim
-            fd
+      apps = forAllSystems (
+        pkgs:
+        let
+          runtimeDeps = with pkgs; [
+            gcc
+            nixd
+            lua-language-server
             ripgrep
+            fd
           ];
-          shellHook = ''
-            [ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.before-pwnvim || true
-             echo "Cloning, Syncing Neovim plugins ..."
-             git clone --depth=1 https://github.com/pwnwriter/pwnvim ~/.config/nvim
-             nvim --headless +"Lazy! sync" +qa
-          '';
 
-        };
-      });
+          nvim = pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (
+            pkgs.neovimUtils.makeNeovimConfig {
+
+              customRC = ''
+                set runtimepath^=${./.}
+                source ${./.}/init.lua
+              '';
+            }
+            // {
+              wrapperArgs = [
+                "--prefix"
+                "PATH"
+                ":"
+                "${pkgs.lib.makeBinPath runtimeDeps}"
+              ];
+            }
+          );
+        in
+        {
+          default = {
+            type = "app";
+            program = "${nvim}/bin/nvim";
+          };
+        }
+      );
     };
 }
