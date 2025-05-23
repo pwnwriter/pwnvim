@@ -49,6 +49,7 @@ return {
       require("opts").final()
       require("mappings").general()
       require("mappings").misc()
+      require("lsp")
     end,
   },
 

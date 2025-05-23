@@ -46,5 +46,30 @@ capabilities.experimental = {
   },
 }
 
-vim.lsp.enable({ 'lua_ls', 'rust_analyzer' })
+vim.lsp.config.lua_ls = {
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
+  root_markers = { ".luarc.json", ".git", vim.uv.cwd() },
+  settings = {
+    Lua = {
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+vim.lsp.enable("lua_ls")
 
+require('mappings').lsp()
+
+vim.api.nvim_create_user_command("LspLog", function()
+  vim.cmd.vsplit(vim.lsp.log.get_filename())
+end, {
+  desc = "Get all the lsp logs",
+})
+
+vim.api.nvim_create_user_command("LspInfo", function()
+  vim.cmd("silent checkhealth vim.lsp")
+end, {
+  desc = "Get all the information about all LSP attached",
+})
