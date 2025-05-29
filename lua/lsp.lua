@@ -58,7 +58,20 @@ vim.lsp.config.lua_ls = {
     },
   },
 }
-vim.lsp.enable("lua_ls")
+vim.lsp.config.nixd = {
+  cmd = { 'nixd' },
+  filetypes = { 'nix' },
+  root_markers = { 'flake.nix', 'git' },
+}
+
+vim.lsp.config.nil_ls = {
+  cmd = { 'nil' },
+  filetypes = { 'nix' },
+  root_markers = { 'flake.nix', '.git' },
+}
+
+
+vim.lsp.enable({ 'lua_ls', 'nixd', 'nil_ls' })
 
 require('mappings').lsp()
 
