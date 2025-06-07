@@ -27,16 +27,22 @@ nix develop github:pwnwriter/pwnvim
 -   To install [**`treesitter`**][Treesitter] of `x` language Run `:TSInstall [x]` !
 -   On [`NIX`][Nix] , run `nix develop` to enter a shell with `pwnvim` .
 -   Install `lsp servers` and configure inside [**`lsp.lua`**][LSP].
--   See [**`:help lspconfig-all`**][Lspconfig] to get an understanding of how
+-   See **`:h vim.lsp.config`** to get an understanding of how
     you would setup a language server protocol.
     ```lua
     -- plugins/lsp.lua
-    local lspconfig = require("lspconfig")
-
-    -- $ rustup component add rust-analyzer
-    lspconfig.rust_analyzer.setup({
-      cmd = { "rust-analyzer" },
-    })
+    vim.lsp.config.lua_ls = {
+      cmd = { "lua-language-server" },
+      filetypes = { "lua" },
+      root_markers = { ".luarc.json", ".git", vim.uv.cwd() },
+      settings = {
+        Lua = {
+          telemetry = {
+            enable = false,
+          },
+        },
+      },
+    }
     ```
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>

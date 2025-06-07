@@ -7,7 +7,7 @@ return
     "rafamadriz/friendly-snippets",
   },
   opts = {
-    keymap = { preset = 'enter' },
+    keymap = { preset = 'default' },
     sources = {
       default = { "lazydev", "lsp", "path", "snippets", "buffer" },
       providers = {

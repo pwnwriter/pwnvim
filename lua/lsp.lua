@@ -46,33 +46,6 @@ capabilities.experimental = {
   },
 }
 
-vim.lsp.config.lua_ls = {
-  cmd = { "lua-language-server" },
-  filetypes = { "lua" },
-  root_markers = { ".luarc.json", ".git", vim.uv.cwd() },
-  settings = {
-    Lua = {
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-}
-vim.lsp.config.nixd = {
-  cmd = { 'nixd' },
-  filetypes = { 'nix' },
-  root_markers = { 'flake.nix', 'git' },
-}
-
-vim.lsp.config.nil_ls = {
-  cmd = { 'nil' },
-  filetypes = { 'nix' },
-  root_markers = { 'flake.nix', '.git' },
-}
-
-
-vim.lsp.enable({ 'lua_ls', 'nixd', 'nil_ls' })
-
 require('mappings').lsp()
 
 vim.api.nvim_create_user_command("LspLog", function()
@@ -86,3 +59,30 @@ vim.api.nvim_create_user_command("LspInfo", function()
 end, {
   desc = "Get all the information about all LSP attached",
 })
+
+vim.lsp.config.lua_ls = {
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
+  root_markers = { ".luarc.json", ".git", vim.uv.cwd() },
+  settings = {
+    Lua = {
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
+vim.lsp.config.nixd = {
+  cmd = { 'nixd' },
+  filetypes = { 'nix' },
+  root_markers = { 'flake.nix', 'git' },
+}
+
+vim.lsp.config.nil_ls = {
+  cmd = { 'nil' },
+  filetypes = { 'nix' },
+  root_markers = { 'flake.nix', '.git' },
+}
+
+vim.lsp.enable({ 'lua_ls', 'nixd', 'nil_ls' })
