@@ -53,5 +53,5 @@ nix develop github:pwnwriter/pwnvim
 [Lspconfig]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [Treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [Mason]: https://github.com/williamboman/mason.nvim
-[LSP]: /lua/plugins/lsp.lua
+[LSP]: /lua/lsp.lua
 [Nix]: https://github.com/NixOS/nix
