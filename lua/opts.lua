@@ -4,7 +4,7 @@ local opts = {}
 
 opts.initial = function()
   opt.laststatus = 3
-  opt.clipboard = "unnamedplus"
+  -- opt.clipboard = "unnamedplus"
   opt.termguicolors = true
   opt.fillchars:append { eob = " " }
   opt.shortmess:append "aIF"

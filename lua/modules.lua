@@ -69,4 +69,12 @@ autocmd("CursorHold", {
   end,
 })
 
+-- Copy last yanked text to clipboard on focusLost
+autocmd('FocusLost', {
+  desc = "Copy to clipboard on FocusLost",
+  callback = function()
+    vim.fn.setreg("+", vim.fn.getreg("0"))
+  end,
+})
+
 return M
