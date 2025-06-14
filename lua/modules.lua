@@ -65,7 +65,7 @@ autocmd("LspProgress", {
 
 autocmd("CursorHold", {
   callback = function()
-    vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+    vim.diagnostic.open_float(nil, { focusable = false, source = "if_many", border = vim.g.border_style })
   end,
 })
 

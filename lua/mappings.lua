@@ -156,7 +156,7 @@ M.lsp = function()
   })
 
   map("n", "<leader>df", function()
-    vim.diagnostic.open_float()
+    vim.diagnostic.open_float({ border = vim.g.border_style })
   end, "Open diagnostics float ")
   map("n", "<leader>ld", vim.lsp.buf.definition, "Goto lsp definition")
   map("n", "<leader>lh", vim.lsp.buf.declaration, "Goto lsp declaration")
