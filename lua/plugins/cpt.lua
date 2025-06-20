@@ -8,9 +8,19 @@ return {
     vim.cmd.colorscheme "catppuccin"
   end,
   opts = {
+    background = { light = "latte", dark = "mocha" },
     transparent_background = not vim.g.neovide,
     compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     compile = true,
+    styles = {
+      comments = { "italic" },
+      functions = { "bold" },
+      keywords = { "italic" },
+      operators = { "bold" },
+      conditionals = { "bold" },
+      loops = { "bold" },
+      booleans = { "bold", "italic" },
+    },
     integrations = {
       snacks = {
         enabled = false,

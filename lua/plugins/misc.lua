@@ -14,7 +14,7 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     keys = {
       require("mappings").map({ "n" }, "<leader>p", function()
-        require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count)
+        require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count or nil)
       end, "Toggle dropbar menu"),
     },
     opts = {},
@@ -30,6 +30,7 @@ return {
       "BufNewFile",
     },
     config = function()
+      ---@diagnostic disable-next-line: missing-fields
       require("nvim-treesitter.configs").setup {
         ensure_installed = { "lua", "vimdoc", "rust", "go", "astro", "json", "toml", "markdown" },
         highlight = {
