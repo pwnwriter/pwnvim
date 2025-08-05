@@ -168,7 +168,6 @@ M.lsp = function()
     vim.lsp.buf.format { async = true }
   end, "Lsp format")
   map("n", "<leader>lc", vim.lsp.buf.rename, "Lsp rename")
-  map({ "i", "x" }, "<A-s>", vim.lsp.buf.signature_help, "Lsp signature help")
 end
 
 return M

@@ -18,6 +18,7 @@ opts.initial = function()
   opt.swapfile = false
   opt.undofile = true
   opt.cmdheight = 0
+  opt.winborder = "rounded"
 
   g.border_style = "rounded" ---@type "single"|"double"|"rounded"
   g.winblend = 0
