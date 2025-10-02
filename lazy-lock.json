@@ -5,8 +5,8 @@
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "258d2a5ef4a3e3d6d9ba9da72c9725c53e9afcbd" },
+  "markview.nvim": { "branch": "main", "commit": "b2a1a0abe36a9a82b974dedba2e4a45314919e27" },
   "mini": { "branch": "main", "commit": "bc34736e5b1d5561bc628f1cedd7c01f5ce5ee9f" },
-  "render-markdown.nvim": { "branch": "main", "commit": "67f2c7c8850bb11eefa6b22054a6f4cef1146de2" },
   "snacks": { "branch": "main", "commit": "d67a47739dfc652cfcf66c59e929c704a854b37a" },
   "treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" }
 }

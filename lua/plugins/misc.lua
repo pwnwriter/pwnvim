@@ -1,10 +1,13 @@
 local conf_path = vim.fn.stdpath "config" --[[@as string]]
 return {
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    ft = "markdown",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    opts = {
+      preview = {
+        icon_provider = "mini", -- "mini" or "devicons"
+      }
+
     },
   },
 
