@@ -34,7 +34,7 @@ return {
     },
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require("nvim-treesitter.config").setup {
+      require("nvim-treesitter.configs").setup {
         ensure_installed = { "lua", "vimdoc", "rust", "go", "astro", "json", "toml", "markdown" },
         highlight = {
           enable = true,
