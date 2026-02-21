@@ -115,57 +115,48 @@ local starter = require "mini.starter"
 
 M.starter = {
   evaluate_single = false,
+
   header = table.concat({
     "                                   ",
+    "            ╔════════╗             ",
+    "            ║  p w n ║             ",
+    "            ╚════════╝             ",
+    "          > build. exploit. repeat.",
     "                                   ",
-    "                                   ",
-    "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
-    "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
-    "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
-    "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
-    "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
-    "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
-    "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
-    " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
-    " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
-    "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
-    "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
-    "                                   ", }, "\n"),
-  footer = os.date("%B %d, %I:%M %p"),
+  }, "\n"),
+
+  footer = "cwd: " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t"),
+
   items = {
     {
-      name = "  Bookmarked Files",
-      action = "lua MiniExtra.pickers.visit_paths { filter = 'todo' }",
-      section = " Actions ",
-    },
-    {
-      name = "  Lazy Update",
-      action = ":Lazy update",
-      section = " Actions ",
-    },
-    {
-      name = "  Open Blank File",
-      action = ":enew",
-      section = " Actions ",
-    },
-    {
-      name = "  Find Files",
+      name = "    Find files",
       action = "lua MiniPick.builtin.files()",
-      section = " Actions ",
+      section = "    start ",
     },
     {
-      name = "  Recent Files",
+      name = "    Recent",
       action = "lua MiniExtra.pickers.oldfiles()",
-      section = " Actions ",
+      section = "    start ",
     },
     {
-      name = "  Quit",
-      action = ":q!",
-      section = " Actions ",
+      name = "    Nvim config",
+      action = "edit $MYVIMRC",
+      section = "    start ",
+    },
+    {
+      name = "    Projects",
+      action = "lua MiniPick.builtin.grep_live()",
+      section = "    work ",
+    },
+    {
+      name = "  󰗼  Quit",
+      action = "qa",
+      section = "    exit ",
     },
   },
+
   content_hooks = {
-    starter.gen_hook.aligning("center", "center"),
+    require("mini.starter").gen_hook.aligning("center", "center"),
   },
 }
 

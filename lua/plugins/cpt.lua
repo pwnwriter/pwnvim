@@ -9,7 +9,11 @@ return {
   end,
   opts = {
     background = { light = "latte", dark = "mocha" },
-    transparent_background = not vim.g.neovide,
+    float = {
+      transparent = true,   -- Enables transparency for floating windows
+      solid = true,        -- If true, uses a solid background for floats
+    },
+    transparent_background = true,
     compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     compile = true,
     styles = {
@@ -23,7 +27,7 @@ return {
     },
     integrations = {
       snacks = {
-        enabled = false,
+        enabled = true,
         indent_scope_color = "lavender",
       },
       treesitter = true,
