@@ -8,46 +8,35 @@ return {
     vim.cmd.colorscheme "catppuccin"
   end,
   opts = {
+    custom_highlights = function(C)
+      return {
+        MiniFilesTitle        = {
+          fg = C.base,
+          bg = C.flamingo,
+          style = { "bold" }
+        },
+        MiniFilesTitleFocused = {
+          bg = C.Rosewater,
+          fg = C.base,
+          style = { "bold", "bold" },
+        }
+      }
+    end,
     background = { light = "latte", dark = "mocha" },
     float = {
-      transparent = true,   -- Enables transparency for floating windows
-      solid = true,        -- If true, uses a solid background for floats
+      transparent = true,
+      solid = true,
     },
     transparent_background = true,
     compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     compile = true,
-    styles = {
-      comments = { "italic" },
-      functions = { "bold" },
-      keywords = { "italic" },
-      operators = { "bold" },
-      conditionals = { "bold" },
-      loops = { "bold" },
-      booleans = { "bold", "italic" },
-    },
     integrations = {
       snacks = {
         enabled = true,
         indent_scope_color = "lavender",
       },
       treesitter = true,
-      mason = true,
       blink_cmp = true,
-      native_lsp = {
-        enabled = true,
-        virtual_text = {
-          errors = { "italic" },
-          hints = { "italic" },
-          warnings = { "italic" },
-          information = { "italic" },
-        },
-        underlines = {
-          errors = { "undercurl" },
-          hints = { "undercurl" },
-          warnings = { "undercurl" },
-          information = { "undercurl" },
-        },
-      },
       mini = {
         enabled = true,
       },
