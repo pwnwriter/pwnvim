@@ -24,7 +24,7 @@ M.general = function()
     vim.api.nvim_win_set_cursor(0, { row + 1, col })
   end)
 
-  map("i", "jj", "<esc>")
+  map("i", "jk", "<esc>")
   map("i", "<C-c>", "<esc>")
 
   map("n", "<C-c>", "<cmd>noh<CR>")
