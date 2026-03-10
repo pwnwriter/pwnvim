@@ -56,6 +56,28 @@ opts.final = function()
   -- Statusline
   local statusline_ascii = ""
   opt.statusline = "%#Normal#" .. statusline_ascii .. "%="
+
+  -- Diagnostics
+  vim.diagnostic.config {
+    virtual_text = {
+      prefix = "",
+      suffix = "",
+      format = function(diagnostic)
+        return " " .. diagnostic.message .. " "
+      end,
+    },
+    underline = {
+      severity = { min = vim.diagnostic.severity.WARN },
+    },
+    signs = {
+      text = {
+        [vim.diagnostic.severity.HINT] = "",
+        [vim.diagnostic.severity.ERROR] = "✘",
+        [vim.diagnostic.severity.INFO] = "◉",
+        [vim.diagnostic.severity.WARN] = "󰚌",
+      },
+    },
+  }
 end
 
 
@@ -75,26 +97,5 @@ vim.api.nvim_create_autocmd("User", {
     pcall(vim.cmd.rshada, { bang = true })
   end,
 })
-
-vim.diagnostic.config {
-  virtual_text = {
-    prefix = "",
-    suffix = "",
-    format = function(diagnostic)
-      return " " .. diagnostic.message .. " "
-    end,
-  },
-  underline = {
-    severity = { min = vim.diagnostic.severity.WARN },
-  },
-  signs = {
-    text = {
-      [vim.diagnostic.severity.HINT] = "",
-      [vim.diagnostic.severity.ERROR] = "✘",
-      [vim.diagnostic.severity.INFO] = "◉",
-      [vim.diagnostic.severity.WARN] = "󰚌",
-    },
-  },
-}
 
 return opts

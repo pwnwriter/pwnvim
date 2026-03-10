@@ -2,7 +2,7 @@ local conf_path = vim.fn.stdpath "config" --[[@as string]]
 return {
   {
     "OXY2DEV/markview.nvim",
-    lazy = false,
+    ft = "markdown",
     opts = {
       preview = {
         icon_provider = "mini", -- "mini" or "devicons"
@@ -16,9 +16,7 @@ return {
     name = "dropbar",
     event = { "BufReadPost", "BufNewFile" },
     keys = {
-      require("mappings").map({ "n" }, "<leader>p", function()
-        require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count or nil)
-      end, "Toggle dropbar menu"),
+      { "<leader>p", function() require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count or nil) end, desc = "Toggle dropbar menu" },
     },
     opts = {},
   },
