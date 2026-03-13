@@ -52,6 +52,7 @@ return {
       require("mappings").general()
       require("mappings").misc()
       require("lsp")
+      require("cmdline")
     end,
   },
 

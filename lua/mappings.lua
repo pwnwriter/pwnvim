@@ -7,8 +7,8 @@ local function map(mode, keys, action, desc)
 end
 
 local M = {}
--- Expose the map function
 M.map = map
+-- Expose the map function
 
 M.general = function()
   -- insert movement
