@@ -135,11 +135,11 @@ M.lsp = function()
 
   -- Diagnostics mappings
   map("n", "dp", function()
-    vim.diagnostic.jump( { count = 1, float = true})
+    vim.diagnostic.jump({ count = 1, float = true })
   end, "Diagnostics goto_prev")
 
   map("n", "dn", function()
-    vim.diagnostic.jump( { count = -1, float = true})
+    vim.diagnostic.jump({ count = -1, float = true })
   end, "Diagnostics goto_next")
 
   map("n", "<leader>ds", vim.diagnostic.setloclist, "Add buffer diagnostics to the location list.")

@@ -90,12 +90,12 @@ vim.g.neovide_padding_left = 25
 --- Load shada after ui-enter
 local shada = vim.o.shada
 vim.o.shada = ""
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy",
-  callback = function()
+vim.api.nvim_create_autocmd("VimEnter", {
+  once = true,
+  callback = vim.schedule_wrap(function()
     vim.o.shada = shada
     pcall(vim.cmd.rshada, { bang = true })
-  end,
+  end),
 })
 
 return opts

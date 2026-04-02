@@ -1,5 +1,5 @@
 -- ┏┓     ┓┏•
--- ┃┃┓┏┏┏┓┃┃┓┏┳┓
+-- ┃┃┓┳┏┏┓┃┃┓┳┳┳
 -- ┣┛┗┻┛┛┗┗┛┗┛┗┗
 -- Neo(vim) the less is more
 --               @pwnwriter/pwnvim
@@ -10,13 +10,15 @@ end
 
 require("opts").initial()
 
-local lazy_path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+require("plugins.cpt")
+require("plugins.lazydev")
+require("plugins.mini")
+require("plugins.blink")
+require("plugins.snacks")
+require("plugins.misc")
 
-if not vim.uv.fs_stat(lazy_path) then
-  local lazy_url = "https://github.com/folke/lazy.nvim"
-  vim.fn.system { "git", "clone", "--filter=blob:none", lazy_url, "--branch=stable", lazy_path }
-end
-
-vim.opt.rtp:prepend(lazy_path)
-
-require "lazy_spec"
+require("opts").final()
+require("mappings").general()
+require("mappings").misc()
+require("cmdline")
+require("lsp")
