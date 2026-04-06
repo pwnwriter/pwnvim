@@ -86,6 +86,7 @@ vim.g.neovide_padding_bottom = 25
 vim.g.neovide_padding_right = 25
 vim.g.neovide_padding_left = 25
 
+vim.o.exrc = true
 
 --- Load shada after ui-enter
 local shada = vim.o.shada
