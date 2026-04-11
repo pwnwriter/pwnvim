@@ -1,8 +1,5 @@
 vim.pack.add({ { src = "https://github.com/nvim-mini/mini.nvim" } })
-
-
-
-
+require("mini.icons").mock_nvim_web_devicons()
 local mini_config = {}
 
 mini_config.pairs = {
