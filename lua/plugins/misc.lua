@@ -1,6 +1,7 @@
 vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { src = "https://github.com/OXY2DEV/markview.nvim" },
+  -- HACK:https://github.com/delphinus/md-render.nvim
   { src = "https://github.com/Bekaboo/dropbar.nvim" },
 })
 
@@ -27,6 +28,6 @@ if ok2 then
 end
 
 local map = require("mappings").map
-map("n", "<leader>p", function()
+map("n", "<leader>;", function()
   require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count or nil)
 end, "Toggle dropbar menu")

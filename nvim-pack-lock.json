@@ -25,6 +25,10 @@
       "rev": "1861f959599ae03cfd59f56222a542035b0cd947",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
+    "md-render.nvim": {
+      "rev": "75d976d89edc4b9457447ba83201ec5805600f79",
+      "src": "https://github.com/delphinus/md-render.nvim"
+    },
     "mini.nvim": {
       "rev": "3923662bf3d6ca49a9503f8d7196ea0450983e6a",
       "src": "https://github.com/nvim-mini/mini.nvim"
@@ -36,6 +40,10 @@
     "nvim-treesitter": {
       "rev": "c82bf96f0a773d85304feeb695e1e23b2207ac35",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "paint.nvim": {
+      "rev": "6ba834dc159f4c9c3b8e7b09f8c36c1a63c0e9a9",
+      "src": "https://github.com/Loukis-13/paint.nvim"
     },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
