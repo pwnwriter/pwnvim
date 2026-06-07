@@ -172,6 +172,22 @@ mini_config.icons = {
 }
 
 mini_config.operators = {}
+local mini_input = require('mini.input')
+mini_config.input = {
+  handlers = {
+    highlight = function(state)
+      state = MiniInput.gen_highlight.treesitter('vim')(state) or state
+      return MiniInput.default_highlight(state) or state
+    end,
+    view = mini_input.gen_view.floatwin({
+      style = 'MM',
+      adjust_config = function(_, config)
+        config.width = math.max(40, math.floor(vim.o.columns * 0.4))
+        return config
+      end,
+    }),
+  },
+}
 
 local mini_modules = {
   "icons",
@@ -191,6 +207,7 @@ local mini_modules = {
   "diff",
   "operators",
   "starter",
+  "input"
 }
 
 for _, module in ipairs(mini_modules) do
