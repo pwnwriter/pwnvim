@@ -115,11 +115,6 @@ M.mini = function()
   map("n", "<leader>td", function()
     minidiff.toggle_overlay(0)
   end, "Toggle git diff")
-
-  map("n", ":", function()
-    local cmd = MiniInput.get({ prompt = "⌘", scope = "editor", completion = "cmdline" })
-    if cmd then vim.cmd(cmd) end
-  end, "Command line via mini.input")
 end
 
 M.misc = function()

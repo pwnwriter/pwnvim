@@ -26,8 +26,3 @@ if ok2 then
     },
   })
 end
-
-local map = require("mappings").map
-map("n", "<leader>;", function()
-  require("dropbar.api").pick(vim.v.count ~= 0 and vim.v.count or nil)
-end, "Toggle dropbar menu")
