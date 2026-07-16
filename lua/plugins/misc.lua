@@ -9,7 +9,7 @@ local ok, ts = pcall(require, "nvim-treesitter.configs")
 if ok then
   ---@diagnostic disable-next-line: missing-fields
   ts.setup({
-    ensure_installed = { "lua", "vimdoc", "rust", "go", "astro", "json", "toml", "markdown" },
+    ensure_installed = { "lua", "vimdoc", "rust", "go", "astro", "json", "toml", "markdown", "tsx", "typst" },
     highlight = {
       enable = true,
       use_languagetree = true,
