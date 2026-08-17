@@ -4,19 +4,35 @@ local ok, snacks = pcall(require, "snacks")
 if not ok then return end
 
 snacks.setup({
+  picker = {
+    sources = {
+      explorer = {
+        layout = {
+          preset = "sidebar",
+          layout = {
+            width = 30,
+          },
+        },
+      },
+    },
+  },
+
   statuscolumn = {
     left = { "fold", "git" },
     right = { "mark", "sign" },
   },
+
   words = {
     enabled = true,
     debounce = 500,
   },
+
   notifier = {
     wo = {
       winblend = vim.g.winblend,
     },
   },
+
   indent = {
     scope = {
       treesitter = {
