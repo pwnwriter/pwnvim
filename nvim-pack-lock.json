@@ -10,15 +10,15 @@
       "src": "https://github.com/Bekaboo/dropbar.nvim"
     },
     "evergarden": {
-      "rev": "6a47a90e5caf1b21e54ff7967017c255bab80fdd",
+      "rev": "c8e5e7e67a36694e5d917b7065b26b59b8cb489f",
       "src": "https://codeberg.org/evergarden/nvim.git"
     },
     "fff.nvim": {
-      "rev": "05a35c6d4856455393a2dc8aadaeae4b2823ddf6",
+      "rev": "e3f694a2e4f82bb755418e8d305dcff779c59c27",
       "src": "https://github.com/dmtrKovalenko/fff.nvim"
     },
     "friendly-snippets": {
-      "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
+      "rev": "b4d01b0fdf3c9a549961c2f9ffe8dc09be166219",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "lazydev.nvim": {
@@ -26,31 +26,31 @@
       "src": "https://github.com/folke/lazydev.nvim"
     },
     "lspconfig": {
-      "rev": "98b0b8a52742afc9e2e2078e2e451f91beef1717",
+      "rev": "046b1a797af1effe8e0474b9af9657a3761ec58a",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "markview.nvim": {
-      "rev": "2471f4097f8561a6880a0fe05ee0f21cbc82b374",
+      "rev": "190bb227c9d3eb4451b81fa16ea3d2efde2d67c5",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "md-render.nvim": {
-      "rev": "56057d92d636a45cdeac5d1857e776e10d279d69",
+      "rev": "00a83b8a25b9d2d50dd15efaf4c701c19de21688",
       "src": "https://github.com/delphinus/md-render.nvim"
     },
     "mini.nvim": {
-      "rev": "a35f08f63b73f0ffac045cd175fb2a22e167c39c",
+      "rev": "561751e839b99a4baca36b9d963166b66d2536a6",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim": {
-      "rev": "058e83dc009e4dd62f30807054de9cc849699e27",
+      "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
       "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-treesitter": {
-      "rev": "7248feaca45e4d944591497964bc19afa89ad1c6",
+      "rev": "f603a2f4da48728f80257fb5fbb90145fd1dc173",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "paint.nvim": {
-      "rev": "0b0e58daf79b4f32a63aa5efe8efb9a2dbc6b14f",
+      "rev": "db0c7d8643de2b596dfc79e6573e2537425326b6",
       "src": "https://github.com/Loukis-13/paint.nvim"
     },
     "showkeys": {
